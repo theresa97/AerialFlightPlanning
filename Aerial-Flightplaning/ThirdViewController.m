@@ -12,7 +12,9 @@
 
 @end
 
-@implementation ThirdViewController
+@implementation ThirdViewController{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
