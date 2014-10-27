@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface FirstViewController : UIViewController
 
@@ -23,6 +24,8 @@
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *pickerDateDatum;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonSendeZuCloud;
 
 //Actions
 
