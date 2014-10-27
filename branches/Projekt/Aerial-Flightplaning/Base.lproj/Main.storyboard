@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAN-Rx-M2X">
-                                <rect key="frame" x="156" y="115" width="177" height="30"/>
+                                <rect key="frame" x="156" y="105" width="177" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -65,14 +65,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5499999999999996" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" text="Namen der Crewmitglieder eingeben" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-K5-YFA">
-                                <rect key="frame" x="156" y="202" width="177" height="120"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <accessibility key="accessibilityConfiguration" label=""/>
-                                <color key="textColor" red="0.57469950754902654" green="0.55936940059404372" blue="0.58759341032608692" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kennzeichen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbi-JB-0jP">
                                 <rect key="frame" x="44" y="359" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -90,6 +82,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5499999999999996" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" text="Namen der Crewmitglieder eingeben" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-K5-YFA">
+                                <rect key="frame" x="156" y="202" width="177" height="120"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <color key="textColor" red="0.57469950754902654" green="0.55936940059404372" blue="0.58759341032608692" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-i4-YbL">
+                                <rect key="frame" x="412" y="496" width="122" height="54"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSendeZuCloud:" destination="9pv-A4-QxB" eventType="touchUpInside" id="BqS-aZ-Dv0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.023235985437276507" green="0.019377046327408123" blue="0.03862847222222221" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,6 +109,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
+                        <outlet property="buttonSendeZuCloud" destination="ose-i4-YbL" id="yL6-PB-VAx"/>
                         <outlet property="pickerDateDatum" destination="9ta-G9-Ixa" id="H5T-gc-bBh"/>
                         <outlet property="pickerHubrschrauber" destination="I5P-hh-ooI" id="VON-Dz-cfX"/>
                         <outlet property="textFieldFlughelfer" destination="5a2-NR-D9X" id="KMY-RD-4WJ"/>
