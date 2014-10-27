@@ -10,36 +10,29 @@
 	<string>Aerial-Flightplaning</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8c966314-88fc-47fc-8a40-bbc5bf1a50dc++5774</key>
-		<string>https://subversion.assembla.com/svn/aerial-flightplanning/branches</string>
+		<key>8c966314-88fc-47fc-8a40-bbc5bf1a50dc</key>
+		<string>https://subversion.assembla.com/svn/aerial-flightplanning.1</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Projekt/Aerial-Flightplaning.xcodeproj</string>
+	<string>branches/Projekt/Aerial-Flightplaning.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8c966314-88fc-47fc-8a40-bbc5bf1a50dc++5774</key>
-		<string>../../..</string>
+		<key>8c966314-88fc-47fc-8a40-bbc5bf1a50dc</key>
+		<string>../../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>8c966314-88fc-47fc-8a40-bbc5bf1a50dc++5774</key>
-		<string>https://subversion.assembla.com/svn/aerial-flightplanning</string>
-	</dict>
-	<key>IDESourceControlProjectURL</key>
-	<string>https://subversion.assembla.com/svn/aerial-flightplanning/branches/Projekt/Aerial-Flightplaning.xcodeproj</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8c966314-88fc-47fc-8a40-bbc5bf1a50dc++5774</string>
+	<string>8c966314-88fc-47fc-8a40-bbc5bf1a50dc</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8c966314-88fc-47fc-8a40-bbc5bf1a50dc++5774</string>
+			<string>8c966314-88fc-47fc-8a40-bbc5bf1a50dc</string>
 			<key>IDESourceControlWCCName</key>
-			<string>aerial-flightplanning</string>
+			<string>aerial-flightplanning.1</string>
 		</dict>
 	</array>
 </dict>
