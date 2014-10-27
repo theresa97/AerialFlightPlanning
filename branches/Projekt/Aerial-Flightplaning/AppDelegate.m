@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "GlobalState.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,7 @@
     [Parse setApplicationId:@"LvbHgOhydS56QecdmdtNwq4iEcPtczjfeuc0sj4C"
                   clientKey:@"cccBLAo63ibXgJZxCssPp3kiWIFXE5QNjp0BLfs4"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     return YES;
 }
 

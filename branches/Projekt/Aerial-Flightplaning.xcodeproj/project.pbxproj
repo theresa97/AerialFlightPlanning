@@ -30,6 +30,8 @@
 		6C867AD019FE741800315F83 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ACF19FE741800315F83 /* Security.framework */; };
 		6C867AD219FE742000315F83 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867AD119FE742000315F83 /* StoreKit.framework */; };
 		6C867AD419FE742A00315F83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867AD319FE742A00315F83 /* SystemConfiguration.framework */; };
+		6C867AD819FE7F6A00315F83 /* ViewControllerAddHelicopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867AD719FE7F6A00315F83 /* ViewControllerAddHelicopter.m */; };
+		6C867ADB19FE809400315F83 /* GlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867ADA19FE809400315F83 /* GlobalState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		6C867ACF19FE741800315F83 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6C867AD119FE742000315F83 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6C867AD319FE742A00315F83 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6C867AD619FE7F6A00315F83 /* ViewControllerAddHelicopter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerAddHelicopter.h; sourceTree = "<group>"; };
+		6C867AD719FE7F6A00315F83 /* ViewControllerAddHelicopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerAddHelicopter.m; sourceTree = "<group>"; };
+		6C867AD919FE809400315F83 /* GlobalState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalState.h; sourceTree = "<group>"; };
+		6C867ADA19FE809400315F83 /* GlobalState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +146,12 @@
 				6C26E4F819EB058F002F627D /* LaunchScreen.xib */,
 				6C6450B119F5178C002D67EE /* ThirdViewController.h */,
 				6C6450B219F5178C002D67EE /* ThirdViewController.m */,
+				6C867AD619FE7F6A00315F83 /* ViewControllerAddHelicopter.h */,
+				6C867AD719FE7F6A00315F83 /* ViewControllerAddHelicopter.m */,
 				6C867AB719FE726F00315F83 /* WeightandBalance.h */,
 				6C867AB819FE726F00315F83 /* WeightandBalance.m */,
+				6C867AD919FE809400315F83 /* GlobalState.h */,
+				6C867ADA19FE809400315F83 /* GlobalState.m */,
 				6C867AD519FE743300315F83 /* Frameworks */,
 				6C26E4E619EB058F002F627D /* Supporting Files */,
 			);
@@ -306,7 +316,9 @@
 			files = (
 				6C26E4F219EB058F002F627D /* SecondViewController.m in Sources */,
 				6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */,
+				6C867ADB19FE809400315F83 /* GlobalState.m in Sources */,
 				6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */,
+				6C867AD819FE7F6A00315F83 /* ViewControllerAddHelicopter.m in Sources */,
 				6C26E4EC19EB058F002F627D /* AppDelegate.m in Sources */,
 				6C26E4EF19EB058F002F627D /* FirstViewController.m in Sources */,
 				6C26E4E919EB058F002F627D /* main.m in Sources */,

@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GlobalState.h"
 
 @interface WeightandBalance : NSObject
 
 @property NSInteger *BasicEmptyWeight;
-@property NSInteger *Arm;
+@property NSInteger *BasicArm;
 
 
 
