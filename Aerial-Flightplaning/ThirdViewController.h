@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIDatePicker *Date_Picker;
+
+@interface ThirdViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
+- (IBAction)textFieldGallonsAction:(id)sender;
+- (IBAction)textFieldLiterAction:(id)sender;
+- (IBAction)textFieldKiloAction:(id)sender;
+- (IBAction)textFieldPoundsAction:(id)sender;
+
+
+
+
+@property (weak, nonatomic) IBOutlet UITextField *textFieldLiter;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldGallons;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldKilo;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPounds;
 
 @end
