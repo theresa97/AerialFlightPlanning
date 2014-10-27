@@ -11,9 +11,7 @@
 @interface ThirdViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIDatePicker *Date_Picker;
 
-//hallo THeresa
-//Hallo Leute‚
-//add svn Comment here
+
 
 
 @end
