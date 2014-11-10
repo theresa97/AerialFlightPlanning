@@ -12,15 +12,11 @@
 
 @end
 
-<<<<<<< .mine
+
 @implementation ThirdViewController{
     NSMutableDictionary *dictionary ;
 }
-=======
-@implementation ThirdViewController{
-    
-}
->>>>>>> .r30
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
