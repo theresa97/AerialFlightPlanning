@@ -10,5 +10,13 @@
 
 @interface ViewControllerAddHelicopter : UIViewController
 - (IBAction)saveNewHelicopter:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *helicopterName;
+@property (weak, nonatomic) IBOutlet UITextField *helicopterType;
+@property (weak, nonatomic) IBOutlet UITextField *BasicEmtpyWeightTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *basicEmptyWeightArm;
+@property (weak, nonatomic) IBOutlet UITextField *pilotSeatArm;
+@property (weak, nonatomic) IBOutlet UITextField *CoPilotSeatArm;
+
+
 
 @end

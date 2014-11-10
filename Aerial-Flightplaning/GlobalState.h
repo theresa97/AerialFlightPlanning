@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface GlobalState : NSObject
-@property NSMutableArray *helicopters;
+@property NSMutableArray *helicopters; // array for PickerView with all stored Helicopters
 
 +(GlobalState *)Instance;
 - (NSString *)dataFilePath:(NSString *)pDataFile;

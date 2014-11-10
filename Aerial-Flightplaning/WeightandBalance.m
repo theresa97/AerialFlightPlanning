@@ -9,6 +9,15 @@
 #import "WeightandBalance.h"
 
 @implementation WeightandBalance
+@synthesize BasicArm;
+@synthesize BasicEmptyWeight;
+@synthesize weigthPilot;
+@synthesize armPilot;
+@synthesize weightCoPilot;
+@synthesize armCoPilot;
+
+
+
 
 
 

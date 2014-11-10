@@ -13,7 +13,10 @@
 
 @property NSInteger *BasicEmptyWeight;
 @property NSInteger *BasicArm;
-
+@property NSInteger *weigthPilot;
+@property NSInteger *armPilot;
+@property NSInteger *weightCoPilot;
+@property NSInteger *armCoPilot;
 
 
 @end
