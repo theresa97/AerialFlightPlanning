@@ -18,5 +18,19 @@
 @property (weak, nonatomic) IBOutlet UITextField *CoPilotSeatArm;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *addPassanger;
+- (IBAction)addPassanger:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelSitzname;
+@property (weak, nonatomic) IBOutlet UILabel *labelArmLong;
+@property (weak, nonatomic) IBOutlet UILabel *labelArmLat;
+
+@property (weak, nonatomic) IBOutlet UITextField *TextSitzName;
+@property (weak, nonatomic) IBOutlet UITextField *textArmLong;
+@property (weak, nonatomic) IBOutlet UITextField *textArmLat;
+
+
+- (IBAction)addFilledPassanger:(id)sender;
+
 
 @end
