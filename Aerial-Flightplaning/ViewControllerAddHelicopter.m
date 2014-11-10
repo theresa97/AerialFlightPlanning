@@ -34,4 +34,18 @@
 
 - (IBAction)saveNewHelicopter:(id)sender {
 }
+- (IBAction)addPassanger:(id)sender {
+    [self.labelSitzname setHidden:NO ];
+    [self.labelArmLong setHidden:NO];
+    [self.labelArmLat setHidden:NO];
+    [self.TextSitzName setHidden:NO];
+    [self.textArmLong setHidden:NO];
+    [self.textArmLat setHidden:NO];
+    
+}
+- (IBAction)addFilledPassanger:(id)sender {
+    //missing
+    
+    
+}
 @end
