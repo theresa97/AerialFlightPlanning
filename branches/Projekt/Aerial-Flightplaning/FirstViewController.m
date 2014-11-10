@@ -14,7 +14,7 @@
 @end
 
 @implementation FirstViewController{
-    int selectedComponent;
+    NSInteger selectedComponent;
 }
 
 
@@ -38,29 +38,35 @@
 
 - (IBAction)buttonSendeZuCloud:(UIButton *)sender {
     PFObject *data = [PFObject objectWithClassName:@"Datas"];
-    data[@"textFieldPilot_data"] = self.textFieldPilot.text;
-    data[@"textFieldFlughelfer_data"] = self.textFieldFlughelfer.text;
-    data[@"textViewCrew_data"] = self.textViewCrew.text;
-    //data[@"pickerHubschrauber_data"] = selectedComponent;
-    //data[@"pickerDateDatum_data"] = [self.pickerDateDatum selectedRowInComponent:selectedComponent];
+    
+    NSDate *date = self.pickerDateDatum.date;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"dd.MM yyyy HH:mm"];
+    NSString *dateString = [formatter  stringFromDate:date];
+    
+    data[@"Pilotenname"] = self.textFieldPilot.text;
+    data[@"Flughelfer"] = self.textFieldFlughelfer.text;
+    data[@"Team"] = self.textViewCrew.text;
+    data[@"Hubschraubername"] = [[GlobalState Instance].helicopters objectAtIndex:selectedComponent];
+    data[@"Durchfuehrungsdatum"] = dateString;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{ // SPALTN
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{  //REIHEN
-    //return [[GlobalState Instance].CarLicensePlates count]; // Änderung– Daten von M.
-    return 0;
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    //REIHEN
+   return [[GlobalState Instance].helicopters count]; // Änderung– Daten von M.
+   
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    //return [[GlobalState Instance].CarLicensePlates objectAtIndex:row]; //DATEN von M.
-    return 0;
-}
+    return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M.
+   }
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedComponent = row;
-    // NSLog(@"%d",selectedComponent);
+   
 }
 @end
