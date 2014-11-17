@@ -10,6 +10,21 @@
 
 @interface HU300 : NSObject
 
-
+@property NSDecimalNumber* BasicEmptyWeight;
+@property NSDecimalNumber* BasicEmptyWeightArmLong;
+@property NSDecimalNumber* BasicEmptyWeightArmLat;
+@property NSDecimalNumber* PilotWeight;
+@property NSDecimalNumber* PilotLongArm;
+@property NSDecimalNumber* PilotLatArm;
+@property NSDecimalNumber* COpilotweight;
+@property NSDecimalNumber* COpilotLongArm;
+@property NSDecimalNumber* COpilotLatArm;
+@property NSDecimalNumber* MidPassangerWeight;
+@property NSDecimalNumber* MidPassangerLongArm;
+@property NSDecimalNumber* MidPassagerLatArm;
+@property NSDecimalNumber* GloveBoxWeight;
+@property NSDecimalNumber* GloveBoxLongArm;
+@property NSDecimalNumber* GloveBoxLatArm;
+@property NSString
 
 @end

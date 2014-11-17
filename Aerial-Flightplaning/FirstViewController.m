@@ -18,10 +18,14 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+<<<<<<< .mine
+        [[GlobalState Instance].helicopters addObject:@"HU300"];
+=======
 
   
    
 
+>>>>>>> .r45
     
 }
 - (void)viewDidLoad {
