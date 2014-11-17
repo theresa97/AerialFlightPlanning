@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "GlobalState.h"
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
 //Properties
 
