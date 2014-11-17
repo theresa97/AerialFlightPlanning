@@ -18,11 +18,15 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [[GlobalState Instance].helicopters addObject:@"HU300"];
+
+  
+   
+
     
 }
 - (void)viewDidLoad {
-    [super viewDidLoad];
+      [super viewDidLoad];
+      [[GlobalState Instance].helicopters addObject:@"HU300"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -52,6 +56,7 @@
     data[@"Team"] = self.textViewCrew.text;
     data[@"Hubschraubername"] = [[GlobalState Instance].helicopters objectAtIndex:selectedComponent];
     data[@"Durchfuehrungsdatum"] = dateString;
+    [data saveInBackground];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{ // SPALTN
