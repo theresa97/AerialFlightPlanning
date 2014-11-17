@@ -7,27 +7,22 @@
 //
 
 #import "ThirdViewController.h"
+#import "GlobalState.h"
 
 @interface ThirdViewController ()
 
 @end
 
-<<<<<<< .mine
-=======
 
->>>>>>> .r33
 @implementation ThirdViewController{
     NSMutableDictionary *dictionary ;
 }
 
-<<<<<<< .mine
+
 
 
 -(void)viewDidLoad {
-=======
 
-- (void)viewDidLoad {
->>>>>>> .r33
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -68,6 +63,9 @@
     
 }
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return [dictionary count];
+}
 
 
 - (IBAction)textFieldGallonsAction:(id)sender{

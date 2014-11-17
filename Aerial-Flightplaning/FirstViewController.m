@@ -17,7 +17,10 @@
     NSInteger selectedComponent;
 }
 
-
+-(void)viewWillAppear:(BOOL)animated{
+    [[GlobalState Instance].helicopters addObject:@"HU300"];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -62,11 +65,14 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M.
+    NSLog(@"Hier");
+    return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M
+    
+    
    }
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedComponent = row;
-   
+    
 }
 @end
