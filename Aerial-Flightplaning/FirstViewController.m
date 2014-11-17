@@ -18,19 +18,14 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-<<<<<<< .mine
-        [[GlobalState Instance].helicopters addObject:@"HU300"];
-=======
 
-  
-   
-
->>>>>>> .r45
-    
+        
 }
 - (void)viewDidLoad {
       [super viewDidLoad];
       [[GlobalState Instance].helicopters addObject:@"HU300"];
+      [[GlobalState Instance].helicopters addObject:@"JetRanger"];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 

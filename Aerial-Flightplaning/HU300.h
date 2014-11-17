@@ -10,6 +10,8 @@
 
 @interface HU300 : NSObject
 
+-(void) initVariables;
+
 @property NSDecimalNumber* BasicEmptyWeight;
 @property NSDecimalNumber* BasicEmptyWeightArmLong;
 @property NSDecimalNumber* BasicEmptyWeightArmLat;
@@ -25,6 +27,12 @@
 @property NSDecimalNumber* GloveBoxWeight;
 @property NSDecimalNumber* GloveBoxLongArm;
 @property NSDecimalNumber* GloveBoxLatArm;
-@property NSString
+@property NSDecimalNumber* MainFuelTankLiter;
+@property NSDecimalNumber* MainFuelTankLongArm;
+@property NSDecimalNumber* MainFuelTankLatArm;
+@property NSDecimalNumber* AuxFuelTankLiter;
+@property NSDecimalNumber* AuxFuelTankLongArm;
+@property NSDecimalNumber* AuxFuelTankLatArm;
+
 
 @end
