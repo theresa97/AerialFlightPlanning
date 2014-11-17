@@ -22,7 +22,9 @@
     [Parse setApplicationId:@"LvbHgOhydS56QecdmdtNwq4iEcPtczjfeuc0sj4C"
                   clientKey:@"cccBLAo63ibXgJZxCssPp3kiWIFXE5QNjp0BLfs4"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-
+    
+    [GlobalState Instance].helicopters = [[NSMutableArray alloc]init];
+    
     return YES;
 }
 
