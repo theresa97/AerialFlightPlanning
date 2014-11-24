@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6686EED31A1ACC24007A2C7D /* LogInViewController.m */; };
+		66D0E5CE1A1AD77D008ECE59 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */; };
+		66D0E5D01A1AD788008ECE59 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5CF1A1AD788008ECE59 /* Accounts.framework */; };
+		66D0E5D21A1AD790008ECE59 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5D11A1AD790008ECE59 /* AdSupport.framework */; };
+		66D0E5D41A1AD796008ECE59 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5D31A1AD796008ECE59 /* Social.framework */; };
 		6C26E4E919EB058F002F627D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4E819EB058F002F627D /* main.m */; };
 		6C26E4EC19EB058F002F627D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4EB19EB058F002F627D /* AppDelegate.m */; };
 		6C26E4EF19EB058F002F627D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4EE19EB058F002F627D /* FirstViewController.m */; };
@@ -48,6 +52,10 @@
 /* Begin PBXFileReference section */
 		6686EED21A1ACC23007A2C7D /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		6686EED31A1ACC24007A2C7D /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		66D0E5CF1A1AD788008ECE59 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		66D0E5D11A1AD790008ECE59 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		66D0E5D31A1AD796008ECE59 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6C26E4E319EB058F002F627D /* Aerial-Flightplaning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aerial-Flightplaning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C26E4E719EB058F002F627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C26E4E819EB058F002F627D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D0E5D41A1AD796008ECE59 /* Social.framework in Frameworks */,
+				66D0E5D21A1AD790008ECE59 /* AdSupport.framework in Frameworks */,
+				66D0E5D01A1AD788008ECE59 /* Accounts.framework in Frameworks */,
+				66D0E5CE1A1AD77D008ECE59 /* libsqlite3.0.dylib in Frameworks */,
 				6C867AD419FE742A00315F83 /* SystemConfiguration.framework in Frameworks */,
 				6C867AD219FE742000315F83 /* StoreKit.framework in Frameworks */,
 				6C867AD019FE741800315F83 /* Security.framework in Frameworks */,
@@ -120,6 +132,7 @@
 		6C26E4DA19EB058F002F627D = {
 			isa = PBXGroup;
 			children = (
+				66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */,
 				6C26E4E519EB058F002F627D /* Aerial-Flightplaning */,
 				6C26E50219EB058F002F627D /* Aerial-FlightplaningTests */,
 				6C26E4E419EB058F002F627D /* Products */,
@@ -157,6 +170,9 @@
 				6C867ADA19FE809400315F83 /* GlobalState.m */,
 				6C7206501A1A240600EF8FE5 /* HU300.h */,
 				6C7206511A1A240600EF8FE5 /* HU300.m */,
+				66D0E5D31A1AD796008ECE59 /* Social.framework */,
+				66D0E5D11A1AD790008ECE59 /* AdSupport.framework */,
+				66D0E5CF1A1AD788008ECE59 /* Accounts.framework */,
 				6C867AD519FE743300315F83 /* Frameworks */,
 				6C26E4E619EB058F002F627D /* Supporting Files */,
 			);

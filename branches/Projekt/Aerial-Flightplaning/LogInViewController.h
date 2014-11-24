@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface LogInViewController : UIViewController //<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface LogInViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UILabel *welcomeLabel;
 
