@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="-1499" y="-20"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="7ve-Vp-K48">
             <objects>
-                <viewController id="Tuu-NO-axc" sceneMemberID="viewController">
+                <viewController id="Tuu-NO-axc" customClass="LogInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wk5-Gm-Kxp"/>
                         <viewControllerLayoutGuide type="bottom" id="KdJ-Wc-5fO"/>
@@ -261,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjP-5d-WgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-335" y="-1061"/>
+            <point key="canvasLocation" x="-311" y="-1149"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
