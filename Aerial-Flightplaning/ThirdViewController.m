@@ -18,9 +18,9 @@
     NSDictionary *dictionary ;
     NSArray *ArrayTitle;
     NSString *value301;
-    NSNumber *valueUmrechnung301;
+    NSDecimalNumber *valueUmrechnung301;
     NSString *value302;
-    NSNumber *valueUmrechnung302;}
+    NSDecimalNumber *valueUmrechnung302;}
 
 
 
@@ -28,7 +28,9 @@
 -(void)viewDidLoad {
 
     [super viewDidLoad];
-    ArrayTitle = @[@"Gallonen", @"Kilogramm", @"Imperalgallonen", @"Meile", @"Meter", @"Liter",@"Kilometer", @"Fuß" ];    // Do any additional setup after loading the view.
+    ArrayTitle = @[@"Gallonen", @"Kilogramm", @"Imperalgallonen", @"Meile", @"Meter", @"Liter",@"Kilometer", @"Fuß" ];
+    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,14 +77,29 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     if( pickerView.tag == 301){
         value301 = [ArrayTitle objectAtIndex:row];
+        
         valueUmrechnung301 = [dictionary valueForKey:value301];
+        
+        if([value301  isEqual: @"Gallonen"]){
+            ArrayTitle = @[@"Liter" , @"Imperalgallonene"];
+            //ArrayTitle - kann man es hier nochmal machen bzw kann man arraytitle updaten -- gefahr: die ursprülgich wird wrsl nicht erhalten
+            //[pickerView. reloadAllComponats];
+            //wie spricht man pickerView mit tag an bzw. updatet man es dan -- oben funktioniert es nicht mit reload
+            
+            
+            
+        }
         
     } else if(pickerView.tag== 302){
         value302 = [ArrayTitle objectAtIndex:row];
         valueUmrechnung302 = [dictionary valueForKey:value302];
     }
     
-    NSDecimalNumber *value301 = [NSDecimalNumber decimalNumberWithString:self.Input301.text];
+    NSDecimalNumber *digit301 = [NSDecimalNumber decimalNumberWithString:self.Input301.text];
+    NSDecimalNumber *equals =  [digit301 decimalNumberByMultiplyingBy:valueUmrechnung301];
+    NSString *final =[NSString stringWithFormat:@"%@", equals];
+    [self.Input301 setText:final];
+    
     
     
     
