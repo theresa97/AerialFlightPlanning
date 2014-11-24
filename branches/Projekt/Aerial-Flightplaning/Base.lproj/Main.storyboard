@@ -256,12 +256,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vv3-PX-Nbe"/>
                     <connections>
-                        <segue destination="49e-Tb-3d3" kind="custom" identifier="TabViewSegue" id="hWX-hp-xRo"/>
+                        <segue destination="49e-Tb-3d3" kind="replace" identifier="TabViewSegue" splitViewControllerTargetIndex="1" id="hWX-hp-xRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjP-5d-WgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-311" y="-1149"/>
+            <point key="canvasLocation" x="-305" y="-1185"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
