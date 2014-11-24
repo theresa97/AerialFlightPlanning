@@ -46,6 +46,7 @@
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
     // Check if both fields are completed
     if (username && password && username.length != 0 && password.length != 0) {
+        
         return YES; // Begin login process
     }
     
@@ -75,6 +76,8 @@
 
 // Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self performSegueWithIdentifier:@"TabViewSegue" sender:self];
+    NSLog(@"hhhh");
     [self.navigationController popViewControllerAnimated:YES];
 }
 
