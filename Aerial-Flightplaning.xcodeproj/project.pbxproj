@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6686EED31A1ACC24007A2C7D /* LogInViewController.m */; };
 		6C26E4E919EB058F002F627D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4E819EB058F002F627D /* main.m */; };
 		6C26E4EC19EB058F002F627D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4EB19EB058F002F627D /* AppDelegate.m */; };
 		6C26E4EF19EB058F002F627D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4EE19EB058F002F627D /* FirstViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6686EED21A1ACC23007A2C7D /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		6686EED31A1ACC24007A2C7D /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		6C26E4E319EB058F002F627D /* Aerial-Flightplaning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aerial-Flightplaning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C26E4E719EB058F002F627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C26E4E819EB058F002F627D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 		6C26E4E519EB058F002F627D /* Aerial-Flightplaning */ = {
 			isa = PBXGroup;
 			children = (
+				6686EED21A1ACC23007A2C7D /* LogInViewController.h */,
+				6686EED31A1ACC24007A2C7D /* LogInViewController.m */,
 				6C26E4EA19EB058F002F627D /* AppDelegate.h */,
 				6C26E4EB19EB058F002F627D /* AppDelegate.m */,
 				6C26E4ED19EB058F002F627D /* FirstViewController.h */,
@@ -316,6 +321,7 @@
 			files = (
 				6C26E4F219EB058F002F627D /* SecondViewController.m in Sources */,
 				6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */,
+				6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */,
 				6C867ADB19FE809400315F83 /* GlobalState.m in Sources */,
 				6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */,
 				6C26E4EC19EB058F002F627D /* AppDelegate.m in Sources */,
