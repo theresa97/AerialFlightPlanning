@@ -15,8 +15,12 @@
 
 
 @implementation ThirdViewController{
-    NSMutableDictionary *dictionary ;
-}
+    NSDictionary *dictionary ;
+    NSArray *ArrayTitle;
+    NSString *value301;
+    NSNumber *valueUmrechnung301;
+    NSString *value302;
+    NSNumber *valueUmrechnung302;}
 
 
 
@@ -24,7 +28,7 @@
 -(void)viewDidLoad {
 
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    ArrayTitle = @[@"Gallonen", @"Kilogramm", @"Imperalgallonen", @"Meile", @"Meter", @"Liter",@"Kilometer", @"Fuß" ];    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,72 +39,75 @@
 -(void) madeDictionary{
     dictionary =[[NSMutableDictionary alloc]init];
     NSNumber *gallonen = [NSNumber numberWithDouble:3.785];
-    NSNumber *kilo = [NSNumber numberWithDouble:2.20462262];
+    NSNumber *kilogramm = [NSNumber numberWithDouble:2.20462262];
     NSNumber *imperalgallonen = [NSNumber numberWithDouble:4.546092];
     NSNumber *meile = [NSNumber numberWithDouble:1.609344];
-    NSNumber *fuß = [NSNumber numberWithDouble:3.2808];
+    NSNumber *meter = [NSNumber numberWithDouble:3.2808];
+    NSNumber *liter = [NSNumber numberWithDouble:0.264173];
+    NSNumber *kilometer = [NSNumber numberWithDouble:0.62137];
+    NSNumber *fuß = [NSNumber numberWithDouble:0.304803];
     [dictionary setValue:gallonen forKey:@"Gallonen"];
-    [dictionary setValue:kilo forKey:@"Kilo"];
+    [dictionary setValue:kilogramm forKey:@"Kilogramm"];
     [dictionary setValue:imperalgallonen forKey:@"Imperalgallonen"];
     [dictionary setValue:meile forKey:@"Meile"];
+    [dictionary setValue:meter forKey:@"Meter"];
+    [dictionary setValue:liter forKey:@"Liter"];
+    [dictionary setValue:kilometer forKey:@"Kilometer"];
     [dictionary setValue:fuß forKey:@"Fuß"];
 }
 
-
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [dictionary count];
+    return [ArrayTitle count];
 }
 
-
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+    
+}
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    NSArray *namen = [dictionary allKeys];
-    return [namen objectAtIndex:row];
-
+    
+    return [ArrayTitle objectAtIndex:row];
+    
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if( pickerView.tag == 301){
+        value301 = [ArrayTitle objectAtIndex:row];
+        valueUmrechnung301 = [dictionary valueForKey:value301];
+        
+    } else if(pickerView.tag== 302){
+        value302 = [ArrayTitle objectAtIndex:row];
+        valueUmrechnung302 = [dictionary valueForKey:value302];
+    }
     
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return [dictionary count];
-}
-
-
-- (IBAction)textFieldGallonsAction:(id)sender{
-    CGFloat eingabe = [self.textFieldGallons.text floatValue];
-    double ergebnis = eingabe*4.546092 ;
-    NSString *liter = [NSString stringWithFormat:@"%f", ergebnis];
-    [self.textFieldLiter setText:liter];
+    NSDecimalNumber *value301 = [NSDecimalNumber decimalNumberWithString:self.Input301.text];
     
     
-}
-
-- (IBAction)textFieldLiterAction:(id)sender {
-    CGFloat eingabe = [self.textFieldLiter.text floatValue];
-    CGFloat ergebnis = (CGFloat)eingabe/4.546092;
-    NSString *gallon =[NSString stringWithFormat:@"%f", ergebnis];
-    [self.textFieldGallons setText:gallon];
+    
+    
+    
     
     
     
 }
-- (IBAction)textFieldKiloAction:(id)sender {
-    CGFloat eingabe = [self.textFieldKilo.text floatValue];
-    double ergebnis = eingabe* 2.20462262;
-    NSString *pounds = [NSString stringWithFormat:@"%f", ergebnis];
-    [self.textFieldPounds setText:pounds];
+
+
+
+/*- (IBAction)textFieldGallonsAction:(id)sender{
+ CGFloat eingabe = [self.textFieldGallons.text floatValue];
+ double ergebnis = eingabe*4.546092 ;
+ NSString *liter = [NSString stringWithFormat:@"%f", ergebnis];
+ [self.textFieldLiter setText:liter];
+ 
+ 
+ }*/
+
+
+- (IBAction)Input301Action:(id)sender {
 }
 
-- (IBAction)textFieldPoundsAction:(id)sender {
-    CGFloat eingabe = [self.textFieldKilo.text floatValue];
-    double ergebnis = eingabe* 2.20462262;
-    NSString *pounds = [NSString stringWithFormat:@"%f", ergebnis];
-    [self.textFieldPounds setText:pounds];}
-
-
-
+- (IBAction)Input302Action:(id)sender {
+}
 @end
-
-
