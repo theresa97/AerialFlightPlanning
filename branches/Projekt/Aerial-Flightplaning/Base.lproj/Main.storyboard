@@ -175,14 +175,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView tag="301" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-2m-3tY">
-                                <rect key="frame" x="22" y="85" width="300" height="162"/>
+                                <rect key="frame" x="13" y="170" width="300" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rFt-Pv-PhF" id="yEn-3h-36j"/>
                                     <outlet property="delegate" destination="rFt-Pv-PhF" id="asm-hW-KKp"/>
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-p4-kYg">
-                                <rect key="frame" x="492" y="269" width="97" height="30"/>
+                                <rect key="frame" x="486" y="345" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -190,20 +190,61 @@
                                 </connections>
                             </textField>
                             <pickerView tag="302" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-2a-y74">
-                                <rect key="frame" x="359" y="85" width="351" height="162"/>
+                                <rect key="frame" x="359" y="170" width="351" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rFt-Pv-PhF" id="MLb-aA-OaO"/>
                                     <outlet property="delegate" destination="rFt-Pv-PhF" id="QAP-Uo-oUA"/>
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-vO-51M">
-                                <rect key="frame" x="119" y="269" width="97" height="30"/>
+                                <rect key="frame" x="115" y="345" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="Input301Action:" destination="rFt-Pv-PhF" eventType="editingDidEnd" id="exY-Oy-sla"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE8-1W-ubi">
+                                <rect key="frame" x="250" y="93" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Länge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LaengeAction:" destination="rFt-Pv-PhF" eventType="touchUpInside" id="B0L-Ea-sBH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2p-Sh-G9h">
+                                <rect key="frame" x="403" y="93" width="63" height="30"/>
+                                <state key="normal" title="Volumen">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="VolumenAction:" destination="rFt-Pv-PhF" eventType="touchUpInside" id="fYd-xC-gPu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWQ-Pa-emZ">
+                                <rect key="frame" x="579" y="93" width="121" height="30"/>
+                                <state key="normal" title="Geschwindigkeit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GeschwindigkeitAction:" destination="rFt-Pv-PhF" eventType="touchUpInside" id="YUc-Zn-BNm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWk-21-Y7j">
+                                <rect key="frame" x="81" y="93" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Gewicht">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="GewichtAction:" destination="rFt-Pv-PhF" eventType="touchUpInside" id="Xta-ZN-NJP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -211,6 +252,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
+                        <outlet property="BTNGeschwindigkeit" destination="eWQ-Pa-emZ" id="iNV-CU-Ibp"/>
+                        <outlet property="BTNGewicht" destination="PWk-21-Y7j" id="GyR-1V-LyD"/>
+                        <outlet property="BTNLaenge" destination="LE8-1W-ubi" id="da9-a9-52a"/>
+                        <outlet property="BTNVolumen" destination="F2p-Sh-G9h" id="gNU-jE-f3y"/>
                         <outlet property="Date_Picker" destination="9ta-G9-Ixa" id="ZUP-O0-KzJ"/>
                         <outlet property="Input301" destination="4gW-vO-51M" id="faF-tW-l9W"/>
                     </connections>
