@@ -81,7 +81,7 @@
         valueUmrechnung301 = [dictionary valueForKey:value301];
         
         if([value301  isEqual: @"Gallonen"]){
-            ArrayTitle = @[@"Liter" , @"Imperalgallonene"];
+            // = @[@"Liter" , @"Imperalgallonene"];
             //ArrayTitle - kann man es hier nochmal machen bzw kann man arraytitle updaten -- gefahr: die ursprülgich wird wrsl nicht erhalten
             //[pickerView. reloadAllComponats];
             //wie spricht man pickerView mit tag an bzw. updatet man es dan -- oben funktioniert es nicht mit reload
