@@ -251,7 +251,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vv3-PX-Nbe"/>
                     <connections>
-                        <segue destination="49e-Tb-3d3" kind="push" identifier="TabViewSegue" id="hWX-hp-xRo"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="TabViewSegue" id="hWX-hp-xRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjP-5d-WgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
