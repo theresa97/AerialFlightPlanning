@@ -76,9 +76,12 @@
 
 // Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
-    [self performSegueWithIdentifier:@"TabViewSegue" sender:self];
+    //[self performSegueWithIdentifier:@"TabViewSegue" sender:self];
+    [self performSegueWithIdentifier:@"TabViewSegue" sender:nil];
+    
+    
     NSLog(@"hhhh");
-    [self.navigationController popViewControllerAnimated:YES];
+   // [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -114,6 +117,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"hal");
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
