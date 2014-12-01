@@ -20,6 +20,7 @@
 		6C26E4F719EB058F002F627D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C26E4F619EB058F002F627D /* Images.xcassets */; };
 		6C26E4FA19EB058F002F627D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C26E4F819EB058F002F627D /* LaunchScreen.xib */; };
 		6C26E50619EB058F002F627D /* Aerial_FlightplaningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E50519EB058F002F627D /* Aerial_FlightplaningTests.m */; };
+		6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C3320741A2C9C9A00E1C0FB /* Lunch.png */; };
 		6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6450B219F5178C002D67EE /* ThirdViewController.m */; };
 		6C7206521A1A240600EF8FE5 /* HU300.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7206511A1A240600EF8FE5 /* HU300.m */; };
 		6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867AB819FE726F00315F83 /* WeightandBalance.m */; };
@@ -71,6 +72,7 @@
 		6C26E4FF19EB058F002F627D /* Aerial-FlightplaningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerial-FlightplaningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C26E50419EB058F002F627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C26E50519EB058F002F627D /* Aerial_FlightplaningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aerial_FlightplaningTests.m; sourceTree = "<group>"; };
+		6C3320741A2C9C9A00E1C0FB /* Lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lunch.png; sourceTree = "<group>"; };
 		6C6450B119F5178C002D67EE /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		6C6450B219F5178C002D67EE /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		6C7206501A1A240600EF8FE5 /* HU300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HU300.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */,
+				6C3320731A2C9C8B00E1C0FB /* Images */,
 				6C26E4E519EB058F002F627D /* Aerial-Flightplaning */,
 				6C26E50219EB058F002F627D /* Aerial-FlightplaningTests */,
 				6C26E4E419EB058F002F627D /* Products */,
@@ -203,6 +206,14 @@
 				6C26E50419EB058F002F627D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C3320731A2C9C8B00E1C0FB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6C3320741A2C9C9A00E1C0FB /* Lunch.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		6C867ABA19FE734400315F83 /* parse-library-1 */ = {
@@ -317,6 +328,7 @@
 			files = (
 				6C26E4F519EB058F002F627D /* Main.storyboard in Resources */,
 				6C26E4FA19EB058F002F627D /* LaunchScreen.xib in Resources */,
+				6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */,
 				6C26E4F719EB058F002F627D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
