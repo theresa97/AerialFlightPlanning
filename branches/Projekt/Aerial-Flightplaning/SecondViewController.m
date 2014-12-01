@@ -12,10 +12,74 @@
 
 @end
 
-@implementation SecondViewController
+
+@implementation SecondViewController{
+
+}
+@synthesize waterLevel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    UIGraphicsBeginImageContext(waterLevel.frame.size);
+    [waterLevel.image drawAtPoint:CGPointMake(400,300)];
+    //define BezierPath
+    
+    UIBezierPath* bezierPath = UIBezierPath.bezierPath;
+    /*[bezierPath moveToPoint: CGPointMake(0, 600)];
+    [bezierPath addLineToPoint: CGPointMake(450, 600)];
+    [bezierPath addLineToPoint: CGPointMake(650, 450)];
+    [bezierPath addLineToPoint: CGPointMake(560, 0)];
+    [bezierPath addLineToPoint: CGPointMake(100, 0)];
+    [bezierPath addLineToPoint: CGPointMake(100.5, -0.5)];
+    [bezierPath addLineToPoint: CGPointMake(0, 600)];
+    [bezierPath closePath];*/
+
+    [bezierPath moveToPoint: CGPointMake(20, 320)];
+    [bezierPath addLineToPoint: CGPointMake(245, 320)];
+    [bezierPath addLineToPoint: CGPointMake(345, 245)];
+    [bezierPath addLineToPoint: CGPointMake(300, 20)];
+    [bezierPath addLineToPoint: CGPointMake(70, 20)];
+    [bezierPath addLineToPoint: CGPointMake(70,20)];
+    [bezierPath addLineToPoint: CGPointMake(20, 320)];
+    [bezierPath closePath];
+
+    //[UIColor.grayColor setFill];
+    //[bezierPath fill];
+    [UIColor.blackColor setStroke];
+    bezierPath.lineWidth = 1;
+    
+    [bezierPath stroke];
+    // Add to the current Graphic context
+    
+    
+    
+    
+    UIBezierPath* bezierPathDiagram = UIBezierPath.bezierPath;
+    [bezierPathDiagram moveToPoint:CGPointMake(0, 0)];
+    [bezierPathDiagram addLineToPoint:CGPointMake(0, 320)];
+    [bezierPathDiagram closePath];
+    bezierPathDiagram.lineWidth = 4;
+    [UIColor.blackColor setStroke];
+    [bezierPathDiagram stroke];
+    
+    UIBezierPath* bezierPathDiagramVertical = UIBezierPath.bezierPath;
+    [bezierPathDiagramVertical moveToPoint:CGPointMake(20,340)];
+    [bezierPathDiagramVertical addLineToPoint:CGPointMake(355,340)];
+    [bezierPathDiagramVertical closePath];
+    bezierPathDiagramVertical.lineWidth = 2;
+    [UIColor.blackColor setStroke];
+    [bezierPathDiagramVertical stroke];
+    
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextAddPath(context,bezierPath.CGPath);
+    CGContextAddPath(context, bezierPathDiagram.CGPath);
+    waterLevel.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [self.view addSubview:waterLevel];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -23,6 +23,7 @@
 		6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C3320741A2C9C9A00E1C0FB /* Lunch.png */; };
 		6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6450B219F5178C002D67EE /* ThirdViewController.m */; };
 		6C7206521A1A240600EF8FE5 /* HU300.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7206511A1A240600EF8FE5 /* HU300.m */; };
+		6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */; };
 		6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867AB819FE726F00315F83 /* WeightandBalance.m */; };
 		6C867ABE19FE734400315F83 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABB19FE734400315F83 /* Bolts.framework */; };
 		6C867ABF19FE734400315F83 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABC19FE734400315F83 /* Parse.framework */; };
@@ -77,6 +78,7 @@
 		6C6450B219F5178C002D67EE /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		6C7206501A1A240600EF8FE5 /* HU300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HU300.h; sourceTree = "<group>"; };
 		6C7206511A1A240600EF8FE5 /* HU300.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HU300.m; sourceTree = "<group>"; };
+		6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiagramHU300.png; sourceTree = "<group>"; };
 		6C867AB719FE726F00315F83 /* WeightandBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightandBalance.h; sourceTree = "<group>"; };
 		6C867AB819FE726F00315F83 /* WeightandBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightandBalance.m; sourceTree = "<group>"; };
 		6C867ABB19FE734400315F83 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		6C3320731A2C9C8B00E1C0FB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */,
 				6C3320741A2C9C9A00E1C0FB /* Lunch.png */,
 			);
 			name = Images;
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C26E4F519EB058F002F627D /* Main.storyboard in Resources */,
+				6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */,
 				6C26E4FA19EB058F002F627D /* LaunchScreen.xib in Resources */,
 				6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */,
 				6C26E4F719EB058F002F627D /* Images.xcassets in Resources */,

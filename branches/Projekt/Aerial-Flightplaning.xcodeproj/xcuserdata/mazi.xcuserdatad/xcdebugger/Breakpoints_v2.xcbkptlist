@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aerial-Flightplaning/LogInViewController.m"
-            timestampString = "439130474.913182"
+            timestampString = "439134703.895106"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-logInViewControllerDidCancelLogIn:"
             landmarkType = "5">
          </BreakpointContent>
