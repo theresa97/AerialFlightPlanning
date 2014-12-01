@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *waterLevel;
+
 
 
 @end
