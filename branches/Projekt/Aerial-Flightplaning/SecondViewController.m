@@ -67,10 +67,16 @@
     UIBezierPath* bezierPathDiagramVertical = UIBezierPath.bezierPath;
     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
     [bezierPathDiagramVertical addLineToPoint:CGPointMake(365,350)];
-    
-    for (int i = -2; i<4; i++) {
-     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
+    [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
     [bezierPathDiagramVertical addLineToPoint:CGPointMake(30,335)];
+    
+    //hier aufgehört weiter bei zeichnen der einzelnen stricke für die schwerpunkte
+    for (NSInteger i = 1; i<6; i++) {
+        NSLog(@"schleife");
+        NSInteger count = i*20;
+    [bezierPathDiagramVertical moveToPoint:CGPointMake(30+count,350)];
+    [bezierPathDiagramVertical addLineToPoint:CGPointMake(30+count,335)];
+        
     }
     
     [bezierPathDiagramVertical closePath];
