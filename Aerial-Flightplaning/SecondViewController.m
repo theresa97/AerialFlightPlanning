@@ -36,13 +36,13 @@
     [bezierPath addLineToPoint: CGPointMake(0, 600)];
     [bezierPath closePath];*/
 
-    [bezierPath moveToPoint: CGPointMake(20, 320)];
-    [bezierPath addLineToPoint: CGPointMake(245, 320)];
-    [bezierPath addLineToPoint: CGPointMake(345, 245)];
-    [bezierPath addLineToPoint: CGPointMake(300, 20)];
-    [bezierPath addLineToPoint: CGPointMake(70, 20)];
-    [bezierPath addLineToPoint: CGPointMake(70,20)];
-    [bezierPath addLineToPoint: CGPointMake(20, 320)];
+    [bezierPath moveToPoint: CGPointMake(30, 320)];
+    [bezierPath addLineToPoint: CGPointMake(255, 320)];
+    [bezierPath addLineToPoint: CGPointMake(355, 245)];
+    [bezierPath addLineToPoint: CGPointMake(310, 20)];
+    [bezierPath addLineToPoint: CGPointMake(80, 20)];
+    [bezierPath addLineToPoint: CGPointMake(80,20)];
+    [bezierPath addLineToPoint: CGPointMake(30, 320)];
     [bezierPath closePath];
 
     //[UIColor.grayColor setFill];
@@ -65,8 +65,14 @@
     [bezierPathDiagram stroke];
     
     UIBezierPath* bezierPathDiagramVertical = UIBezierPath.bezierPath;
-    [bezierPathDiagramVertical moveToPoint:CGPointMake(20,340)];
-    [bezierPathDiagramVertical addLineToPoint:CGPointMake(355,340)];
+    [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
+    [bezierPathDiagramVertical addLineToPoint:CGPointMake(365,350)];
+    
+    for (int i = -2; i<4; i++) {
+     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
+    [bezierPathDiagramVertical addLineToPoint:CGPointMake(30,335)];
+    }
+    
     [bezierPathDiagramVertical closePath];
     bezierPathDiagramVertical.lineWidth = 2;
     [UIColor.blackColor setStroke];
