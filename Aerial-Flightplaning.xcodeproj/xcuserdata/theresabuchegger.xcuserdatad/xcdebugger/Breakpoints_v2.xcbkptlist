@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aerial-Flightplaning/ThirdViewController.m"
-            timestampString = "437930439.439216"
+            timestampString = "439138362.083549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-pickerView:didSelectRow:inComponent:"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-madeDictionary"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aerial-Flightplaning/ThirdViewController.m"
-            timestampString = "437930439.439216"
+            timestampString = "439138362.083549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-pickerView:didSelectRow:inComponent:"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-madeDictionary"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -65,6 +65,22 @@
             endingLineNumber = "37"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aerial-Flightplaning/ThirdViewController.m"
+            timestampString = "439138362.083549"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "@implementation ThirdViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

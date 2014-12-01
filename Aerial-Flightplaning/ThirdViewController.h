@@ -13,8 +13,16 @@
 @interface ThirdViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *Input301;
 @property (weak, nonatomic) IBOutlet UITextField *Input302;
+@property (weak, nonatomic) IBOutlet UIButton *BTNGeschwindigkeit;
+@property (weak, nonatomic) IBOutlet UIButton *BTNVolumen;
+@property (weak, nonatomic) IBOutlet UIButton *BTNLaenge;
+@property (weak, nonatomic) IBOutlet UIButton *BTNGewicht;
 
 - (IBAction)Input301Action:(id)sender;
 - (IBAction)Input302Action:(id)sender;
+- (IBAction)GewichtAction:(id)sender;
+- (IBAction)LaengeAction:(id)sender;
+- (IBAction)VolumenAction:(id)sender;
+- (IBAction)GeschwindigkeitAction:(id)sender;
 
-@end 
+@end
