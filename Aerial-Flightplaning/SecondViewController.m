@@ -64,18 +64,31 @@
     [UIColor.blackColor setStroke];
     [bezierPathDiagram stroke];
     
+    
     UIBezierPath* bezierPathDiagramVertical = UIBezierPath.bezierPath;
+    bezierPathDiagramVertical.lineWidth = 1;
+    [UIColor.redColor setStroke];
+    [bezierPathDiagramVertical stroke];
+
     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
     [bezierPathDiagramVertical addLineToPoint:CGPointMake(365,350)];
     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
     [bezierPathDiagramVertical addLineToPoint:CGPointMake(30,335)];
     
+    
     //hier aufgehört weiter bei zeichnen der einzelnen stricke für die schwerpunkte
-    for (NSInteger i = 1; i<6; i++) {
+    for (NSInteger i = 1; i<14; i++) {
         NSLog(@"schleife");
-        NSInteger count = i*20;
-    [bezierPathDiagramVertical moveToPoint:CGPointMake(30+count,350)];
-    [bezierPathDiagramVertical addLineToPoint:CGPointMake(30+count,335)];
+        NSInteger count = i*25;
+        [bezierPathDiagramVertical moveToPoint:CGPointMake(30+count,350)];
+        [bezierPathDiagramVertical addLineToPoint:CGPointMake(30+count,0)];
+        bezierPathDiagramVertical.lineWidth = 1;
+        [UIColor.redColor setStroke];
+        [bezierPathDiagramVertical stroke];
+
+    }
+    for (NSInteger i = 1; i<13; i++) {
+        NSInteger count = i*50;
         
     }
     
