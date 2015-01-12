@@ -45,10 +45,8 @@
     [bezierPath addLineToPoint: CGPointMake(30, 320)];
     [bezierPath closePath];
 
-    //[UIColor.grayColor setFill];
-    //[bezierPath fill];
     [UIColor.blackColor setStroke];
-    bezierPath.lineWidth = 1;
+    bezierPath.lineWidth = 4;
     
     [bezierPath stroke];
     // Add to the current Graphic context
@@ -60,36 +58,37 @@
     [bezierPathDiagram moveToPoint:CGPointMake(0, 0)];
     [bezierPathDiagram addLineToPoint:CGPointMake(0, 320)];
     [bezierPathDiagram closePath];
-    bezierPathDiagram.lineWidth = 4;
+     bezierPathDiagram.lineWidth = 4;
     [UIColor.blackColor setStroke];
     [bezierPathDiagram stroke];
     
+    UIBezierPath* bezierPathDiagramHorizontal = UIBezierPath.bezierPath;
+    for (NSInteger i = 1; i<14; i++) {
+        NSInteger count = i*25;
+        [bezierPathDiagramHorizontal moveToPoint:CGPointMake(0,345-count)];
+        [bezierPathDiagramHorizontal addLineToPoint:CGPointMake(360,345-count)];
+    }
+    bezierPathDiagramHorizontal.lineWidth = 1;
+    [UIColor.blackColor setStroke];
+    [bezierPathDiagramHorizontal stroke];
+
     
     UIBezierPath* bezierPathDiagramVertical = UIBezierPath.bezierPath;
-    bezierPathDiagramVertical.lineWidth = 1;
-    [UIColor.redColor setStroke];
-    [bezierPathDiagramVertical stroke];
-
     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
     [bezierPathDiagramVertical addLineToPoint:CGPointMake(365,350)];
     [bezierPathDiagramVertical moveToPoint:CGPointMake(30,350)];
     [bezierPathDiagramVertical addLineToPoint:CGPointMake(30,335)];
+   
     
     
     //hier aufgehört weiter bei zeichnen der einzelnen stricke für die schwerpunkte
     for (NSInteger i = 1; i<14; i++) {
         NSLog(@"schleife");
         NSInteger count = i*25;
-        [bezierPathDiagramVertical moveToPoint:CGPointMake(30+count,350)];
-        [bezierPathDiagramVertical addLineToPoint:CGPointMake(30+count,0)];
-        bezierPathDiagramVertical.lineWidth = 1;
-        [UIColor.redColor setStroke];
-        [bezierPathDiagramVertical stroke];
-
-    }
-    for (NSInteger i = 1; i<13; i++) {
-        NSInteger count = i*50;
+        [bezierPathDiagramVertical moveToPoint:CGPointMake(5+count,350)];
+        [bezierPathDiagramVertical addLineToPoint:CGPointMake(5+count,0)];
         
+
     }
     
     [bezierPathDiagramVertical closePath];
