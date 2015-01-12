@@ -28,6 +28,7 @@
     bool VolumenBOOL ;
     bool LaengeBOOL ;
     bool GeschwindigkeitBOOL ;
+    
 }
 
 
@@ -48,9 +49,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/*
 -(void) madeDictionary{
-    
+ 
     NSNumber *gallonenInLiter = [NSNumber numberWithDouble:3.785];//in liter
     //Geschwindigkeit
     NSNumber *kmhInMeilenh= [NSNumber numberWithDouble:0.621371192];//in meilen/h
@@ -73,7 +74,7 @@
     NSNumber *kilometerInFuß = [NSNumber  numberWithDouble:3280.84];//inFuß
     
     NSNumber *fußInMeter = [NSNumber numberWithDouble:0.304803];// in meter
-    
+ 
     //Volumen
     //NOCH ALLE URECHNUNGEN!!!!!!! -- OBEN NOCHMAL KONTROLLIEREN
     //http://www.convertworld.com/de/
@@ -82,7 +83,7 @@
     
     
     dictionary =[[NSMutableDictionary alloc]init];
-   /* [dictionary setValue:gallonen forKey:@"Gallonen"];
+   [dictionary setValue:gallonen forKey:@"Gallonen"];
     [dictionary setValue:kilogramm forKey:@"Kilogramm"];
     [dictionary setValue:imperalgallonen forKey:@"Imperalgallonen"];
     [dictionary setValue:meile forKey:@"Meile"];
@@ -139,7 +140,7 @@
     
     
     
-    */
+    
     
     
 }
@@ -153,7 +154,7 @@
  [self.textFieldLiter setText:liter];
  
  
- }*/
+ }
 
 
 - (IBAction)Input301Action:(id)sender {
@@ -193,6 +194,6 @@
     self.BTNGewicht.alpha = 0.25;
     GeschwindigkeitBOOL = true;
 }
-
+*/
 
 @end
