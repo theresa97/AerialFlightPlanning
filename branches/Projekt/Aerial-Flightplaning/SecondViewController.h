@@ -11,6 +11,12 @@
 @interface SecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *waterLevel;
 
+@property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtPilot;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtPassagier;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtCoPilot;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSpritStart;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSpritEnde;
+
 
 
 @end
