@@ -45,7 +45,7 @@
     [bezierPath addLineToPoint: CGPointMake(30, 320)];
     [bezierPath closePath];
 
-    [UIColor.blackColor setStroke];
+    [UIColor.greenColor setStroke];
     bezierPath.lineWidth = 4;
     
     [bezierPath stroke];
