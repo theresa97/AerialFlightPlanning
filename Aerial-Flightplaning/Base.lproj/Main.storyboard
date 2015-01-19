@@ -275,13 +275,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView tag="301" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-2m-3tY">
-                                <rect key="frame" x="13" y="170" width="300" height="162"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="rFt-Pv-PhF" id="yEn-3h-36j"/>
-                                    <outlet property="delegate" destination="rFt-Pv-PhF" id="asm-hW-KKp"/>
-                                </connections>
-                            </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-p4-kYg">
                                 <rect key="frame" x="486" y="345" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -346,6 +339,13 @@
                                     <action selector="GewichtAction:" destination="rFt-Pv-PhF" eventType="touchUpInside" id="Xta-ZN-NJP"/>
                                 </connections>
                             </button>
+                            <pickerView tag="301" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-2m-3tY">
+                                <rect key="frame" x="13" y="170" width="300" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rFt-Pv-PhF" id="yEn-3h-36j"/>
+                                    <outlet property="delegate" destination="rFt-Pv-PhF" id="asm-hW-KKp"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -359,6 +359,8 @@
                         <outlet property="BTNVolumen" destination="F2p-Sh-G9h" id="gNU-jE-f3y"/>
                         <outlet property="Date_Picker" destination="9ta-G9-Ixa" id="ZUP-O0-KzJ"/>
                         <outlet property="Input301" destination="4gW-vO-51M" id="faF-tW-l9W"/>
+                        <outlet property="Picker301Outet" destination="Xed-2m-3tY" id="nWo-bg-E6V"/>
+                        <outlet property="Picker302Outlet" destination="E6c-2a-y74" id="9WZ-KO-xsu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6q-jp-2hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -377,7 +379,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Tuu-NO-axc" kind="relationship" relationship="rootViewController" id="itY-wD-tlN"/>
+                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="GAe-Tj-Knh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgU-FG-WgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -393,7 +395,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KdJ-Wc-5fO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tMy-3q-9SE">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -431,4 +433,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GAe-Tj-Knh"/>
+    </inferredMetricsTieBreakers>
 </document>
