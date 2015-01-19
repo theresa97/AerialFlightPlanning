@@ -34,9 +34,11 @@
 @synthesize AuxFuelTankLongArm;
 @synthesize CGLatLimit;
 @synthesize CGLongLimit;
+@synthesize FuelEnd;
+@synthesize FuelStart;
 
 
--(void)initVariables:(NSDecimalNumber*)PilotWeighta and:(NSDecimalNumber*)COpilotWeighta and:(NSDecimalNumber*)MidPassangerWeighta and:(NSDecimalNumber*)MainTank and: (NSDecimalNumber*)AuxTank{
+-(void)initVariables:(NSDecimalNumber*)PilotWeighta and:(NSDecimalNumber*)COpilotWeighta and:(NSDecimalNumber*)MidPassangerWeighta and:(NSDecimalNumber*)FuelAtStart and: (NSDecimalNumber*)FuelAtEnd{
     
     BasicEmptyWeight = [[NSDecimalNumber alloc]init];
     
@@ -56,12 +58,11 @@
      GloveBoxLatArm = [[NSDecimalNumber alloc]init];
     MainFuelTankLatArm = [[NSDecimalNumber alloc]initWithDouble:18];
      MainFuelTankLongArm  = [[NSDecimalNumber alloc]initWithDouble:107];
-    MainFuelTankLiter = MainTank;
-    AuxFuelTankLiter = AuxTank;
      AuxFuelTankLatArm = [[NSDecimalNumber alloc]initWithDouble:-17.2];
      AuxFuelTankLongArm = [[NSDecimalNumber alloc]initWithDouble:107];
     CGLatLimit = [[NSDecimalNumber alloc]initWithDouble:107];
-    
+    FuelEnd = FuelAtEnd;
+    FuelStart = FuelAtStart;
 }
 
 

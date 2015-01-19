@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-
+#import "HU300.h"
 @interface SecondViewController ()
 
 @end
@@ -83,7 +83,7 @@
     
     //hier aufgehört weiter bei zeichnen der einzelnen stricke für die schwerpunkte
     for (NSInteger i = 1; i<14; i++) {
-        NSLog(@"schleife");
+        //NSLog(@"schleife");
         NSInteger count = i*25;
         [bezierPathDiagramVertical moveToPoint:CGPointMake(5+count,350)];
         [bezierPathDiagramVertical addLineToPoint:CGPointMake(5+count,0)];
@@ -116,4 +116,16 @@
 }
 
 
+- (IBAction)buttonBerechnen:(id)sender {
+    HU300 *neueBerechnung = [[HU300 alloc]init];
+    [neueBerechnung initVariables:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPilot.text]and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtCoPilot.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPassagier.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritStart.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritEnde.text]];
+    
+    NSNumber * momentOld = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeightArmLong doubleValue]*[neueBerechnung.self.BasicEmptyWeight doubleValue]];
+    
+    NSNumber *loadMoment = [NSNumber numberWithDouble:[neueBerechnung.self.PilotWeight doubleValue]*[neueBerechnung.self.PilotLongArm doubleValue]+[neueBerechnung.self.COpilotweight doubleValue]*[neueBerechnung.self.COpilotLongArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*[neueBerechnung.self.MidPassangerLongArm doubleValue]+[neueBerechnung.self.FuelStart doubleValue]*[neueBerechnung.self.MainFuelTankLongArm doubleValue]];
+    NSNumber * momentNew =[NSNumber numberWithDouble:[momentOld doubleValue] + [loadMoment doubleValue]];
+    //Hier weiter mit berechen von neuen CG und punkt auf grafen zeichnen
+   
+    
+}
 @end

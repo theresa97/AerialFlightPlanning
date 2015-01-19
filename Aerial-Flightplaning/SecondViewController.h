@@ -16,7 +16,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtCoPilot;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldSpritStart;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldSpritEnde;
+@property (weak, nonatomic) IBOutlet UILabel *labelNeuerCG;
+@property (weak, nonatomic) IBOutlet UILabel *labelCGOld;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttoBerechnen;
+- (IBAction)buttonBerechnen:(id)sender;
 
 
 @end

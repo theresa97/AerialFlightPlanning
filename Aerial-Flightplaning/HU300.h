@@ -10,7 +10,7 @@
 
 @interface HU300 : NSObject
 
--(void)initVariables:(NSDecimalNumber*)PilotWeighta and:(NSDecimalNumber*)COpilotWeighta and:(NSDecimalNumber*)MidPassangerWeighta and:(NSDecimalNumber*)MainTank and: (NSDecimalNumber*)AuxTank;
+-(void)initVariables:(NSDecimalNumber*)PilotWeighta and:(NSDecimalNumber*)COpilotWeighta and:(NSDecimalNumber*)MidPassangerWeighta and:(NSDecimalNumber*)FuelAtStart and: (NSDecimalNumber*)FuelAtEnd;
 
 @property NSDecimalNumber* BasicEmptyWeight;
 @property NSDecimalNumber* BasicEmptyWeightArmLong;
@@ -35,6 +35,7 @@
 @property NSDecimalNumber* AuxFuelTankLatArm;
 @property NSDecimalNumber* CGLatLimit;
 @property NSDecimalNumber* CGLongLimit;
-
+@property NSDecimalNumber* FuelStart;
+@property NSDecimalNumber* FuelEnd;
 
 @end
