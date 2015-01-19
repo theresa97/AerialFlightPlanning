@@ -24,6 +24,8 @@
     NSDecimalNumber *valueUmrechnung301;
     NSString *value302;
     NSDecimalNumber *valueUmrechnung302;
+    NSString *valueGanz301;
+    NSString *valueGanz302;
     bool GewichtBOOL;
     bool VolumenBOOL ;
     bool LaengeBOOL ;
@@ -40,7 +42,7 @@
     ArrayGeschwindigkeit = @[@"Kilometer/Stunde", @"Knoten", @"Meilen/Stunde" ];
     ArrayGewicht =@[@"Kilogramm", @"Pfund"];
     ArrayLaenge = @[@"Meile", @"Meter", @"Kilometer",@"Fuß"];
-    ArrayVolumen =@[@"Gallonen", @"Imperalgallonene" , @"Liter"];
+    ArrayVolumen =@[@"Gallonen", @"Imperalgallonen" , @"Liter"];
     
     // Do any additional setup after loading the view.
 }
@@ -49,15 +51,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-/*
+
 -(void) madeDictionary{
- 
+
+    //Volumen
     NSNumber *gallonenInLiter = [NSNumber numberWithDouble:3.785];//in liter
+    NSNumber *gallonenInImperalgallone = [NSNumber numberWithDouble:0.8326]; //in impergallone
+
+    NSNumber *imperalgalloneInGallone = [NSNumber numberWithDouble:1.201]; //in gallone
+    NSNumber *imperalgalloneInLiter = [NSNumber numberWithDouble:4.55]; //in Liter
+    
+    NSNumber *literInGallonen =[NSNumber numberWithDouble:0.26]; // in Gallone
+    NSNumber *literInImperalgallone = [NSNumber numberWithDouble:0.22]; //in Imperalgallone
     //Geschwindigkeit
     NSNumber *kmhInMeilenh= [NSNumber numberWithDouble:0.621371192];//in meilen/h
     NSNumber *kmhInKnoten =[NSNumber numberWithDouble:0.5399568034]; //in knoten
+    
     NSNumber *knotenInKmh = [NSNumber numberWithDouble:1.8520]; //in km/h
     NSNumber *knotenInMeilenh = [NSNumber numberWithDouble:1.1507794480136]; //in meilen/h
+    
     NSNumber *meilehInKmh= [NSNumber numberWithDouble:1.609344];//in kmh
     NSNumber *meilehInKnoten=[NSNumber numberWithDouble:0.8689762];//in Knoten
     //Gewicht
@@ -75,15 +87,49 @@
     
     NSNumber *fußInMeter = [NSNumber numberWithDouble:0.304803];// in meter
  
-    //Volumen
-    //NOCH ALLE URECHNUNGEN!!!!!!! -- OBEN NOCHMAL KONTROLLIEREN
-    //http://www.convertworld.com/de/
-    //NSNumber *liter = [NSNumber numberWithDouble:0.264173];//
-    //NSNumber *imperalgallonenInLiter = [NSNumber numberWithDouble:4.546092]; // in liter
-    
-    
     dictionary =[[NSMutableDictionary alloc]init];
-   [dictionary setValue:gallonen forKey:@"Gallonen"];
+    //Volumen
+    [dictionary setValue:gallonenInLiter forKey:@"GallonenInLiter"];
+    [dictionary setValue:gallonenInImperalgallone forKey:@"GallonenInImperalgallonen"];
+    
+    [dictionary setValue:imperalgalloneInGallone forKey:@"ImperalgallonenInGallonen"];
+    [dictionary setValue:imperalgalloneInLiter forKey:@"ImperalgallonenInLiter"];
+
+    [dictionary setValue:literInGallonen forKey:@"LiterInGallonen"];
+    [dictionary setValue:literInImperalgallone forKey:@"LiterInImperalgallonen"];
+    
+    //Geschwindigkeit
+    [dictionary setValue:kmhInMeilenh forKey:@"Kilometer/StundeInMeilen/Stunde"];
+    [dictionary setValue:kmhInKnoten forKey:@"Kilometer/StundeInKnoten"];
+    
+    [dictionary setValue:knotenInKmh forKey:@"KnotenInKilometer/Stunde"];
+    [dictionary setValue:knotenInMeilenh forKey:@"KontenInMeilen/Stunde"];
+    
+    [dictionary setValue:meilehInKmh forKey:@"Meile/StundeInKilometer/Stunde"];
+    [dictionary setValue:meilehInKnoten forKey:@"Meile/StundeInKilometer/Stunde"];
+    
+    //Gewicht
+    [dictionary setValue:pfundInKilogramm forKey:@"PfundInKilogramm"];
+    [dictionary setValue:kilogrammInPfund forKey:@"KilogrammInPfund"];
+    
+    //Laenge
+    [dictionary setValue:meileInKilometer forKey:@"MeileInKilometer"];
+    [dictionary setValue:meileInMeter forKey:@"MeileInMeter"];
+    [dictionary setValue:meileInFuß forKey:@"MeileInFuß"];
+    
+    [dictionary setValue:meterInFuß forKey:@"MeterInFuß"];
+    
+    [dictionary setValue:kilometerInFuß forKey:@"KilometerInFuß"];
+    [dictionary setValue:kilometerInMeilen forKey:@"KilometerInMeilen"];
+    
+    [dictionary setValue:fußInMeter forKey:@"FußInMeter"];
+    
+    
+    
+   }
+/*
+    dictionary =[[NSMutableDictionary alloc]init];
+    [dictionary setValue:gallonen forKey:@"Gallonen"];
     [dictionary setValue:kilogramm forKey:@"Kilogramm"];
     [dictionary setValue:imperalgallonen forKey:@"Imperalgallonen"];
     [dictionary setValue:meile forKey:@"Meile"];
@@ -92,10 +138,23 @@
     [dictionary setValue:kilometer forKey:@"Kilometer"];
     [dictionary setValue:fuß forKey:@"Fuß"];
 }
+*/
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [ArrayTitle count];
+    if(GewichtBOOL == true){
+            return [ArrayGewicht count];
+    }else if(GeschwindigkeitBOOL == true){
+            return [ArrayGeschwindigkeit count];
+    }else if(VolumenBOOL==true){
+            return [ArrayGewicht count];
+    }else if(LaengeBOOL == true){
+            return [ArrayLaenge count];
+    }else{
+         return [ArrayGewicht count];
+    }
+    
 }
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -104,63 +163,81 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    
-    return [ArrayTitle objectAtIndex:row];
+    if(GewichtBOOL == true){
+        return [ArrayGewicht objectAtIndex:row];
+    }else if(GeschwindigkeitBOOL == true){
+        return [ArrayGeschwindigkeit objectAtIndex:row];
+    }else if(VolumenBOOL==true){
+        return [ArrayGewicht objectAtIndex:row];
+    }else if(LaengeBOOL == true){
+        return [ArrayLaenge objectAtIndex:row];
+    }else{
+        return [ArrayGewicht objectAtIndex:row];
+    }
     
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     if( pickerView.tag == 301){
-        value301 = [ArrayTitle objectAtIndex:row];
-        
-        valueUmrechnung301 = [dictionary valueForKey:value301];
-        
-        if([value301  isEqual: @"Gallonen"]){
-            // = @[@"Liter" , @"Imperalgallonene"];
-            //ArrayTitle - kann man es hier nochmal machen bzw kann man arraytitle updaten -- gefahr: die ursprülgich wird wrsl nicht erhalten
-            //[pickerView. reloadAllComponats];
-            //wie spricht man pickerView mit tag an bzw. updatet man es dan -- oben funktioniert es nicht mit reload
-            
-            
-            
+        if(GewichtBOOL == true){
+            value301 = [ArrayGewicht objectAtIndex:row];
+        }else if(GeschwindigkeitBOOL == true){
+            value301= [ArrayGeschwindigkeit objectAtIndex:row];
+        }else if(VolumenBOOL==true){
+            value301= [ArrayGewicht objectAtIndex:row];
+        }else if(LaengeBOOL == true){
+            value301= [ArrayLaenge objectAtIndex:row];
+        }else{
+            value301= [ArrayGewicht objectAtIndex:row];
         }
         
     } else if(pickerView.tag== 302){
-        value302 = [ArrayTitle objectAtIndex:row];
-        valueUmrechnung302 = [dictionary valueForKey:value302];
+        if(GewichtBOOL == true){
+            value302 = [ArrayGewicht objectAtIndex:row];
+        }else if(GeschwindigkeitBOOL == true){
+            value302= [ArrayGeschwindigkeit objectAtIndex:row];
+        }else if(VolumenBOOL==true){
+            value302= [ArrayGewicht objectAtIndex:row];
+        }else if(LaengeBOOL == true){
+            value302= [ArrayLaenge objectAtIndex:row];
+        }else{
+            value302= [ArrayGewicht objectAtIndex:row];
+        }
     }
+    valueGanz301 = [NSString stringWithFormat: value301 , @"In" , value302];
+    valueUmrechnung301 = [dictionary valueForKey:valueGanz301];
     
-    NSDecimalNumber *digit301 = [NSDecimalNumber decimalNumberWithString:self.Input301.text];
-    NSDecimalNumber *equals =  [digit301 decimalNumberByMultiplyingBy:valueUmrechnung301];
-    NSString *final =[NSString stringWithFormat:@"%@", equals];
-    [self.Input301 setText:final];
-    
-    
-    
-    
-    
-    
+
+    valueGanz302 =[NSString stringWithFormat: value302, @"In" , value301];
+    valueUmrechnung302 =[dictionary valueForKey:valueGanz302];
+    }
+
+
     
     
     
-}
+    
+    
+    
 
 
 
-/*- (IBAction)textFieldGallonsAction:(id)sender{
- CGFloat eingabe = [self.textFieldGallons.text floatValue];
- double ergebnis = eingabe*4.546092 ;
- NSString *liter = [NSString stringWithFormat:@"%f", ergebnis];
- [self.textFieldLiter setText:liter];
- 
- 
- }
+
+
 
 
 - (IBAction)Input301Action:(id)sender {
+    NSDecimalNumber *digit301 = [NSDecimalNumber decimalNumberWithString:self.Input301.text];
+    NSDecimalNumber *equals301 =  [digit301 decimalNumberByMultiplyingBy:valueUmrechnung301];
+    NSString *final301 =[NSString stringWithFormat:@"%@", equals301];
+    [self.Input301 setText:final301];
 }
 
 - (IBAction)Input302Action:(id)sender {
+    NSDecimalNumber *digit302 = [NSDecimalNumber decimalNumberWithString:self.Input302.text];
+    NSDecimalNumber *equals302 =  [digit302 decimalNumberByMultiplyingBy:valueUmrechnung302];
+    NSString *final302 =[NSString stringWithFormat:@"%@", equals302];
+    [self.Input302 setText:final302];
 }
 
 - (IBAction)GewichtAction:(id)sender {
@@ -191,9 +268,9 @@
     self.BTNLaenge.alpha = 0.25;
     self.BTNGeschwindigkeit.alpha = 1;
     self.BTNVolumen.alpha = .25;
-    self.BTNGewicht.alpha = 0.25;
+    self.BTNGewicht.alpha = .25;
     GeschwindigkeitBOOL = true;
 }
-*/
+
 
 @end
