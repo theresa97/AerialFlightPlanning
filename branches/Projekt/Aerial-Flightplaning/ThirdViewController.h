@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *BTNVolumen;
 @property (weak, nonatomic) IBOutlet UIButton *BTNLaenge;
 @property (weak, nonatomic) IBOutlet UIButton *BTNGewicht;
+@property (weak, nonatomic) IBOutlet UIPickerView *Picker301Outet;
+@property (weak, nonatomic) IBOutlet UIPickerView *Picker302Outlet;
 
 - (IBAction)Input301Action:(id)sender;
 - (IBAction)Input302Action:(id)sender;

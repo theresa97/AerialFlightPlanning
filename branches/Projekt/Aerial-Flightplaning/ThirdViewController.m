@@ -126,19 +126,7 @@
     
     
     
-   }
-/*
-    dictionary =[[NSMutableDictionary alloc]init];
-    [dictionary setValue:gallonen forKey:@"Gallonen"];
-    [dictionary setValue:kilogramm forKey:@"Kilogramm"];
-    [dictionary setValue:imperalgallonen forKey:@"Imperalgallonen"];
-    [dictionary setValue:meile forKey:@"Meile"];
-    [dictionary setValue:meter forKey:@"Meter"];
-    [dictionary setValue:liter forKey:@"Liter"];
-    [dictionary setValue:kilometer forKey:@"Kilometer"];
-    [dictionary setValue:fuß forKey:@"Fuß"];
 }
-*/
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if(GewichtBOOL == true){
@@ -164,15 +152,16 @@
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if(GewichtBOOL == true){
+       
         return [ArrayGewicht objectAtIndex:row];
     }else if(GeschwindigkeitBOOL == true){
         return [ArrayGeschwindigkeit objectAtIndex:row];
     }else if(VolumenBOOL==true){
-        return [ArrayGewicht objectAtIndex:row];
+        return [ArrayVolumen objectAtIndex:row];
     }else if(LaengeBOOL == true){
         return [ArrayLaenge objectAtIndex:row];
     }else{
-        return [ArrayGewicht objectAtIndex:row];
+        return @"";
     }
     
 }
@@ -204,25 +193,13 @@
             value302= [ArrayGewicht objectAtIndex:row];
         }
     }
-    valueGanz301 = [NSString stringWithFormat: value301 , @"In" , value302];
+    valueGanz301 = [NSString stringWithFormat:  @"%@In%@", value301 ,value302];
     valueUmrechnung301 = [dictionary valueForKey:valueGanz301];
     
 
-    valueGanz302 =[NSString stringWithFormat: value302, @"In" , value301];
+    valueGanz302 =[NSString stringWithFormat:  @"%@In%@" ,value302, value301];
     valueUmrechnung302 =[dictionary valueForKey:valueGanz302];
     }
-
-
-    
-    
-    
-    
-    
-    
-
-
-
-
 
 
 
@@ -246,7 +223,13 @@
     self.BTNVolumen.alpha = .25;
     self.BTNGewicht.alpha = 1;
     GewichtBOOL = true;
-}
+    LaengeBOOL = false;
+    VolumenBOOL = false;
+    GeschwindigkeitBOOL = false;
+    [self pickerView:self.Picker301Outet titleForRow:[ArrayGewicht count]-1 forComponent:1];
+    [self pickerView:self.Picker302Outlet titleForRow:[ArrayGewicht count]-1 forComponent:1];
+    [self.Picker301Outet reloadAllComponents];
+    [self.Picker302Outlet reloadAllComponents];}
 
 - (IBAction)LaengeAction:(id)sender {
     self.BTNLaenge.alpha = 1;
@@ -254,7 +237,13 @@
     self.BTNVolumen.alpha = .25;
     self.BTNGewicht.alpha = .25;
     LaengeBOOL = true;
-}
+    GewichtBOOL = false;
+    VolumenBOOL = false,
+    GeschwindigkeitBOOL = false;
+    [self pickerView:self.Picker301Outet titleForRow:[ArrayLaenge count]-1 forComponent:1];
+    [self pickerView:self.Picker302Outlet titleForRow:[ArrayLaenge count]-1 forComponent:1];
+    [self.Picker301Outet reloadAllComponents];
+    [self.Picker302Outlet reloadAllComponents];}
 
 - (IBAction)VolumenAction:(id)sender {
     self.BTNLaenge.alpha = .25;
@@ -262,7 +251,13 @@
     self.BTNVolumen.alpha = 1;
     self.BTNGewicht.alpha = .25;
     VolumenBOOL = true;
-}
+    GewichtBOOL = false;
+    GeschwindigkeitBOOL = false;
+    LaengeBOOL = false;
+    [self pickerView:self.Picker301Outet titleForRow:[ArrayVolumen count]-1 forComponent:1];
+    [self pickerView:self.Picker302Outlet titleForRow:[ArrayVolumen count]-1 forComponent:1];
+    [self.Picker301Outet reloadAllComponents];
+    [self.Picker302Outlet reloadAllComponents];}
 
 - (IBAction)GeschwindigkeitAction:(id)sender {
     self.BTNLaenge.alpha = 0.25;
@@ -270,7 +265,13 @@
     self.BTNVolumen.alpha = .25;
     self.BTNGewicht.alpha = .25;
     GeschwindigkeitBOOL = true;
-}
+    GewichtBOOL = false;
+    LaengeBOOL = false;
+    VolumenBOOL = false;
+    [self pickerView:self.Picker301Outet titleForRow:[ArrayGeschwindigkeit count]-1 forComponent:1];
+    [self pickerView:self.Picker302Outlet titleForRow:[ArrayGeschwindigkeit count]-1 forComponent:1];
+    [self.Picker301Outet reloadAllComponents];
+    [self.Picker302Outlet reloadAllComponents];}
 
 
 @end
