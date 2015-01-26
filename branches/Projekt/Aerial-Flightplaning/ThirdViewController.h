@@ -20,8 +20,11 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *Picker301Outet;
 @property (weak, nonatomic) IBOutlet UIPickerView *Picker302Outlet;
 
-- (IBAction)Input301Action:(id)sender;
-- (IBAction)Input302Action:(id)sender;
+
+- (IBAction)in302:(id)sender;
+
+- (IBAction)in301:(id)sender;
+
 - (IBAction)GewichtAction:(id)sender;
 - (IBAction)LaengeAction:(id)sender;
 - (IBAction)VolumenAction:(id)sender;

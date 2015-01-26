@@ -21,9 +21,9 @@
     NSArray *ArrayLaenge;
     NSArray *ArrayGewicht;
     NSString *value301;
-    NSDecimalNumber *valueUmrechnung301;
+    NSNumber *valueUmrechnung301;
     NSString *value302;
-    NSDecimalNumber *valueUmrechnung302;
+    NSNumber *valueUmrechnung302;
     NSString *valueGanz301;
     NSString *valueGanz302;
     bool GewichtBOOL;
@@ -43,6 +43,8 @@
     ArrayGewicht =@[@"Kilogramm", @"Pfund"];
     ArrayLaenge = @[@"Meile", @"Meter", @"Kilometer",@"Fuß"];
     ArrayVolumen =@[@"Gallonen", @"Imperalgallonen" , @"Liter"];
+    [self madeDictionary];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -173,49 +175,53 @@
         }else if(GeschwindigkeitBOOL == true){
             value301= [ArrayGeschwindigkeit objectAtIndex:row];
         }else if(VolumenBOOL==true){
-            value301= [ArrayGewicht objectAtIndex:row];
+            value301= [ArrayVolumen objectAtIndex:row];
         }else if(LaengeBOOL == true){
             value301= [ArrayLaenge objectAtIndex:row];
         }else{
             value301= [ArrayGewicht objectAtIndex:row];
+            
         }
+
         
-    } else if(pickerView.tag== 302){
+    }if(pickerView.tag== 302){
         if(GewichtBOOL == true){
             value302 = [ArrayGewicht objectAtIndex:row];
         }else if(GeschwindigkeitBOOL == true){
             value302= [ArrayGeschwindigkeit objectAtIndex:row];
         }else if(VolumenBOOL==true){
-            value302= [ArrayGewicht objectAtIndex:row];
+            value302= [ArrayVolumen objectAtIndex:row];
         }else if(LaengeBOOL == true){
             value302= [ArrayLaenge objectAtIndex:row];
         }else{
             value302= [ArrayGewicht objectAtIndex:row];
         }
     }
-    valueGanz301 = [NSString stringWithFormat:  @"%@In%@", value301 ,value302];
-    valueUmrechnung301 = [dictionary valueForKey:valueGanz301];
-    
-
-    valueGanz302 =[NSString stringWithFormat:  @"%@In%@" ,value302, value301];
-    valueUmrechnung302 =[dictionary valueForKey:valueGanz302];
+   
     }
 
 
 
-- (IBAction)Input301Action:(id)sender {
-    NSDecimalNumber *digit301 = [NSDecimalNumber decimalNumberWithString:self.Input301.text];
-    NSDecimalNumber *equals301 =  [digit301 decimalNumberByMultiplyingBy:valueUmrechnung301];
+- (IBAction)in302:(id)sender {
+    valueGanz302 = [NSString stringWithFormat:  @"%@In%@", value302 ,value301];
+    valueUmrechnung302 = [dictionary valueForKey:valueGanz302];
+    NSNumber *digit302 = [NSNumber numberWithDouble: [self.Input301.text doubleValue]];
+    NSNumber *equals302=  [NSNumber numberWithDouble: [digit302 doubleValue]*   [valueUmrechnung302 doubleValue]];
+    NSString *final302 =[NSString stringWithFormat:@"%@", equals302];
+    [self.Input301 setText:final302];}
+
+- (IBAction)in301:(id)sender {
+    valueGanz301 = [NSString stringWithFormat:  @"%@In%@", value301 ,value302];
+    valueUmrechnung301 = [dictionary valueForKey:valueGanz301];
+    NSString *zw   = self.Input301.text;
+    NSNumber *digit301 = [NSNumber numberWithInt: [zw intValue]];
+    NSNumber *equals301 =  [NSNumber numberWithDouble: [digit301 doubleValue]*   [valueUmrechnung301 doubleValue]];
     NSString *final301 =[NSString stringWithFormat:@"%@", equals301];
-    [self.Input301 setText:final301];
+   // [self.Input302 set:final301]; ---------muss editable setzten?! bzw setValue--setStringValue --setText
+   // [self.Input302 setText:final301];
+    //https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTextField_Class/index.html#//apple_ref/occ/instm/NSTextField/setEditable:
 }
 
-- (IBAction)Input302Action:(id)sender {
-    NSDecimalNumber *digit302 = [NSDecimalNumber decimalNumberWithString:self.Input302.text];
-    NSDecimalNumber *equals302 =  [digit302 decimalNumberByMultiplyingBy:valueUmrechnung302];
-    NSString *final302 =[NSString stringWithFormat:@"%@", equals302];
-    [self.Input302 setText:final302];
-}
 
 - (IBAction)GewichtAction:(id)sender {
     self.BTNLaenge.alpha = .25;
