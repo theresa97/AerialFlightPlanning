@@ -23,19 +23,11 @@
     
 
     UIGraphicsBeginImageContext(waterLevel.frame.size);
-    [waterLevel.image drawAtPoint:CGPointMake(400,300)];
+    //[waterLevel.image drawAtPoint:CGPointMake(400,300)];
     //define BezierPath
     
     UIBezierPath* bezierPath = UIBezierPath.bezierPath;
-    /*[bezierPath moveToPoint: CGPointMake(0, 600)];
-    [bezierPath addLineToPoint: CGPointMake(450, 600)];
-    [bezierPath addLineToPoint: CGPointMake(650, 450)];
-    [bezierPath addLineToPoint: CGPointMake(560, 0)];
-    [bezierPath addLineToPoint: CGPointMake(100, 0)];
-    [bezierPath addLineToPoint: CGPointMake(100.5, -0.5)];
-    [bezierPath addLineToPoint: CGPointMake(0, 600)];
-    [bezierPath closePath];*/
-
+    
     [bezierPath moveToPoint: CGPointMake(30, 320)];
     [bezierPath addLineToPoint: CGPointMake(255, 320)];
     [bezierPath addLineToPoint: CGPointMake(355, 245)];
@@ -45,10 +37,19 @@
     [bezierPath addLineToPoint: CGPointMake(30, 320)];
     [bezierPath closePath];
 
+    
+    //links unten anfagn (x koordinate) beginnt bei -2,5 (30,310)
+    //links unten anfang (y koordinate) beginnt bei 101  (30,310)
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    
+    CGContextFillEllipseInRect(contextRef, CGRectMake(80, 95, 5, 5));
+    //hier weiter mit Punkte einezeichnen Bzw in Berechnen Methode 1 inch = 25 punkte
+    
     [UIColor.greenColor setStroke];
     bezierPath.lineWidth = 4;
     
     [bezierPath stroke];
+    
     // Add to the current Graphic context
     
     
@@ -121,11 +122,28 @@
     [neueBerechnung initVariables:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPilot.text]and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtCoPilot.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPassagier.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritStart.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritEnde.text]];
     
     NSNumber * momentOld = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeightArmLong doubleValue]*[neueBerechnung.self.BasicEmptyWeight doubleValue]];
+    //NSNumber *testnum =[NSNumber numberWithDouble:[neueBerechnung.self.PilotWeight doubleValue]];
     
-    NSNumber *loadMoment = [NSNumber numberWithDouble:[neueBerechnung.self.PilotWeight doubleValue]*[neueBerechnung.self.PilotLongArm doubleValue]+[neueBerechnung.self.COpilotweight doubleValue]*[neueBerechnung.self.COpilotLongArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*[neueBerechnung.self.MidPassangerLongArm doubleValue]+[neueBerechnung.self.FuelStart doubleValue]*[neueBerechnung.self.MainFuelTankLongArm doubleValue]];
+    //NSNumber *test1 =[NSNumber numberWithDouble:[neueBerechnung.self.COpilotweight doubleValue]*[neueBerechnung.self.COpilotLongArm doubleValue] ];
+    
+    
+    NSNumber *loadMoment = [NSNumber numberWithFloat:[neueBerechnung.self.PilotWeight floatValue]*[neueBerechnung.self.PilotLongArm floatValue]+[neueBerechnung.self.COpilotweight floatValue]*[neueBerechnung.self.COpilotLongArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*[neueBerechnung.self.MidPassangerLongArm floatValue]+0.79*[neueBerechnung.self.FuelStart floatValue]*[neueBerechnung.self.MainFuelTankLongArm floatValue]+[neueBerechnung.self.GloveBoxWeight floatValue]*[neueBerechnung.self.GloveBoxLongArm floatValue]];
     NSNumber * momentNew =[NSNumber numberWithDouble:[momentOld doubleValue] + [loadMoment doubleValue]];
-    //Hier weiter mit berechen von neuen CG und punkt auf grafen zeichnen
-   
+    NSNumber * WeightNew = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeight doubleValue]+ [neueBerechnung.self.PilotWeight doubleValue]+[neueBerechnung.self.COpilotweight doubleValue]+ [neueBerechnung.self.MidPassangerWeight doubleValue]+[neueBerechnung.self.GloveBoxWeight doubleValue]+[neueBerechnung.self.FuelStart doubleValue]*0.79];
+    NSNumber *CGnew = [NSNumber numberWithDouble:[momentNew doubleValue] / [WeightNew doubleValue]];
+   [self.labelNeuerCG setText:[NSString stringWithFormat:@"%@",CGnew]];
+    
+    //Berechung CG mit verbleibenden Sprit
+    NSNumber *MomentWithoutFuel =[NSNumber numberWithFloat:[neueBerechnung.self.PilotWeight floatValue]*[neueBerechnung.self.PilotLongArm floatValue]+[neueBerechnung.self.COpilotweight floatValue]*[neueBerechnung.self.COpilotLongArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*[neueBerechnung.self.MidPassangerLongArm floatValue]+0.79*[neueBerechnung.self.FuelEnd floatValue]*[neueBerechnung.self.MainFuelTankLongArm floatValue]+[neueBerechnung.self.GloveBoxWeight floatValue]*[neueBerechnung.self.GloveBoxLongArm floatValue]];
+    NSNumber *momentNewWithoutFuel = [NSNumber numberWithDouble:[momentOld doubleValue]+ [MomentWithoutFuel doubleValue]];
+    NSNumber *weigthWithoutFuel =[NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeight doubleValue]+ [neueBerechnung.self.PilotWeight doubleValue]+[neueBerechnung.self.COpilotweight doubleValue]+ [neueBerechnung.self.MidPassangerWeight doubleValue]+[neueBerechnung.self.GloveBoxWeight doubleValue]+[neueBerechnung.self.FuelEnd doubleValue]*0.79];
+    
+    NSNumber *CGWithoutFuel = [NSNumber numberWithDouble:[momentNewWithoutFuel doubleValue] / [weigthWithoutFuel doubleValue]];
+    
+    [self.labelCGOld setText:[NSString stringWithFormat:@"%@",CGWithoutFuel]];
+    
+    
+       [self.view reloadInputViews];
     
 }
 @end
