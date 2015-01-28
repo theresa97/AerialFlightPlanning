@@ -10,6 +10,7 @@
 
 @interface SecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *waterLevel;
+@property (weak, nonatomic) IBOutlet UIView *drawView;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtPilot;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtPassagier;
