@@ -8,23 +8,34 @@
 
 #import "SecondViewController.h"
 #import "HU300.h"
+#import <QuartzCore/QuartzCore.h>
 @interface SecondViewController ()
 
 @end
 
 
 @implementation SecondViewController{
-
+    CGPoint cgNeutralposition;
 }
 @synthesize waterLevel;
+@synthesize drawView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    cgNeutralposition = CGPointMake(30,  320);
+    
+    
+    
+   
+    //CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    
+   // CGContextFillEllipseInRect(contextRef, CGRectMake(30, 320, 5, 5));
+    //[self.view addSubview:drawView];
+
     
 
     UIGraphicsBeginImageContext(waterLevel.frame.size);
-    //[waterLevel.image drawAtPoint:CGPointMake(400,300)];
-    //define BezierPath
+    
     
     UIBezierPath* bezierPath = UIBezierPath.bezierPath;
     
@@ -38,22 +49,17 @@
     [bezierPath closePath];
 
     
-    //links unten anfagn (x koordinate) beginnt bei -2,5 (30,310)
-    //links unten anfang (y koordinate) beginnt bei 101  (30,310)
-    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    //links unten anfagn (x koordinate) beginnt bei -2,5 (30,320)
+    //links unten anfang (y koordinate) beginnt bei 101  (30,320)
+   // CGContextRef contextRef = UIGraphicsGetCurrentContext();
     
-    CGContextFillEllipseInRect(contextRef, CGRectMake(80, 95, 5, 5));
+    //CGContextFillEllipseInRect(contextRef, CGRectMake(30, 320, 5, 5));
     //hier weiter mit Punkte einezeichnen Bzw in Berechnen Methode 1 inch = 25 punkte
     
     [UIColor.greenColor setStroke];
     bezierPath.lineWidth = 4;
     
     [bezierPath stroke];
-    
-    // Add to the current Graphic context
-    
-    
-    
     
     UIBezierPath* bezierPathDiagram = UIBezierPath.bezierPath;
     [bezierPathDiagram moveToPoint:CGPointMake(0, 0)];
@@ -105,8 +111,10 @@
     UIGraphicsEndImageContext();
     
     [self.view addSubview:waterLevel];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -142,8 +150,26 @@
     
     [self.labelCGOld setText:[NSString stringWithFormat:@"%@",CGWithoutFuel]];
     
+    NSNumber *cgLongmax = [NSNumber numberWithDouble:101.0];
+    NSNumber *cgLatmax = [NSNumber numberWithDouble:-2.5];
     
-       [self.view reloadInputViews];
+    NSNumber *cgdif = [NSNumber numberWithDouble:[cgLongmax doubleValue] - [CGWithoutFuel doubleValue]];
+    
+   
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    
+    
+    UIGraphicsBeginImageContext(CGSizeMake(500, 400));
+    //CGContextFillRect(contextRef, CGRectMake(30, 320, 15, 15));
+    CGContextFillEllipseInRect(contextRef, CGRectMake(30, 320, 15, 15));
+    
+    waterLevel.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+   
+    
+   
     
 }
+
+
 @end
