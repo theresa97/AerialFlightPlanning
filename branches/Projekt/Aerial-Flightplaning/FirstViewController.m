@@ -69,8 +69,7 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    NSLog(@"Hier");
-    return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M
+       return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M
     
     
    }
