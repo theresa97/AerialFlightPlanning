@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TransparentView.h"
 
 @interface SecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *waterLevel;
-@property (weak, nonatomic) IBOutlet UIView *drawView;
+@property (nonatomic, strong) IBOutlet TransparentView *drawView;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtPilot;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldGewichtPassagier;

@@ -241,9 +241,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-Lb-nRJ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-Lb-nRJ" customClass="TransparentView">
                                 <rect key="frame" x="143" y="569" width="482" height="374"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,7 +253,7 @@
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="buttoBerechnen" destination="T5q-BE-YUQ" id="Z2d-jX-Zzy"/>
-                        <outlet property="drawView" destination="oFI-Lb-nRJ" id="Oab-BM-2Qs"/>
+                        <outlet property="drawView" destination="oFI-Lb-nRJ" id="AfW-bG-kx0"/>
                         <outlet property="labelCGOld" destination="sWL-hC-d1r" id="eng-Vb-jDe"/>
                         <outlet property="labelNeuerCG" destination="Z9w-Bq-RSd" id="DFt-xj-MOe"/>
                         <outlet property="textFieldGewichtCoPilot" destination="1kL-P6-VWZ" id="tOb-9h-Bol"/>

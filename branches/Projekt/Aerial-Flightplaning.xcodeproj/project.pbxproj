@@ -39,6 +39,7 @@
 		6C867AD219FE742000315F83 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867AD119FE742000315F83 /* StoreKit.framework */; };
 		6C867AD419FE742A00315F83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867AD319FE742A00315F83 /* SystemConfiguration.framework */; };
 		6C867ADB19FE809400315F83 /* GlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867ADA19FE809400315F83 /* GlobalState.m */; };
+		6C94B5271A7BF87000DD7306 /* TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C94B5261A7BF87000DD7306 /* TransparentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		6C867AD319FE742A00315F83 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6C867AD919FE809400315F83 /* GlobalState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalState.h; sourceTree = "<group>"; };
 		6C867ADA19FE809400315F83 /* GlobalState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalState.m; sourceTree = "<group>"; };
+		6C94B5251A7BF87000DD7306 /* TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentView.h; sourceTree = "<group>"; };
+		6C94B5261A7BF87000DD7306 /* TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 				6C867ADA19FE809400315F83 /* GlobalState.m */,
 				6C7206501A1A240600EF8FE5 /* HU300.h */,
 				6C7206511A1A240600EF8FE5 /* HU300.m */,
+				6C94B5251A7BF87000DD7306 /* TransparentView.h */,
+				6C94B5261A7BF87000DD7306 /* TransparentView.m */,
 				66D0E5D31A1AD796008ECE59 /* Social.framework */,
 				66D0E5D11A1AD790008ECE59 /* AdSupport.framework */,
 				66D0E5CF1A1AD788008ECE59 /* Accounts.framework */,
@@ -356,6 +361,7 @@
 				6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */,
 				6C867ADB19FE809400315F83 /* GlobalState.m in Sources */,
 				6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */,
+				6C94B5271A7BF87000DD7306 /* TransparentView.m in Sources */,
 				6C26E4EC19EB058F002F627D /* AppDelegate.m in Sources */,
 				6C7206521A1A240600EF8FE5 /* HU300.m in Sources */,
 				6C26E4EF19EB058F002F627D /* FirstViewController.m in Sources */,
