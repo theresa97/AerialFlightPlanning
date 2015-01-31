@@ -24,7 +24,6 @@
 		6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6450B219F5178C002D67EE /* ThirdViewController.m */; };
 		6C7206521A1A240600EF8FE5 /* HU300.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7206511A1A240600EF8FE5 /* HU300.m */; };
 		6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */; };
-		6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867AB819FE726F00315F83 /* WeightandBalance.m */; };
 		6C867ABE19FE734400315F83 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABB19FE734400315F83 /* Bolts.framework */; };
 		6C867ABF19FE734400315F83 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABC19FE734400315F83 /* Parse.framework */; };
 		6C867AC019FE734400315F83 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABD19FE734400315F83 /* ParseFacebookUtils.framework */; };
@@ -80,8 +79,6 @@
 		6C7206501A1A240600EF8FE5 /* HU300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HU300.h; sourceTree = "<group>"; };
 		6C7206511A1A240600EF8FE5 /* HU300.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HU300.m; sourceTree = "<group>"; };
 		6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiagramHU300.png; sourceTree = "<group>"; };
-		6C867AB719FE726F00315F83 /* WeightandBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightandBalance.h; sourceTree = "<group>"; };
-		6C867AB819FE726F00315F83 /* WeightandBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightandBalance.m; sourceTree = "<group>"; };
 		6C867ABB19FE734400315F83 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6C867ABC19FE734400315F83 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6C867ABD19FE734400315F83 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -172,8 +169,6 @@
 				6C26E4F819EB058F002F627D /* LaunchScreen.xib */,
 				6C6450B119F5178C002D67EE /* ThirdViewController.h */,
 				6C6450B219F5178C002D67EE /* ThirdViewController.m */,
-				6C867AB719FE726F00315F83 /* WeightandBalance.h */,
-				6C867AB819FE726F00315F83 /* WeightandBalance.m */,
 				6C867AD919FE809400315F83 /* GlobalState.h */,
 				6C867ADA19FE809400315F83 /* GlobalState.m */,
 				6C7206501A1A240600EF8FE5 /* HU300.h */,
@@ -360,7 +355,6 @@
 				6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */,
 				6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */,
 				6C867ADB19FE809400315F83 /* GlobalState.m in Sources */,
-				6C867AB919FE726F00315F83 /* WeightandBalance.m in Sources */,
 				6C94B5271A7BF87000DD7306 /* TransparentView.m in Sources */,
 				6C26E4EC19EB058F002F627D /* AppDelegate.m in Sources */,
 				6C7206521A1A240600EF8FE5 /* HU300.m in Sources */,
