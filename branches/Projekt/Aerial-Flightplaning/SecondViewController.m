@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "HU300.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TransparentView.h"
 @interface SecondViewController ()
 
 @end
@@ -110,6 +111,7 @@
     waterLevel.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
+    
     [self.view addSubview:waterLevel];
     
 }
@@ -126,7 +128,8 @@
 
 
 - (IBAction)buttonBerechnen:(id)sender {
-    HU300 *neueBerechnung = [[HU300 alloc]init];
+    
+        HU300 *neueBerechnung = [[HU300 alloc]init];
     [neueBerechnung initVariables:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPilot.text]and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtCoPilot.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPassagier.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritStart.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritEnde.text]];
     
     NSNumber * momentOld = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeightArmLong doubleValue]*[neueBerechnung.self.BasicEmptyWeight doubleValue]];
@@ -155,6 +158,11 @@
     
     NSNumber *cgdif = [NSNumber numberWithDouble:[cgLongmax doubleValue] - [CGWithoutFuel doubleValue]];
     
+    
+    [drawView setNums:cgdif setDrawingDisabled:YES];
+    [self.drawView setNeedsDisplay];
+
+    /*
    
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     
@@ -165,11 +173,12 @@
     
     waterLevel.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-   
+   */
     
    
     
 }
+
 
 
 @end
