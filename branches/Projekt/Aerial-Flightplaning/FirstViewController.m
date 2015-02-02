@@ -62,7 +62,8 @@
     [self.textFieldFlughelfer setText:@""];
     [self.textViewCrew setText:@""];
     [self.textFieldKennzeichen setText:@""];
-//  self.pickerDateDatum setDate:<#(NSDate *)#>
+
+//  self.pickerDateDatum setDate:
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Daten gespeichert" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
     [alert show];
     
