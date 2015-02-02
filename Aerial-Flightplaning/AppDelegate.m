@@ -19,10 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Initialize Parse.
     [Parse setApplicationId:@"LvbHgOhydS56QecdmdtNwq4iEcPtczjfeuc0sj4C"
                   clientKey:@"cccBLAo63ibXgJZxCssPp3kiWIFXE5QNjp0BLfs4"];
+    
+    // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-   
+    
     [GlobalState Instance].helicopters = [[NSMutableArray alloc]init];
     
 
