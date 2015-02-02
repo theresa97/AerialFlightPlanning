@@ -55,7 +55,19 @@
     data[@"Team"] = self.textViewCrew.text;
     data[@"Hubschraubername"] = [[GlobalState Instance].helicopters objectAtIndex:selectedComponent];
     data[@"Durchfuehrungsdatum"] = dateString;
+    data[@"Kennzeichen"]=self.textFieldKennzeichen.text;
     [data saveInBackground];
+    
+    [self.textFieldPilot setText:@""];
+    [self.textFieldFlughelfer setText:@""];
+    [self.textViewCrew setText:@""];
+    [self.textFieldKennzeichen setText:@""];
+//  self.pickerDateDatum setDate:<#(NSDate *)#>
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Daten gespeichert" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+    [alert show];
+    
+
+    
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{ // SPALTN
