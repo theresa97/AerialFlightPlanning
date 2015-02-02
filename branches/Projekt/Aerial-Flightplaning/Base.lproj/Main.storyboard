@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -128,6 +128,7 @@
                         <outlet property="pickerDateDatum" destination="9ta-G9-Ixa" id="H5T-gc-bBh"/>
                         <outlet property="pickerHubrschrauber" destination="I5P-hh-ooI" id="VON-Dz-cfX"/>
                         <outlet property="textFieldFlughelfer" destination="5a2-NR-D9X" id="KMY-RD-4WJ"/>
+                        <outlet property="textFieldKennzeichen" destination="VUD-dP-dha" id="Ssl-JN-0J9"/>
                         <outlet property="textFieldPilot" destination="hAN-Rx-M2X" id="8Ff-l2-5LU"/>
                         <outlet property="textViewCrew" destination="4Jt-K5-YFA" id="LHt-55-zYO"/>
                     </connections>
