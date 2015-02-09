@@ -169,6 +169,8 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    [self.Input302 setText:@""];
+    [self.Input301 setText:@""];
     if( pickerView.tag == 301){
         if(GewichtBOOL == true){
             value301 = [ArrayGewicht objectAtIndex:row];
@@ -182,7 +184,6 @@
             value301= [ArrayGewicht objectAtIndex:row];
             
         }
-
         
     }if(pickerView.tag== 302){
         if(GewichtBOOL == true){
@@ -202,13 +203,7 @@
 
 
 
-- (IBAction)in302:(id)sender {
-    valueGanz302 = [NSString stringWithFormat:  @"%@In%@", value302 ,value301];
-    valueUmrechnung302 = [dictionary valueForKey:valueGanz302];
-    NSNumber *digit302 = [NSNumber numberWithDouble: [self.Input301.text doubleValue]];
-    NSNumber *equals302=  [NSNumber numberWithDouble: [digit302 doubleValue]*   [valueUmrechnung302 doubleValue]];
-    NSString *final302 =[NSString stringWithFormat:@"%@", equals302];
-    [self.Input301 setText:final302];}
+
 
 - (IBAction)in301:(id)sender {
     valueGanz301 = [NSString stringWithFormat:  @"%@In%@", value301 ,value302];
@@ -217,11 +212,20 @@
     NSNumber *digit301 = [NSNumber numberWithInt: [zw intValue]];
     NSNumber *equals301 =  [NSNumber numberWithDouble: [digit301 doubleValue]*   [valueUmrechnung301 doubleValue]];
     NSString *final301 =[NSString stringWithFormat:@"%@", equals301];
-   // [self.Input302 set:final301]; ---------muss editable setzten?! bzw setValue--setStringValue --setText
-   // [self.Input302 setText:final301];
-    //https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTextField_Class/index.html#//apple_ref/occ/instm/NSTextField/setEditable:
+    
+    
+    
+    [self.Input302 setText:final301];
 }
 
+- (IBAction)in302:(id)sender {
+    valueGanz302 = [NSString stringWithFormat:  @"%@In%@", value302 ,value301];
+    valueUmrechnung302 = [dictionary valueForKey:valueGanz302];
+    NSNumber *digit302 = [NSNumber numberWithDouble: [self.Input302.text doubleValue]];
+    NSNumber *equals302=  [NSNumber numberWithDouble: [digit302 doubleValue]*   [valueUmrechnung302 doubleValue]];
+    NSString *final302 =[NSString stringWithFormat:@"%@", equals302];
+    [self.Input301 setText:final302];
+}
 
 - (IBAction)GewichtAction:(id)sender {
     self.BTNLaenge.alpha = .25;
