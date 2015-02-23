@@ -154,7 +154,7 @@
     [self.labelCGOld setText:[NSString stringWithFormat:@"%@",CGWithoutFuel]];
     
     NSNumber *cgLongmax = [NSNumber numberWithDouble:101.0];
-    NSNumber *cgLatmax = [NSNumber numberWithDouble:-2.5];
+    //NSNumber *cgLatmax = [NSNumber numberWithDouble:-2.5];
     
     NSNumber *cgdif = [NSNumber numberWithDouble:[cgLongmax doubleValue] - [CGWithoutFuel doubleValue]];
     
