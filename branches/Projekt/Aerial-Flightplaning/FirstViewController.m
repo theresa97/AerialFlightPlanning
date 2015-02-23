@@ -15,6 +15,7 @@
 
 @implementation FirstViewController{
     NSInteger selectedComponent;
+    NSArray* auftragsArray;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -26,6 +27,10 @@
       [[GlobalState Instance].helicopters addObject:@"HU300"];
       [[GlobalState Instance].helicopters addObject:@"JetRanger"];
 
+    PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
+    [query whereKey:@"User" equalTo:[GlobalState Instance].logedInUser.username];
+    auftragsArray = [query findObjects];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -50,6 +55,8 @@
     [formatter setDateFormat:@"dd.MM yyyy HH:mm"];
     NSString *dateString = [formatter  stringFromDate:date];
     
+    
+    data[@"User"] = @"test";//[GlobalState Instance].logedInUser.username;
     data[@"Pilotenname"] = self.textFieldPilot.text;
     data[@"Flughelfer"] = self.textFieldFlughelfer.text;
     data[@"Team"] = self.textViewCrew.text;

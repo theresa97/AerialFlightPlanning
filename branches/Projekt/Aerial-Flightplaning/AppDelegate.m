@@ -28,7 +28,8 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [GlobalState Instance].helicopters = [[NSMutableArray alloc]init];
-    
+    [GlobalState Instance].logedInUser = [[PFUser alloc]init];
+    [GlobalState Instance].logedInUser.username = @"test";
 
     return YES;
 }

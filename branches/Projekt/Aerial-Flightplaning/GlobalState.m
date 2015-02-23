@@ -10,7 +10,8 @@
 
 @implementation GlobalState
 @synthesize helicopters;
-
+@synthesize Flugauftraege;
+@synthesize logedInUser;
 
 +(GlobalState *)Instance {
     static GlobalState *instance = nil;
