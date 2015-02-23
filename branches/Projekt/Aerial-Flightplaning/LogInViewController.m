@@ -68,6 +68,7 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [GlobalState Instance].logedInUser = user;
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

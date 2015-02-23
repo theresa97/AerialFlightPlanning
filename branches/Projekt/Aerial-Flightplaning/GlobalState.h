@@ -17,5 +17,7 @@
 -(NSMutableArray*)load;
 -(void)save:(NSMutableArray*)file;
 
+@property PFUser *logedInUser;
+@property NSMutableArray *Flugauftraege;
 
 @end
