@@ -126,9 +126,28 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PFObject *ob = [auftragsArray objectAtIndex:indexPath.row];
+       
+        PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
+        [query whereKey:@"User" equalTo:[PFUser currentUser].username];
+        [query whereKey:@"Durchfuehrungsdatum" equalTo:[ob valueForKey:@"Durchfuehrungsdatum"]];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!object) {
+                NSLog(@"The getFirstObject request failed.");
+            } else {
+                // The find succeeded.
+                NSLog(@"Successfully retrieved the object.");
+                [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (succeeded && !error) {
+                        NSLog(@"like deleted from parse");
+                    } else {
+                        NSLog(@"error: %@", error); 
+                    }
+                }];
+            }
+        }];
+         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [auftragsArray removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        //[PFObject ]
     }
 }
 
