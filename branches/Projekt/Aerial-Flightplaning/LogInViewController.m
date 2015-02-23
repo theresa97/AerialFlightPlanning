@@ -7,7 +7,7 @@
 //
 
 #import "LogInViewController.h"
-
+#import "GlobalState.h"
 @interface LogInViewController ()
 
 @end
