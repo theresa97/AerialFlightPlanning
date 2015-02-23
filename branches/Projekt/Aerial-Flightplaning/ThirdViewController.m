@@ -64,13 +64,14 @@
     NSNumber *imperalgalloneInLiter = [NSNumber numberWithDouble:4.55]; //in Liter
     
     NSNumber *literInGallonen =[NSNumber numberWithDouble:0.26]; // in Gallone
-    NSNumber *literInImperalgallone = [NSNumber numberWithDouble:0.22]; //in Imperalgallone
+    NSNumber *literInImperalgallone = [NSNumber numberWithDouble:0.22]; //in Imperalgallone1
     //Geschwindigkeit
     NSNumber *kmhInMeilenh= [NSNumber numberWithDouble:0.621371192];//in meilen/h
     NSNumber *kmhInKnoten =[NSNumber numberWithDouble:0.5399568034]; //in knoten
     
     NSNumber *knotenInKmh = [NSNumber numberWithDouble:1.8520]; //in km/h
     NSNumber *knotenInMeilenh = [NSNumber numberWithDouble:1.1507794480136]; //in meilen/h
+    //!!!!!!!!!!!!ACHTUNG dieses eine funktioniert nicht!!!!!!!!!!!
     
     NSNumber *meilehInKmh= [NSNumber numberWithDouble:1.609344];//in kmh
     NSNumber *meilehInKnoten=[NSNumber numberWithDouble:0.8689762];//in Knoten
@@ -83,11 +84,16 @@
     NSNumber *meileInFuß= [NSNumber numberWithDouble:5280]; //in fuß
     
     NSNumber *meterInFuß = [NSNumber numberWithDouble:3.2808];// in fuß
+    NSNumber *meterInKilometer = [NSNumber numberWithDouble:0.001];// in kilometer
+    NSNumber *meterInMeile = [NSNumber numberWithDouble:0.000621371];// in Meile
     
     NSNumber *kilometerInMeilen = [NSNumber numberWithDouble:0.62137];//in meilen
     NSNumber *kilometerInFuß = [NSNumber  numberWithDouble:3280.84];//inFuß
+    NSNumber *kilometerInMeter = [NSNumber numberWithDouble:1000];//in meter
     
     NSNumber *fußInMeter = [NSNumber numberWithDouble:0.304803];// in meter
+    NSNumber *fußInKilometer = [NSNumber numberWithDouble:0.0003048];// in kilometer
+    NSNumber *fußInMeile = [NSNumber numberWithDouble:0.000189394]; //in Meile
  
     dictionary =[[NSMutableDictionary alloc]init];
     //Volumen
@@ -107,8 +113,8 @@
     [dictionary setValue:knotenInKmh forKey:@"KnotenInKilometer/Stunde"];
     [dictionary setValue:knotenInMeilenh forKey:@"KontenInMeilen/Stunde"];
     
-    [dictionary setValue:meilehInKmh forKey:@"Meile/StundeInKilometer/Stunde"];
-    [dictionary setValue:meilehInKnoten forKey:@"Meile/StundeInKilometer/Stunde"];
+    [dictionary setValue:meilehInKmh forKey:@"Meilen/StundeInKilometer/Stunde"];
+    [dictionary setValue:meilehInKnoten forKey:@"Meilen/StundeInKnoten"];
     
     //Gewicht
     [dictionary setValue:pfundInKilogramm forKey:@"PfundInKilogramm"];
@@ -120,13 +126,16 @@
     [dictionary setValue:meileInFuß forKey:@"MeileInFuß"];
     
     [dictionary setValue:meterInFuß forKey:@"MeterInFuß"];
+    [dictionary setValue:meterInKilometer forKey:@"MeterInKilometer"];
+    [dictionary setValue:meterInMeile forKey:@"MeterInMeile"];
     
     [dictionary setValue:kilometerInFuß forKey:@"KilometerInFuß"];
     [dictionary setValue:kilometerInMeilen forKey:@"KilometerInMeilen"];
+    [dictionary setValue:kilometerInMeter forKey:@"KilometerInMeter"];
     
     [dictionary setValue:fußInMeter forKey:@"FußInMeter"];
-    
-    
+    [dictionary setValue:fußInMeile forKey:@"FußInMeile"];
+    [dictionary setValue:fußInKilometer forKey:@"FußInKilometer"];
     
 }
 
