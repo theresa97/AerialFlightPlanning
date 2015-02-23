@@ -15,7 +15,7 @@
 
 @implementation FirstViewController{
     NSInteger selectedComponent;
-    NSArray* auftragsArray;
+    NSMutableArray* auftragsArray;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -24,12 +24,13 @@
 }
 - (void)viewDidLoad {
       [super viewDidLoad];
+      self.automaticallyAdjustsScrollViewInsets = NO;
       [[GlobalState Instance].helicopters addObject:@"HU300"];
       [[GlobalState Instance].helicopters addObject:@"JetRanger"];
 
     PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
     [query whereKey:@"User" equalTo:[GlobalState Instance].logedInUser.username];
-    auftragsArray = [query findObjects];
+    auftragsArray = [[query findObjects] mutableCopy];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -98,4 +99,37 @@
     selectedComponent = row;
     
 }
+
+//Table View Code
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [[UITableViewCell alloc]init];
+    PFObject *eintrag = [auftragsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [eintrag valueForKey:@"User"];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section{
+    
+    
+    return auftragsArray.count;
+}
+
+- (NSArray *)tableView:(UITableView *)tableView
+editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [auftragsArray removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        //[PFObject ]
+    }
+}
+
 @end
