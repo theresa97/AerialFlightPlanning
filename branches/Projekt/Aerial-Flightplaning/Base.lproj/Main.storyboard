@@ -105,7 +105,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KPn-zn-ZYv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KPn-zn-ZYv">
                                 <rect key="frame" x="0.0" y="66" width="271" height="909"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="VDe-sK-RS9">
@@ -120,28 +120,36 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="isA-lw-jzc"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-zi-o5G">
-                                <rect key="frame" x="279" y="571" width="270" height="404"/>
+                            <tableView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-zi-o5G">
+                                <rect key="frame" x="279" y="596" width="270" height="379"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <navigationBar key="tableFooterView" contentMode="scaleToFill" id="nTL-te-H4j">
-                                    <rect key="frame" x="0.0" y="0.0" width="270" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <items>
-                                        <navigationItem title="Flüge" id="l3E-G5-ajh">
-                                            <barButtonItem key="rightBarButtonItem" title="Neu" id="cLz-qP-RFX">
-                                                <connections>
-                                                    <segue destination="7Iv-Jb-ycq" kind="show" id="dAa-ai-dO4"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </navigationItem>
-                                    </items>
-                                </navigationBar>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="Czx-mh-Fuq"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="G32-ZH-1Aj"/>
+                                </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-Md-zxn">
+                                <rect key="frame" x="279" y="552" width="270" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="qI3-0C-pdW">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="zlx-Jv-mB4">
+                                            <connections>
+                                                <segue destination="7Iv-Jb-ycq" kind="show" id="d7Y-RH-6zq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.023235985437276507" green="0.019377046327408123" blue="0.03862847222222221" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Flugplan" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="sYJ-Bj-Mrt"/>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="rcm-CP-mpf"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="buttonSendeZuCloud" destination="ose-i4-YbL" id="yL6-PB-VAx"/>
@@ -171,73 +179,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abflugort:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDG-91-qYZ">
-                                <rect key="frame" x="131" y="48" width="76" height="21"/>
+                                <rect key="frame" x="127" y="95" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Startzeit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlS-jD-x1f">
-                                <rect key="frame" x="131" y="86" width="69" height="21"/>
+                                <rect key="frame" x="127" y="133" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ankunftort:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6w-7z-DKP">
-                                <rect key="frame" x="131" y="121" width="85" height="21"/>
+                                <rect key="frame" x="127" y="168" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Landezeit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drW-F0-8rV">
-                                <rect key="frame" x="131" y="161" width="80" height="21"/>
+                                <rect key="frame" x="127" y="208" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anzahl der Rundflüge / Dauer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-td-Tgq">
-                                <rect key="frame" x="131" y="198" width="231" height="21"/>
+                                <rect key="frame" x="127" y="245" width="231" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flugart / Pax:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP5-VZ-2ME">
-                                <rect key="frame" x="131" y="236" width="103" height="21"/>
+                                <rect key="frame" x="127" y="283" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-JY-qy1">
-                                <rect key="frame" x="457" y="39" width="97" height="30"/>
+                                <rect key="frame" x="453" y="86" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVq-pq-dhP">
-                                <rect key="frame" x="457" y="77" width="97" height="30"/>
+                                <rect key="frame" x="453" y="124" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dop-78-0M8">
-                                <rect key="frame" x="457" y="112" width="97" height="30"/>
+                                <rect key="frame" x="453" y="159" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOm-n2-vTE">
-                                <rect key="frame" x="457" y="152" width="97" height="30"/>
+                                <rect key="frame" x="453" y="199" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-KB-lSJ">
-                                <rect key="frame" x="457" y="189" width="97" height="30"/>
+                                <rect key="frame" x="453" y="236" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evp-NX-NwG">
-                                <rect key="frame" x="457" y="227" width="97" height="30"/>
+                                <rect key="frame" x="453" y="274" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sw-nK-g3b">
-                                <rect key="frame" x="131" y="310" width="101" height="30"/>
+                                <rect key="frame" x="127" y="357" width="101" height="30"/>
                                 <state key="normal" title="Flug speichern">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -256,12 +264,11 @@
                         <outlet property="Flugort" destination="ITh-JY-qy1" id="ICB-Rm-2u1"/>
                         <outlet property="Ladezeit" destination="GOm-n2-vTE" id="7PO-4i-bWq"/>
                         <outlet property="Startzeit" destination="mVq-pq-dhP" id="wEe-Yl-eiT"/>
-                        <segue destination="9pv-A4-QxB" kind="show" id="thT-AJ-Xp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlV-HM-gNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2115" y="-1319"/>
+            <point key="canvasLocation" x="1677" y="-1185"/>
         </scene>
         <!--W&B-->
         <scene sceneID="vaI-Vr-FVa">
@@ -568,6 +575,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hWX-hp-xRo"/>
-        <segue reference="u7Y-xg-7CH"/>
     </inferredMetricsTieBreakers>
 </document>
