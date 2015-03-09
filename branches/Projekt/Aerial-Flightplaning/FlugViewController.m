@@ -47,7 +47,7 @@
     [dict setValue:flugart forKey:@"Flugart"];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
-    [query whereKey:@"User" equalTo:@"test"];
+    [query whereKey:@"Fluege" equalTo:[GlobalState Instance].logedInUser.username];
     NSArray* scoreArray = [query findObjects];
     
     [[GlobalState Instance].Flugauftraege addObject:dict];
