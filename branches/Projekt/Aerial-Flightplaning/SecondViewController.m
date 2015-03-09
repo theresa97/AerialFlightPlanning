@@ -24,17 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     cgNeutralposition = CGPointMake(30,  320);
-    
-    
-    
-   
-    //CGContextRef contextRef = UIGraphicsGetCurrentContext();
-    
-   // CGContextFillEllipseInRect(contextRef, CGRectMake(30, 320, 5, 5));
-    //[self.view addSubview:drawView];
-
-    
-
+ 
     UIGraphicsBeginImageContext(waterLevel.frame.size);
     
     

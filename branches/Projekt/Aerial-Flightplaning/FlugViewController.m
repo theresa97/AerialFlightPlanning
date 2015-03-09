@@ -46,6 +46,9 @@
     [dict setValue:dauer forKey:@"Dauer"];
     [dict setValue:flugart forKey:@"Flugart"];
     
+    PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
+    [query whereKey:@"User" equalTo:@"test"];
+    NSArray* scoreArray = [query findObjects];
     
     [[GlobalState Instance].Flugauftraege addObject:dict];
     
