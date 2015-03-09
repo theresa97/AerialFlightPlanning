@@ -58,15 +58,17 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"dd.MM yyyy HH:mm"];
     NSString *dateString = [formatter  stringFromDate:date];
+    NSMutableArray *fluege = [[NSMutableArray alloc]init];
     
-    
-    data[@"User"] = @"test";//[GlobalState Instance].logedInUser.username;
+    data[@"User"] = [GlobalState Instance].logedInUser.username;
     data[@"Pilotenname"] = self.textFieldPilot.text;
     data[@"Flughelfer"] = self.textFieldFlughelfer.text;
     data[@"Team"] = self.textViewCrew.text;
     data[@"Hubschraubername"] = [[GlobalState Instance].helicopters objectAtIndex:selectedComponent];
     data[@"Durchfuehrungsdatum"] = dateString;
     data[@"Kennzeichen"]=self.textFieldKennzeichen.text;
+    data[@"Fluege"] = fluege;
+    
     [data saveInBackground];
     
     [self.textFieldPilot setText:@""];
