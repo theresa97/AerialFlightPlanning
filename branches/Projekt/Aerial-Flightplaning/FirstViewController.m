@@ -20,7 +20,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 
-        
+    PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
+    [query whereKey:@"User" equalTo:@"test"];
+     NSArray* scoreArray = [query findObjects];
+    auftragsArray = [scoreArray mutableCopy];
+
 }
 - (void)viewDidLoad {
       [super viewDidLoad];
@@ -28,9 +32,6 @@
       [[GlobalState Instance].helicopters addObject:@"HU300"];
       [[GlobalState Instance].helicopters addObject:@"JetRanger"];
 
-    PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
-    [query whereKey:@"User" equalTo:[GlobalState Instance].logedInUser.username];
-    auftragsArray = [[query findObjects] mutableCopy];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -49,6 +50,8 @@
 }
 
 - (IBAction)buttonSendeZuCloud:(UIButton *)sender {
+    
+    
     PFObject *data = [PFObject objectWithClassName:@"Datas"];
     
     NSDate *date = self.pickerDateDatum.date;
@@ -97,17 +100,23 @@
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedComponent = row;
-    
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PFObject* auswahl = [auftragsArray objectAtIndex:indexPath.row];
+    [self.textFieldPilot setText:[auswahl valueForKey:@"Pilotenname"]];
+    [self.textFieldFlughelfer setText:[auswahl valueForKey:@"Flughelfer"]];
+    [self.textViewCrew setText:[auswahl valueForKey:@"Team"]];
+    [self.textFieldKennzeichen setText:[auswahl valueForKey:@"Kennzeichen"]];
+    [self.pickerHubrschrauber ]
+}
 //Table View Code
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UITableViewCell *cell = [[UITableViewCell alloc]init];
     PFObject *eintrag = [auftragsArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [eintrag valueForKey:@"User"];
+    cell.textLabel.text = [eintrag valueForKey:@"Durchfuehrungsdatum"];
     return cell;
 }
 
@@ -124,7 +133,7 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{/*
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         PFObject *ob = [auftragsArray objectAtIndex:indexPath.row];
        
@@ -148,7 +157,11 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
         }];
          [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [auftragsArray removeObjectAtIndex:indexPath.row];
-    }
+  
+    }*/
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [auftragsArray removeObjectAtIndex:indexPath.row];
+
 }
 
 @end

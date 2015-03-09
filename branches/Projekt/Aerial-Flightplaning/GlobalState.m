@@ -13,6 +13,7 @@
 @synthesize Flugauftraege;
 @synthesize logedInUser;
 
+
 +(GlobalState *)Instance {
     static GlobalState *instance = nil;
     if (instance == nil) {

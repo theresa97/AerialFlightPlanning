@@ -12,6 +12,7 @@
 @interface GlobalState : NSObject
 @property NSMutableArray *helicopters; // array for PickerView with all stored Helicopters
 
+
 +(GlobalState *)Instance;
 - (NSString *)dataFilePath:(NSString *)pDataFile;
 -(NSMutableArray*)load;
