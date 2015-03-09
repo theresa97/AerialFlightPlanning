@@ -103,28 +103,47 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView.tag ==0) {
+        
+    
     PFObject* auswahl = [auftragsArray objectAtIndex:indexPath.row];
     [self.textFieldPilot setText:[auswahl valueForKey:@"Pilotenname"]];
     [self.textFieldFlughelfer setText:[auswahl valueForKey:@"Flughelfer"]];
     [self.textViewCrew setText:[auswahl valueForKey:@"Team"]];
     [self.textFieldKennzeichen setText:[auswahl valueForKey:@"Kennzeichen"]];
-    [self.pickerHubrschrauber ]
+    
+   // [self.pickerHubrschrauber ]
+    }else{
+        //kleine Table view
+    }
+    
 }
 //Table View Code
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+     if (tableView.tag ==0) {
     UITableViewCell *cell = [[UITableViewCell alloc]init];
     PFObject *eintrag = [auftragsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [eintrag valueForKey:@"Durchfuehrungsdatum"];
     return cell;
+     }else{
+         UITableViewCell *cell = [[UITableViewCell alloc]init];
+         NSMutableDictionary* Fluege = [[GlobalState Instance].Flugauftraege objectAtIndex:indexPath.row];
+         NSString* text = [Fluege valueForKey:@"Abflugort"];
+         cell.textLabel.text = text;
+         return cell;
+     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
+     if (tableView.tag ==0) {
     
-    
-    return auftragsArray.count;
+         return auftragsArray.count;
+     }else{
+         return [GlobalState Instance].Flugauftraege.count;
+     }
 }
 
 - (NSArray *)tableView:(UITableView *)tableView
@@ -159,9 +178,12 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
         [auftragsArray removeObjectAtIndex:indexPath.row];
   
     }*/
+     if (tableView.tag ==0) {
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [auftragsArray removeObjectAtIndex:indexPath.row];
-
+     }else{
+         
+     }
 }
 
 @end

@@ -28,7 +28,8 @@
 
 
 - (IBAction)FlugSpeichern:(id)sender {
-    NSDictionary *dictionary;
+    
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     
     NSString *abflugort = self.Flugort.text;
     NSString *startzeit = self.Startzeit.text;
@@ -38,17 +39,17 @@
     NSString *flugart = self.Flugart.text;
     
     
-    [dictionary setValue:abflugort forKey:@"Abflugort"];
-    [dictionary setValue:startzeit forKey:@"Startzeit"];
-    [dictionary setValue:ankunftsort forKey:@"Ankunftsort"];
-    [dictionary setValue:landezeit forKey:@"Landezeit"];
-    [dictionary setValue:dauer forKey:@"Dauer"];
-    [dictionary setValue:flugart forKey:@"Flugart"];
+    [dict setValue:abflugort forKey:@"Abflugort"];
+    [dict setValue:startzeit forKey:@"Startzeit"];
+    [dict setValue:ankunftsort forKey:@"Ankunftsort"];
+    [dict setValue:landezeit forKey:@"Landezeit"];
+    [dict setValue:dauer forKey:@"Dauer"];
+    [dict setValue:flugart forKey:@"Flugart"];
     
     
-    [[GlobalState Instance].Flugauftraege addObject:dictionary];
+    [[GlobalState Instance].Flugauftraege addObject:dict];
     
-    
+    [self.navigationController popViewControllerAnimated:TRUE];
     
     
 }
