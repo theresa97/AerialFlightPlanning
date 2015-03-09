@@ -29,7 +29,7 @@
     bool GewichtBOOL;
     bool VolumenBOOL ;
     bool LaengeBOOL ;
-    bool GeschwindigkeitBOOL;    
+    bool GeschwindigkeitBOOL;
 }
 
 
