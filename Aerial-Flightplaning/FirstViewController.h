@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonSendeZuCloud;
 @property (weak, nonatomic) IBOutlet UITableView *listView;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldKennzeichen;
+- (IBAction)buttonzuruecksetzen:(id)sender;
 
 //Actions
 
