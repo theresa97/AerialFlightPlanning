@@ -247,7 +247,13 @@
     [self pickerView:self.Picker301Outet titleForRow:[ArrayGewicht count]-1 forComponent:1];
     [self pickerView:self.Picker302Outlet titleForRow:[ArrayGewicht count]-1 forComponent:1];
     [self.Picker301Outet reloadAllComponents];
-    [self.Picker302Outlet reloadAllComponents];}
+    [self.Picker302Outlet reloadAllComponents];
+    NSInteger index301 = [self.Picker301Outet selectedRowInComponent:0];
+    NSInteger index302 = [self.Picker302Outlet selectedRowInComponent:0];
+    value301 = [ArrayGewicht objectAtIndex:index301];
+    value302 = [ArrayGewicht objectAtIndex:index302];
+   
+  }
 
 - (IBAction)LaengeAction:(id)sender {
     self.BTNLaenge.alpha = 1;
@@ -261,7 +267,11 @@
     [self pickerView:self.Picker301Outet titleForRow:[ArrayLaenge count]-1 forComponent:1];
     [self pickerView:self.Picker302Outlet titleForRow:[ArrayLaenge count]-1 forComponent:1];
     [self.Picker301Outet reloadAllComponents];
-    [self.Picker302Outlet reloadAllComponents];}
+    [self.Picker302Outlet reloadAllComponents];
+    NSInteger index301 = [self.Picker301Outet selectedRowInComponent:0];
+    NSInteger index302 = [self.Picker302Outlet selectedRowInComponent:0];
+    value301 = [ArrayLaenge objectAtIndex:index301];
+    value302 = [ArrayLaenge objectAtIndex:index302];}
 
 - (IBAction)VolumenAction:(id)sender {
     self.BTNLaenge.alpha = .25;
@@ -275,7 +285,11 @@
     [self pickerView:self.Picker301Outet titleForRow:[ArrayVolumen count]-1 forComponent:1];
     [self pickerView:self.Picker302Outlet titleForRow:[ArrayVolumen count]-1 forComponent:1];
     [self.Picker301Outet reloadAllComponents];
-    [self.Picker302Outlet reloadAllComponents];}
+    [self.Picker302Outlet reloadAllComponents];
+    NSInteger index301 = [self.Picker301Outet selectedRowInComponent:0];
+    NSInteger index302 = [self.Picker302Outlet selectedRowInComponent:0];
+    value301 = [ArrayVolumen objectAtIndex:index301];
+    value302 = [ArrayVolumen objectAtIndex:index302];}
 
 - (IBAction)GeschwindigkeitAction:(id)sender {
     self.BTNLaenge.alpha = 0.25;
@@ -289,7 +303,12 @@
     [self pickerView:self.Picker301Outet titleForRow:[ArrayGeschwindigkeit count]-1 forComponent:1];
     [self pickerView:self.Picker302Outlet titleForRow:[ArrayGeschwindigkeit count]-1 forComponent:1];
     [self.Picker301Outet reloadAllComponents];
-    [self.Picker302Outlet reloadAllComponents];}
+    [self.Picker302Outlet reloadAllComponents];
+    NSInteger index301 = [self.Picker301Outet selectedRowInComponent:0];
+    NSInteger index302 = [self.Picker302Outlet selectedRowInComponent:0];
+    value301 = [ArrayGeschwindigkeit objectAtIndex:index301];
+    value302 = [ArrayGeschwindigkeit objectAtIndex:index302];
+}
 
 
 @end
