@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6686EED31A1ACC24007A2C7D /* LogInViewController.m */; };
 		6689AE4E1A9A9E2000F79580 /* FlugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689AE4D1A9A9E2000F79580 /* FlugViewController.m */; };
+		6689AE511A9AA5D100F79580 /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689AE501A9AA5D100F79580 /* CheckListViewController.m */; };
 		66D0E5CE1A1AD77D008ECE59 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */; };
 		66D0E5D01A1AD788008ECE59 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5CF1A1AD788008ECE59 /* Accounts.framework */; };
 		66D0E5D21A1AD790008ECE59 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0E5D11A1AD790008ECE59 /* AdSupport.framework */; };
@@ -57,6 +58,8 @@
 		6686EED31A1ACC24007A2C7D /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		6689AE4C1A9A9E2000F79580 /* FlugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlugViewController.h; sourceTree = "<group>"; };
 		6689AE4D1A9A9E2000F79580 /* FlugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlugViewController.m; sourceTree = "<group>"; };
+		6689AE4F1A9AA5D100F79580 /* CheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckListViewController.h; sourceTree = "<group>"; };
+		6689AE501A9AA5D100F79580 /* CheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListViewController.m; sourceTree = "<group>"; };
 		66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		66D0E5CF1A1AD788008ECE59 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		66D0E5D11A1AD790008ECE59 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -176,6 +179,8 @@
 				6C6450B219F5178C002D67EE /* ThirdViewController.m */,
 				6C867AD919FE809400315F83 /* GlobalState.h */,
 				6C867ADA19FE809400315F83 /* GlobalState.m */,
+				6689AE4F1A9AA5D100F79580 /* CheckListViewController.h */,
+				6689AE501A9AA5D100F79580 /* CheckListViewController.m */,
 				6C7206501A1A240600EF8FE5 /* HU300.h */,
 				6C7206511A1A240600EF8FE5 /* HU300.m */,
 				6C94B5251A7BF87000DD7306 /* TransparentView.h */,
@@ -356,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6689AE511A9AA5D100F79580 /* CheckListViewController.m in Sources */,
 				6C26E4F219EB058F002F627D /* SecondViewController.m in Sources */,
 				6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */,
 				6686EED41A1ACC24007A2C7D /* LogInViewController.m in Sources */,
