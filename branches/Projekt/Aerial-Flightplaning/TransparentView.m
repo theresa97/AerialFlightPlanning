@@ -10,7 +10,7 @@
 
 
 @implementation TransparentView
-@synthesize cgdif,noDrwaing,test;
+@synthesize cgdif,noDrwaing,cgdifLat;
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -25,14 +25,15 @@
         CGContextRef contextRef = UIGraphicsGetCurrentContext();
         UIColor *c = [UIColor blueColor] ;
         CGContextSetFillColorWithColor(contextRef,[c CGColor]);
-        CGContextFillEllipseInRect(contextRef, CGRectMake(100, [cgdif doubleValue]*25, 15, 15));
+        CGContextFillEllipseInRect(contextRef, CGRectMake([cgdifLat doubleValue]*25, [cgdif doubleValue]*25, 15, 15));
 
     }
     
 
     }
--(void)setNums:(NSNumber *)cg setDrawingDisabled:(BOOL)drawing{
-    cgdif=cg;
+-(void)setCGlong:(NSNumber *)cglong setCGlat:(NSNumber *)cglat setDrawingDisabled:(BOOL)drawing{
+    cgdif=cglong;
+    cgdifLat=cglat ;
     noDrwaing=drawing;
 }
 
