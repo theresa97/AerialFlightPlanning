@@ -51,7 +51,7 @@
    
     NSMutableArray* fluegeArray = [query findObjects];
     [fluegeArray addObject:dict];
-    fluegeArray
+   
     
    // [PFObject fe]
     [[GlobalState Instance].Flugauftraege addObject:dict];
