@@ -175,24 +175,7 @@
 
     [drawView setCGlong:cgdif setCGlat:cgdifLat setDrawingDisabled:YES];
     [self.drawView setNeedsDisplay];
-
-    /*
-   
-    CGContextRef contextRef = UIGraphicsGetCurrentContext();
-    
-    
-    UIGraphicsBeginImageContext(CGSizeMake(500, 400));
-    //CGContextFillRect(contextRef, CGRectMake(30, 320, 15, 15));
-    CGContextFillEllipseInRect(contextRef, CGRectMake(30, 320, 15, 15));
-    
-    waterLevel.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-   */
-    
-   
-    
 }
-
 
 
 @end

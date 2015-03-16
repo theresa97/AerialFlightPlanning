@@ -106,13 +106,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView.tag ==0) {
+        [self.buttonSendeZuCloud setHidden:YES];
     PFObject* auswahl = [auftragsArray objectAtIndex:indexPath.row];
     [self.textFieldPilot setText:[auswahl valueForKey:@"Pilotenname"]];
     [self.textFieldFlughelfer setText:[auswahl valueForKey:@"Flughelfer"]];
     [self.textViewCrew setText:[auswahl valueForKey:@"Team"]];
     [self.textFieldKennzeichen setText:[auswahl valueForKey:@"Kennzeichen"]];
-    
-   // [self.pickerHubrschrauber ]
+        
+    NSString* heli = [auswahl valueForKey:@"Hubschraubername"];
+        if ([heli containsString:@"HU300"]) {
+            [self.pickerHubrschrauber selectRow: 0 inComponent:0 animated:YES];
+        }else if ([heli containsString:@"JetRanger"]) {
+            [self.pickerHubrschrauber selectRow: 1 inComponent:0 animated:YES];
+        }
+        
+   
     }else{
         //kleine Table view
         
@@ -161,6 +169,7 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 - (IBAction)buttonzuruecksetzen:(id)sender {
+    [self.buttonSendeZuCloud setHidden:NO];
     [self.textFieldPilot setText:@""];
     [self.textFieldFlughelfer setText:@""];
     [self.textViewCrew setText:@""];
