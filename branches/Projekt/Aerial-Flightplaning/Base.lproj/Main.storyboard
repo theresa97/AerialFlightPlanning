@@ -490,9 +490,11 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYd-Qm-iDi">
-                                <rect key="frame" x="289" y="548" width="30" height="30"/>
+                                <rect key="frame" x="289" y="553" width="30" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="1"/>
+                                <state key="normal" title="1">
+                                    <color key="titleShadowColor" red="0.30477674216870043" green="1" blue="0.23819694815438019" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-77-YJ1">
                                 <rect key="frame" x="372" y="548" width="30" height="30"/>
@@ -550,13 +552,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYm-bz-TzH">
-                                <rect key="frame" x="410" y="588" width="35" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-0j-AYi">
                                 <rect key="frame" x="410" y="624" width="30" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -591,6 +586,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYm-bz-TzH">
+                                <rect key="frame" x="410" y="588" width="35" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -602,6 +604,20 @@
                         <outlet property="BTNGewicht" destination="PWk-21-Y7j" id="GyR-1V-LyD"/>
                         <outlet property="BTNLaenge" destination="LE8-1W-ubi" id="da9-a9-52a"/>
                         <outlet property="BTNVolumen" destination="F2p-Sh-G9h" id="gNU-jE-f3y"/>
+                        <outlet property="Button0" destination="7SB-7B-wYW" id="MnO-DC-PyO"/>
+                        <outlet property="Button1" destination="aYd-Qm-iDi" id="FD7-jI-QDu"/>
+                        <outlet property="Button2" destination="rOs-Xa-pTz" id="vjX-mW-DCD"/>
+                        <outlet property="Button3" destination="dh4-77-YJ1" id="wte-4Y-LKJ"/>
+                        <outlet property="Button4" destination="hc0-QJ-2vi" id="4dE-Iz-cxP"/>
+                        <outlet property="Button5" destination="TxR-Hc-KSp" id="YLM-gS-1iS"/>
+                        <outlet property="Button6" destination="3Nc-KW-8Cc" id="eJd-eb-d02"/>
+                        <outlet property="Button7" destination="Mqt-RZ-0Uk" id="LjG-Q7-bVH"/>
+                        <outlet property="Button8" destination="g1F-Zb-4sM" id="uzR-cf-5rr"/>
+                        <outlet property="Button9" destination="fea-oM-gBU" id="nce-Yc-22Z"/>
+                        <outlet property="ButtonAC" destination="WQd-9N-OeV" id="g7g-c3-Reb"/>
+                        <outlet property="ButtonIstgleich" destination="nA7-aT-wAB" id="UoH-Ni-x41"/>
+                        <outlet property="ButtonMinus" destination="xYm-bz-TzH" id="mln-Gs-luL"/>
+                        <outlet property="ButtonPlus" destination="hyk-0j-AYi" id="1tV-Qa-JhI"/>
                         <outlet property="Date_Picker" destination="9ta-G9-Ixa" id="ZUP-O0-KzJ"/>
                         <outlet property="Input301" destination="c6r-Ya-YpG" id="vEy-Db-Nfn"/>
                         <outlet property="Input302" destination="ONX-ZL-Efs" id="N8y-JB-1l6"/>
