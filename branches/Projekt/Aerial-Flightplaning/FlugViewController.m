@@ -48,8 +48,12 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
     [query whereKey:@"Fluege" equalTo:[GlobalState Instance].logedInUser.username];
-    NSArray* scoreArray = [query findObjects];
+   
+    NSMutableArray* fluegeArray = [query findObjects];
+    [fluegeArray addObject:dict];
+    fluegeArray
     
+   // [PFObject fe]
     [[GlobalState Instance].Flugauftraege addObject:dict];
     
     [self.navigationController popViewControllerAnimated:TRUE];
