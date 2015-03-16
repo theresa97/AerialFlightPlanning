@@ -12,6 +12,7 @@
 @synthesize helicopters;
 @synthesize Flugauftraege;
 @synthesize logedInUser;
+@synthesize allCheckLists;
 
 
 +(GlobalState *)Instance {

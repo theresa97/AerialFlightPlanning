@@ -11,6 +11,7 @@
 
 @interface GlobalState : NSObject
 @property NSMutableArray *helicopters; // array for PickerView with all stored Helicopters
+@property NSMutableArray *allCheckLists;
 
 
 +(GlobalState *)Instance;
