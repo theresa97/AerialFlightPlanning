@@ -19,21 +19,14 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-
-    PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
-    [query whereKey:@"User" equalTo:@"test"];
-     NSArray* scoreArray = [query findObjects];
-    auftragsArray = [scoreArray mutableCopy];
-
+    [self getObjects];
+    
 }
 - (void)viewDidLoad {
       [super viewDidLoad];
       self.automaticallyAdjustsScrollViewInsets = NO;
       [[GlobalState Instance].helicopters addObject:@"HU300"];
       [[GlobalState Instance].helicopters addObject:@"JetRanger"];
-
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,12 +68,10 @@
     [self.textFieldFlughelfer setText:@""];
     [self.textViewCrew setText:@""];
     [self.textFieldKennzeichen setText:@""];
-
-//  self.pickerDateDatum setDate:
+    [self getObjects];
+    [self.listView reloadData];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Daten gespeichert" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
     [alert show];
-    
-
     
 }
 
@@ -120,6 +111,13 @@
             [self.pickerHubrschrauber selectRow: 1 inComponent:0 animated:YES];
         }
         
+        NSDateFormatter *formatter;
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"dd.MM yyyy HH:mm"];
+        
+        NSDate *date=[formatter dateFromString:[auswahl valueForKey:@"Durchfuehrungsdatum"]];
+        [self.pickerDateDatum setDate:date];
+      
    
     }else{
         //kleine Table view
@@ -175,5 +173,13 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.textViewCrew setText:@""];
     [self.textFieldKennzeichen setText:@""];
     
+}
+
+-(void)getObjects{
+    PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
+    [query whereKey:@"User" equalTo:@"test"];
+    NSArray* scoreArray = [query findObjects];
+    auftragsArray = [scoreArray mutableCopy];
+
 }
 @end
