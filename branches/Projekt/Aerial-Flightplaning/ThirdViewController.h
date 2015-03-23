@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *ButtonMinus;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonPlus;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonIstgleich;
+@property (weak, nonatomic) IBOutlet UILabel *Anzeige;
 
 
 - (IBAction)in301:(id)sender;
@@ -45,5 +46,20 @@
 - (IBAction)LaengeAction:(id)sender;
 - (IBAction)VolumenAction:(id)sender;
 - (IBAction)GeschwindigkeitAction:(id)sender;
+- (IBAction)Action1:(id)sender;
+- (IBAction)Action2:(id)sender;
+- (IBAction)Action3:(id)sender;
+- (IBAction)Action4:(id)sender;
+- (IBAction)Action5:(id)sender;
+- (IBAction)Action6:(id)sender;
+- (IBAction)Action7:(id)sender;
+- (IBAction)Action8:(id)sender;
+- (IBAction)Action9:(id)sender;
+- (IBAction)Action0:(id)sender;
+- (IBAction)ActionAC:(id)sender;
+- (IBAction)ActionMinus:(id)sender;
+- (IBAction)ActionPlus:(id)sender;
+- (IBAction)ActionIstGleich:(id)sender;
+
 
 @end
