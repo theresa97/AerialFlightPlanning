@@ -312,5 +312,47 @@
     value302 = [ArrayGeschwindigkeit objectAtIndex:index302];
 }
 
+- (IBAction)Action1:(id)sender {
+}
+
+- (IBAction)Action2:(id)sender {
+}
+
+- (IBAction)Action3:(id)sender {
+}
+
+- (IBAction)Action4:(id)sender {
+}
+
+- (IBAction)Action5:(id)sender {
+}
+
+- (IBAction)Action6:(id)sender {
+}
+
+- (IBAction)Action7:(id)sender {
+}
+
+- (IBAction)Action8:(id)sender {
+}
+
+- (IBAction)Action9:(id)sender {
+}
+
+- (IBAction)Action0:(id)sender {
+}
+
+- (IBAction)ActionAC:(id)sender {
+}
+
+- (IBAction)ActionMinus:(id)sender {
+}
+
+- (IBAction)ActionPlus:(id)sender {
+}
+
+- (IBAction)ActionIstGleich:(id)sender {
+}
+
 
 @end
