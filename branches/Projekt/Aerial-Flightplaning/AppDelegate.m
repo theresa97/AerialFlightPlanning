@@ -32,6 +32,7 @@
     [GlobalState Instance].logedInUser = [[PFUser alloc]init];
     [GlobalState Instance].logedInUser.username = @"test";
     [GlobalState Instance].fluege = [[NSMutableArray alloc]init];
+    [GlobalState Instance].flugData = [[PFObject alloc]init];
     return YES;
 }
 

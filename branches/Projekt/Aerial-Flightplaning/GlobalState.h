@@ -22,4 +22,5 @@
 @property PFUser *logedInUser;
 @property NSMutableArray *Flugauftraege;
 @property NSMutableArray *fluege;
+@property NSMutableDictionary *flugData;
 @end

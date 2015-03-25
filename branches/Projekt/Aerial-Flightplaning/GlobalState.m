@@ -14,6 +14,7 @@
 @synthesize logedInUser;
 @synthesize allCheckLists;
 @synthesize fluege;
+@synthesize flugData;
 
 +(GlobalState *)Instance {
     static GlobalState *instance = nil;

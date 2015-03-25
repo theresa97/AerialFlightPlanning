@@ -28,7 +28,9 @@
 
 
 - (IBAction)FlugSpeichern:(id)sender {
-    
+    if ([[GlobalState Instance].flugData count]==1) {
+        self.Flugort.text = [[GlobalState Instance].flugData valueForKey:@"Abflugort"];
+    }
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     
     NSString *abflugort = self.Flugort.text;
