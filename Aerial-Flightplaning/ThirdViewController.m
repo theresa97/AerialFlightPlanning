@@ -30,7 +30,18 @@
     bool VolumenBOOL ;
     bool LaengeBOOL ;
     bool GeschwindigkeitBOOL;
+    bool ErsteZ;
+    bool ZweiteZ;
+    bool DritteZ;
+    bool VierteZ;
+    NSString *ErsteZahl;
+    NSString *ZweiteZahl;
+    NSString *DritteZahl;
+    NSString *VierteZahl;
+    
+    
 }
+
 
 
 
@@ -313,33 +324,323 @@
 }
 
 - (IBAction)Action1:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"02";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"2";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"2";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"1";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action2:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"01";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"1";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"2";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"2";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action3:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"03";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"3";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"3";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"3";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action4:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"04";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"4";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"4";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"4";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action5:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"05";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"5";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"5";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"5";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action6:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"06";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"6";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"6";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"6";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action7:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"07";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"7";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"7";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"7";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action8:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"08";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"8";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"8";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"8";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action9:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"09";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"9";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"9";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"9";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)Action0:(id)sender {
+    if(ErsteZ == false){
+        ErsteZ = true;
+        ErsteZahl = @"00";
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+    }else if(ZweiteZ == false){
+        ZweiteZ = true;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"0";
+        NSString *Zahl = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", @"00" , Zahl]];
+    }else if(DritteZ == false){
+        DritteZ = true;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"0";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , @"0" , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+        
+    }else if(VierteZ == false){
+        VierteZ = true;
+        VierteZahl = DritteZahl;
+        DritteZahl = ZweiteZahl;
+        ZweiteZahl = ErsteZahl;
+        ErsteZahl = @"0";
+        NSString *Zahlv = [NSString stringWithFormat:@"%@%@" , VierteZahl , DritteZahl];
+        NSString *Zahln = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", Zahlv, Zahln]];
+    }
 }
 
 - (IBAction)ActionAC:(id)sender {
