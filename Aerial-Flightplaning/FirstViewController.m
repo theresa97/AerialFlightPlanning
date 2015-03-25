@@ -124,24 +124,30 @@ PFObject* currentAuftrag;
         NSDate *date=[formatter dateFromString:[auswahl valueForKey:@"Durchfuehrungsdatum"]];
         [self.pickerDateDatum setDate:date];
         
+        [self getObjects];
+        [self getFluege];
+        [self.smalltable reloadData];
+        
         
     }else{
         //kleine Table view
         // [GlobalState Instance].selectedFlight = [indexPath row];
         selectFlight = indexPath.row;
+        
     }
-    
-}
+    }
 //Table View Code
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self getFluege];
     if (tableView.tag ==0) {
         UITableViewCell *cell = [[UITableViewCell alloc]init];
         PFObject *eintrag = [auftragsArray objectAtIndex:indexPath.row];
         cell.textLabel.text = [eintrag valueForKey:@"Durchfuehrungsdatum"];
         return cell;
     }else if(tableView.tag ==333){
+        
         UITableViewCell *cell = [[UITableViewCell alloc]init];
         // NSMutableDictionary* Fluege = [[GlobalState Instance].Flugauftraege objectAtIndex:indexPath.row];
         NSMutableArray *Fluege = [currentAuftrag valueForKey:@"Fluege"];
@@ -160,7 +166,6 @@ PFObject* currentAuftrag;
         return auftragsArray.count;
     }else{
         NSInteger ss = [[currentAuftrag valueForKey:@"Fluege"] count];
-        
         return ss;
         //return [GlobalState Instance].Flugauftraege.count;
     }
@@ -175,8 +180,6 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 {     if (tableView.tag ==0) {
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [auftragsArray removeObjectAtIndex:indexPath.row];
-}else{
-    
 }
 }
 
@@ -187,8 +190,7 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.textViewCrew setText:@""];
     [self.textFieldKennzeichen setText:@""];
     currentAuftrag = nil;
-    [self.smalltable reloadData];
-    
+    [self.smalltable reloadData];    
 }
 
 -(void)getObjects{
@@ -197,13 +199,12 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray* scoreArray = [query findObjects];
 
     if (scoreArray.count != 0) {
-     
         auftragsArray = [scoreArray mutableCopy];
-    
-        currentAuftrag = [auftragsArray objectAtIndex:currentPlan];
-        
-            [currentAuftrag addUniqueObjectsFromArray:[GlobalState Instance].fluege forKey:@"Fluege"];
-        
     }
+}
+
+-(void)getFluege{
+    currentAuftrag = [auftragsArray objectAtIndex:currentPlan];
+    [currentAuftrag addUniqueObjectsFromArray:[GlobalState Instance].fluege forKey:@"Fluege"];
 }
 @end
