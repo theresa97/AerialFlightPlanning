@@ -63,7 +63,25 @@ PFObject* currentAuftrag;
     data[@"Hubschraubername"] = [[GlobalState Instance].helicopters objectAtIndex:selectedComponent];
     data[@"Durchfuehrungsdatum"] = dateString;
     data[@"Kennzeichen"]=self.textFieldKennzeichen.text;
-    data[@"Fluege"] = fluege;
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    
+    NSString *abflugort = @"ss";
+    NSString *startzeit = @"ss";
+    NSString *ankunftsort =@"ss";
+    NSString *landezeit = @"ss";
+    NSString *dauer = @"ss";
+    NSString *flugart = @"ss";
+    
+    [dict setValue:abflugort forKey:@"Abflugort"];
+    [dict setValue:startzeit forKey:@"Startzeit"];
+    [dict setValue:ankunftsort forKey:@"Ankunftsort"];
+    [dict setValue:landezeit forKey:@"Landezeit"];
+    [dict setValue:dauer forKey:@"Dauer"];
+    [dict setValue:flugart forKey:@"Flugart"];
+    
+    [[GlobalState Instance].fluege addObject:dict];
+    
+    data[@"Fluege"] = [GlobalState Instance].fluege;
     
     [data saveInBackground];
     
@@ -188,12 +206,16 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 -(void)getObjects{
     PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
     [query whereKey:@"User" equalTo:@"test"];
-    
     NSArray* scoreArray = [query findObjects];
-    auftragsArray = [scoreArray mutableCopy];
+
+    if (scoreArray.count != 0) {
+     
+        auftragsArray = [scoreArray mutableCopy];
     
     currentAuftrag = [auftragsArray objectAtIndex:currentPlan];
     
+    [currentAuftrag addUniqueObjectsFromArray:[GlobalState Instance].fluege forKey:@"Fluege"];
+    }
     //if (![[GlobalState Instance].flugDict count]==0) {
         
         //hier weiter mit addObjectsFromArray:forKey: für den einen flugeintrag in kleiner View mit der methode kann ich die fehlenden daten des array mit dem Key setzen https://www.parse.com/docs/ios_guide#objects-updating/iOS

@@ -58,9 +58,10 @@
     
    // [PFObject fe]
     [[GlobalState Instance].Flugauftraege addObject:dict];
+    */
     
     [self.navigationController popViewControllerAnimated:TRUE];
-    */
+    
     
 }
 @end
