@@ -133,7 +133,9 @@ PFObject* currentAuftrag;
         //kleine Table view
         // [GlobalState Instance].selectedFlight = [indexPath row];
         selectFlight = indexPath.row;
-        
+        NSMutableArray *Fluege = [currentAuftrag valueForKey:@"Fluege"];
+        NSMutableDictionary* vals =[Fluege objectAtIndex:indexPath.row];
+        [GlobalState Instance].flugData = vals;
     }
     }
 //Table View Code
