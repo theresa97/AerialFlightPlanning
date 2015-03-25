@@ -46,6 +46,9 @@
     [dict setValue:dauer forKey:@"Dauer"];
     [dict setValue:flugart forKey:@"Flugart"];
     
+    [[GlobalState Instance].fluege addObject:dict];
+    
+    /*
     PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
     [query whereKey:@"Fluege" equalTo:[GlobalState Instance].logedInUser.username];
    
@@ -57,7 +60,7 @@
     [[GlobalState Instance].Flugauftraege addObject:dict];
     
     [self.navigationController popViewControllerAnimated:TRUE];
-    
+    */
     
 }
 @end
