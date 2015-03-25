@@ -145,7 +145,9 @@ PFObject* currentAuftrag;
         UITableViewCell *cell = [[UITableViewCell alloc]init];
         // NSMutableDictionary* Fluege = [[GlobalState Instance].Flugauftraege objectAtIndex:indexPath.row];
         NSMutableArray *Fluege = [currentAuftrag valueForKey:@"Fluege"];
-        NSString* text = [Fluege valueForKey:@"Abflugort"];
+        NSMutableDictionary* vals =[Fluege objectAtIndex:indexPath.row];
+        NSString* text = [vals valueForKey:@"Abflugort"];
+       
         cell.textLabel.text = text;
         return cell;
     }else{
@@ -159,6 +161,7 @@ PFObject* currentAuftrag;
         return auftragsArray.count;
     }else{
         NSInteger ss = [[currentAuftrag valueForKey:@"Fluege"] count];
+        
         return ss;
         //return [GlobalState Instance].Flugauftraege.count;
     }
@@ -196,13 +199,10 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
      
         auftragsArray = [scoreArray mutableCopy];
     
-    currentAuftrag = [auftragsArray objectAtIndex:currentPlan];
-    
-    [currentAuftrag addUniqueObjectsFromArray:[GlobalState Instance].fluege forKey:@"Fluege"];
-    }
-    //if (![[GlobalState Instance].flugDict count]==0) {
+        currentAuftrag = [auftragsArray objectAtIndex:currentPlan];
         
-        //hier weiter mit addObjectsFromArray:forKey: für den einen flugeintrag in kleiner View mit der methode kann ich die fehlenden daten des array mit dem Key setzen https://www.parse.com/docs/ios_guide#objects-updating/iOS
-   // }
+            [currentAuftrag addUniqueObjectsFromArray:[GlobalState Instance].fluege forKey:@"Fluege"];
+        
+    }
 }
 @end
