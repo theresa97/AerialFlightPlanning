@@ -327,8 +327,9 @@
 
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"01";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"1";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -360,8 +361,9 @@
     
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"02";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"2";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -392,8 +394,9 @@
 - (IBAction)Action3:(id)sender {
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"03";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"3";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -425,8 +428,9 @@
     
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"04";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"4";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -458,8 +462,9 @@
     
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"05";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"5";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -491,8 +496,9 @@
     
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"06";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"6";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -524,8 +530,9 @@
     
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"07";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"7";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -556,8 +563,9 @@
 - (IBAction)Action8:(id)sender {
          if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"08";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"8";
+             NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+             [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -589,8 +597,9 @@
      [self.Anzeige setText:@""];
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"09";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"9";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
@@ -622,8 +631,9 @@
      [self.Anzeige setText:@""];
     if(ErsteZ == false){
         ErsteZ = true;
-        ErsteZahl = @"00";
-        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , ErsteZahl ]];
+        ErsteZahl = @"0";
+        NSString *zahl = [NSString stringWithFormat:@"%@%@" , @"0" , ErsteZahl];
+        [self.Anzeige setText:[NSString stringWithFormat: @"%@:%@" , @"00" , zahl ]];
     }else if(ZweiteZ == false){
         ZweiteZ = true;
         ZweiteZahl = ErsteZahl;
