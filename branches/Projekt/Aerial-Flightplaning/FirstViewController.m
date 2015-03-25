@@ -63,23 +63,7 @@ PFObject* currentAuftrag;
     data[@"Hubschraubername"] = [[GlobalState Instance].helicopters objectAtIndex:selectedComponent];
     data[@"Durchfuehrungsdatum"] = dateString;
     data[@"Kennzeichen"]=self.textFieldKennzeichen.text;
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    
-    NSString *abflugort = @"ss";
-    NSString *startzeit = @"ss";
-    NSString *ankunftsort =@"ss";
-    NSString *landezeit = @"ss";
-    NSString *dauer = @"ss";
-    NSString *flugart = @"ss";
-    
-    [dict setValue:abflugort forKey:@"Abflugort"];
-    [dict setValue:startzeit forKey:@"Startzeit"];
-    [dict setValue:ankunftsort forKey:@"Ankunftsort"];
-    [dict setValue:landezeit forKey:@"Landezeit"];
-    [dict setValue:dauer forKey:@"Dauer"];
-    [dict setValue:flugart forKey:@"Flugart"];
-    
-    [[GlobalState Instance].fluege addObject:dict];
+   
     
     data[@"Fluege"] = [GlobalState Instance].fluege;
     
