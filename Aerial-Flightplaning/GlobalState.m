@@ -13,7 +13,7 @@
 @synthesize Flugauftraege;
 @synthesize logedInUser;
 @synthesize allCheckLists;
-
+@synthesize fluege;
 
 +(GlobalState *)Instance {
     static GlobalState *instance = nil;
