@@ -12,6 +12,7 @@
 @interface FirstViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 //Properties
+@property (weak, nonatomic) IBOutlet UITableView *smalltable;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPilot;
 

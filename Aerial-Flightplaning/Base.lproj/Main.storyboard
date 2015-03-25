@@ -160,6 +160,7 @@
                         <outlet property="listView" destination="KPn-zn-ZYv" id="RNs-pe-X5M"/>
                         <outlet property="pickerDateDatum" destination="9ta-G9-Ixa" id="H5T-gc-bBh"/>
                         <outlet property="pickerHubrschrauber" destination="I5P-hh-ooI" id="VON-Dz-cfX"/>
+                        <outlet property="smalltable" destination="nTA-zi-o5G" id="EaA-7k-IU0"/>
                         <outlet property="textFieldFlughelfer" destination="5a2-NR-D9X" id="KMY-RD-4WJ"/>
                         <outlet property="textFieldKennzeichen" destination="VUD-dP-dha" id="Ssl-JN-0J9"/>
                         <outlet property="textFieldPilot" destination="hAN-Rx-M2X" id="8Ff-l2-5LU"/>

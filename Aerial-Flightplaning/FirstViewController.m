@@ -146,8 +146,7 @@ PFObject* currentAuftrag;
         // NSMutableDictionary* Fluege = [[GlobalState Instance].Flugauftraege objectAtIndex:indexPath.row];
         NSMutableArray *Fluege = [currentAuftrag valueForKey:@"Fluege"];
         NSMutableDictionary* vals =[Fluege objectAtIndex:indexPath.row];
-        NSString* text = [vals valueForKey:@"Abflugort"];
-       
+        NSString* text = [vals valueForKey:@"Abflugort"];       
         cell.textLabel.text = text;
         return cell;
     }else{
@@ -187,6 +186,8 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.textFieldFlughelfer setText:@""];
     [self.textViewCrew setText:@""];
     [self.textFieldKennzeichen setText:@""];
+    currentAuftrag = nil;
+    [self.smalltable reloadData];
     
 }
 
