@@ -7,9 +7,11 @@
 //
 
 #import "FirstViewController.h"
-
-
+NSInteger currentPlan = 0;
+NSInteger selectFlight = 0;
+PFObject* currentAuftrag;
 @interface FirstViewController ()
+
 
 @end
 
@@ -21,12 +23,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     [self getObjects];
     
+    
 }
 - (void)viewDidLoad {
-      [super viewDidLoad];
-      self.automaticallyAdjustsScrollViewInsets = NO;
-      [[GlobalState Instance].helicopters addObject:@"HU300"];
-      [[GlobalState Instance].helicopters addObject:@"JetRanger"];
+    [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [[GlobalState Instance].helicopters addObject:@"HU300"];
+    [[GlobalState Instance].helicopters addObject:@"JetRanger"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,15 +84,15 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     //REIHEN
-   return [[GlobalState Instance].helicopters count]; // Änderung– Daten von M.
-   
+    return [[GlobalState Instance].helicopters count]; // Änderung– Daten von M.
+    
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-       return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M
+    return [[GlobalState Instance].helicopters objectAtIndex:row]; //DATEN von M
     
     
-   }
+}
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedComponent = row;
@@ -98,13 +101,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView.tag ==0) {
         [self.buttonSendeZuCloud setHidden:YES];
-    PFObject* auswahl = [auftragsArray objectAtIndex:indexPath.row];
-    [self.textFieldPilot setText:[auswahl valueForKey:@"Pilotenname"]];
-    [self.textFieldFlughelfer setText:[auswahl valueForKey:@"Flughelfer"]];
-    [self.textViewCrew setText:[auswahl valueForKey:@"Team"]];
-    [self.textFieldKennzeichen setText:[auswahl valueForKey:@"Kennzeichen"]];
+        currentPlan = indexPath.row;
+        PFObject* auswahl = [auftragsArray objectAtIndex:indexPath.row];
+        [self.textFieldPilot setText:[auswahl valueForKey:@"Pilotenname"]];
+        [self.textFieldFlughelfer setText:[auswahl valueForKey:@"Flughelfer"]];
+        [self.textViewCrew setText:[auswahl valueForKey:@"Team"]];
+        [self.textFieldKennzeichen setText:[auswahl valueForKey:@"Kennzeichen"]];
         
-    NSString* heli = [auswahl valueForKey:@"Hubschraubername"];
+        NSString* heli = [auswahl valueForKey:@"Hubschraubername"];
         if ([heli containsString:@"HU300"]) {
             [self.pickerHubrschrauber selectRow: 0 inComponent:0 animated:YES];
         }else if ([heli containsString:@"JetRanger"]) {
@@ -117,11 +121,12 @@
         
         NSDate *date=[formatter dateFromString:[auswahl valueForKey:@"Durchfuehrungsdatum"]];
         [self.pickerDateDatum setDate:date];
-      
-   
+        
+        
     }else{
         //kleine Table view
-        
+        // [GlobalState Instance].selectedFlight = [indexPath row];
+        selectFlight = indexPath.row;
     }
     
 }
@@ -129,27 +134,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-     if (tableView.tag ==0) {
-    UITableViewCell *cell = [[UITableViewCell alloc]init];
-    PFObject *eintrag = [auftragsArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [eintrag valueForKey:@"Durchfuehrungsdatum"];
-    return cell;
-     }else{
-         UITableViewCell *cell = [[UITableViewCell alloc]init];
-         NSMutableDictionary* Fluege = [[GlobalState Instance].Flugauftraege objectAtIndex:indexPath.row];
-         NSString* text = [Fluege valueForKey:@"Abflugort"];
-         cell.textLabel.text = text;
-         return cell;
-     }
+    if (tableView.tag ==0) {
+        UITableViewCell *cell = [[UITableViewCell alloc]init];
+        PFObject *eintrag = [auftragsArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [eintrag valueForKey:@"Durchfuehrungsdatum"];
+        return cell;
+    }else if(tableView.tag ==333){
+        UITableViewCell *cell = [[UITableViewCell alloc]init];
+        // NSMutableDictionary* Fluege = [[GlobalState Instance].Flugauftraege objectAtIndex:indexPath.row];
+        NSMutableArray *Fluege = [currentAuftrag valueForKey:@"Fluege"];
+        NSString* text = [Fluege valueForKey:@"Abflugort"];
+        cell.textLabel.text = text;
+        return cell;
+    }else{
+        return nil;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
-     if (tableView.tag ==0) {
-         return auftragsArray.count;
-     }else{
-         return [GlobalState Instance].Flugauftraege.count;
-     }
+    if (tableView.tag ==0) {
+        return auftragsArray.count;
+    }else{
+        NSInteger ss = [[currentAuftrag valueForKey:@"Fluege"] count];
+        return ss;
+        //return [GlobalState Instance].Flugauftraege.count;
+    }
 }
 
 - (NSArray *)tableView:(UITableView *)tableView
@@ -161,9 +171,9 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 {     if (tableView.tag ==0) {
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [auftragsArray removeObjectAtIndex:indexPath.row];
-     }else{
-         
-     }
+}else{
+    
+}
 }
 
 - (IBAction)buttonzuruecksetzen:(id)sender {
@@ -178,8 +188,15 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
 -(void)getObjects{
     PFQuery *query = [PFQuery queryWithClassName:@"Datas"];
     [query whereKey:@"User" equalTo:@"test"];
+    
     NSArray* scoreArray = [query findObjects];
     auftragsArray = [scoreArray mutableCopy];
-
+    
+    currentAuftrag = [auftragsArray objectAtIndex:currentPlan];
+    
+    //if (![[GlobalState Instance].flugDict count]==0) {
+        
+        //hier weiter mit addObjectsFromArray:forKey: für den einen flugeintrag in kleiner View mit der methode kann ich die fehlenden daten des array mit dem Key setzen https://www.parse.com/docs/ios_guide#objects-updating/iOS
+   // }
 }
 @end
