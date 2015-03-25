@@ -34,11 +34,13 @@
     bool ZweiteZ;
     bool DritteZ;
     bool VierteZ;
+    bool minus;
+    bool plus;
     NSString *ErsteZahl;
     NSString *ZweiteZahl;
     NSString *DritteZahl;
     NSString *VierteZahl;
-    
+    NSInteger minutenGesamt;
     
 }
 
@@ -662,15 +664,104 @@
 }
 
 - (IBAction)ActionAC:(id)sender {
+    [self.Anzeige setText:@""];
+    ErsteZ = false;
+    ZweiteZ = false;
+    DritteZ = false;
+    VierteZ = false;
+    
+    ErsteZahl = 0;
+    ZweiteZahl = 0;
+    DritteZahl = 0;
+    VierteZahl = 0;
+    
+    plus = false;
+    minus = false;
 }
 
 - (IBAction)ActionMinus:(id)sender {
+    [self.Anzeige setText:@""];
+    minus = true;
+    NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    NSString *Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    NSInteger StundenINT = [Stunden integerValue];
+    NSInteger MinutenINT = [Minuten integerValue];
+    NSInteger StundenInMin = StundenINT * 60;
+    minutenGesamt = StundenInMin +MinutenINT;
+    ErsteZ = false;
+    ZweiteZ = false;
+    DritteZ = false;
+    VierteZ = false;
+    
+    ErsteZahl = 0;
+    ZweiteZahl = 0;
+    DritteZahl = 0;
+    VierteZahl = 0;
+    
+    
+    
+    
 }
 
 - (IBAction)ActionPlus:(id)sender {
+    [self.Anzeige setText:@""];
+    plus = true;
+    NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    NSString *Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    NSInteger StundenINT = [Stunden integerValue];
+    NSInteger MinutenINT = [Minuten integerValue];
+    NSInteger StundenInMin = StundenINT * 60;
+    minutenGesamt = StundenInMin +MinutenINT;
+    
+    ErsteZ = false;
+    ZweiteZ = false;
+    DritteZ = false;
+    VierteZ = false;
+    
+    ErsteZahl = 0;
+    ZweiteZahl = 0;
+    DritteZahl = 0;
+    VierteZahl = 0;
+    
 }
 
 - (IBAction)ActionIstGleich:(id)sender {
+    NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    NSString *Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    NSInteger StundenINT = [Stunden integerValue];
+    NSInteger MinutenINT = [Minuten integerValue];
+    NSInteger StundenInMin = StundenINT * 60;
+    NSInteger minutenGesamt2 = StundenInMin +MinutenINT;
+    if(minus == true){
+        NSInteger minutenEnde =  minutenGesamt - minutenGesamt2;
+        NSInteger stunden = minutenEnde / 60;
+        NSInteger minuten = minutenEnde % 60;
+        NSString *stundenST =[@(stunden) stringValue];
+        NSString *minutenST = [@(minuten) stringValue];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+       
+        
+    }else if(plus == true){
+        NSInteger minutenEnde =  minutenGesamt + minutenGesamt2;
+        NSInteger stunden = minutenEnde / 60;
+        NSInteger minuten = minutenEnde % 60;
+        NSString *stundenST =[@(stunden) stringValue];
+        NSString *minutenST = [@(minuten) stringValue];
+        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+    }
+    ErsteZ = false;
+    ZweiteZ = false;
+    DritteZ = false;
+    VierteZ = false;
+    
+    ErsteZahl = 0;
+    ZweiteZahl = 0;
+    DritteZahl = 0;
+    VierteZahl = 0;
+    
+    plus = false;
+    minus = false;
+    
 }
 
 
