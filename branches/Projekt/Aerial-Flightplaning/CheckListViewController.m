@@ -12,24 +12,34 @@
 
 @end
 
-@implementation CheckListViewController
-    NSInteger LFZ_Button = 0;
-    NSInteger OMBescheide_Button =0;
-    NSInteger Flugtickets_Button =0;
-    NSInteger Notausruestung_Button= 0;
-    NSInteger Endurance_Button =0;
-    NSInteger ATCFlugplan_Button =0;
-    NSInteger Wetterberatung_button= 0;
-    NSInteger Notam_Button =0;
-    NSInteger Kartenmaterial_Button =0;
-    NSInteger Schwerpunktberechnung_Button =0;
-    NSInteger Bordbuch_Button= 0;
+@implementation CheckListViewController{
+    NSInteger LFZButton;
+    NSInteger OMBescheideButton ;
+    NSInteger FlugticketsButton ;
+    NSInteger NotausruestungButton;
+    NSInteger EnduranceButton ;
+    NSInteger ATCFlugplanButton ;
+    NSInteger Wetterberatungbutton;
+    NSInteger NotamButton ;
+    NSInteger KartenmaterialButton;
+    NSInteger SchwerpunktberechnungButton;
+    NSInteger BordbuchButton;
  
-
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+     LFZButton =0;
+     OMBescheideButton =0;
+     FlugticketsButton =0;
+     NotausruestungButton= 0;
+     EnduranceButton =0;
+     ATCFlugplanButton =0;
+     Wetterberatungbutton= 0;
+     NotamButton =0;
+     KartenmaterialButton =0;
+     SchwerpunktberechnungButton =0;
+     BordbuchButton= 0;
     // Do any additional setup after loading the view.
 }
 
@@ -51,16 +61,89 @@
 - (IBAction)ButtonsAction:(id)sender {
     
     if ([sender tag] == 10 ) {
-       //zuerst erhöhen und dan abfragen und setzten
-        //if(
-        
-        //[sender setBackgroundColor:[UIColor greenColor]];
+        LFZButton = LFZButton +1;
+        if(LFZButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(LFZButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }else if(LFZButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            LFZButton = 0;
+        }
+       
+    }else if ([sender tag] == 11 ) {
+        OMBescheideButton = OMBescheideButton +1;
+        if(OMBescheideButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(OMBescheideButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if ([sender tag] == 18 ) {
+        FlugticketsButton  = FlugticketsButton +1;
+        if(FlugticketsButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(FlugticketsButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if ([sender tag] == 20 ) {
+        NotausruestungButton = NotausruestungButton +1;
+        if(NotausruestungButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(NotausruestungButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if([sender tag] == 19) {
+        EnduranceButton = EnduranceButton +1;
+        if(EnduranceButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(EnduranceButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if([sender tag] == 15 ) {
+        ATCFlugplanButton = ATCFlugplanButton +1;
+        if(ATCFlugplanButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(ATCFlugplanButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if ([sender tag] == 16 ) {
+        Wetterberatungbutton = Wetterberatungbutton +1;
+        if(Wetterberatungbutton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(Wetterberatungbutton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if ([sender tag] == 17 ) {
+        NotamButton = NotamButton +1;
+        if(NotamButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(NotamButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if([sender tag] == 12 ) {
+        KartenmaterialButton = KartenmaterialButton +1;
+        if(KartenmaterialButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(KartenmaterialButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if ([sender tag] == 13 ) {
+        SchwerpunktberechnungButton = SchwerpunktberechnungButton +1;
+        if(SchwerpunktberechnungButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(SchwerpunktberechnungButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
+    }else if ([sender tag] == 14 ) {
+        BordbuchButton =  BordbuchButton +1;
+        if(BordbuchButton == 1){
+            [sender setBackgroundColor:[UIColor greenColor]];
+        }else if(BordbuchButton==2){
+            [sender setBackgroundColor:[UIColor redColor]];
+        }
     }
-    
-    
-    
-  
-    
-    
+
 }
+
+
 @end

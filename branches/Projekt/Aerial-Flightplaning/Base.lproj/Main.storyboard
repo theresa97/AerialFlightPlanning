@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Flugplan-->
@@ -761,54 +761,81 @@
                                 <state key="normal" title="aktuelle LFZ-Papiere an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="HmY-qy-PnX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzU-Lo-NqM">
                                 <rect key="frame" x="50" y="124" width="227" height="30"/>
                                 <state key="normal" title="aktuelle OM &amp;Bescheide an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="XbE-3Y-Jqc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73j-uR-gjA">
                                 <rect key="frame" x="50" y="390" width="80" height="30"/>
                                 <state key="normal" title="Flugtickets ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="LxX-ck-Lqo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-AR-Ztp">
                                 <rect key="frame" x="50" y="276" width="93" height="30"/>
                                 <state key="normal" title="ATC-Flugplan">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="JZY-wf-a3a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PJ-Gv-8eA">
                                 <rect key="frame" x="50" y="314" width="106" height="30"/>
                                 <state key="normal" title="Wetterberatung">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="gPX-g8-Z6e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14g-Jx-FXM">
                                 <rect key="frame" x="50" y="352" width="46" height="30"/>
                                 <state key="normal" title="Notam">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="mJb-Ga-PDT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkW-wo-NEC">
                                 <rect key="frame" x="50" y="162" width="159" height="30"/>
                                 <state key="normal" title="Kartenmaterial an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="61r-5X-TNl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-eR-zRd">
                                 <rect key="frame" x="50" y="200" width="291" height="30"/>
                                 <state key="normal" title="Mass &amp; Balance durchgeführt und an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="yKi-Tv-yXl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyz-Ot-keB">
                                 <rect key="frame" x="50" y="238" width="262" height="30"/>
                                 <state key="normal" title="Bordbuch an Bord / Wartung / Mängel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="WXl-LC-bL4"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao3-17-Lbf">
                                 <rect key="frame" x="437" y="86" width="97" height="30"/>
@@ -871,17 +898,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-YR-63M">
-                                <rect key="frame" x="50" y="466" width="101" height="30"/>
-                                <state key="normal" title="Notausrüstung">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-ds-VWL">
                                 <rect key="frame" x="50" y="428" width="74" height="30"/>
                                 <state key="normal" title="Endurance">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="hIR-b8-dTl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-YR-63M">
+                                <rect key="frame" x="50" y="466" width="101" height="30"/>
+                                <state key="normal" title="Notausrüstung">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonsAction:" destination="qxX-h2-dd4" eventType="touchUpInside" id="myV-pH-xg0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -903,7 +936,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocR-nT-fCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-879" y="1120"/>
+            <point key="canvasLocation" x="-828" y="913"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
