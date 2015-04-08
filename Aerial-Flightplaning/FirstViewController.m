@@ -22,7 +22,7 @@ PFObject* currentAuftrag;
 
 -(void)viewWillAppear:(BOOL)animated{
     [self getObjects];
-    
+    [self getFluege];
     
 }
 - (void)viewDidLoad {
@@ -101,6 +101,7 @@ PFObject* currentAuftrag;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [[GlobalState Instance].fluege removeAllObjects];
     if (tableView.tag ==0) {
         [self.buttonSendeZuCloud setHidden:YES];
         currentPlan = indexPath.row;
