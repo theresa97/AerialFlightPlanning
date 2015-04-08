@@ -136,6 +136,20 @@ PFObject* currentAuftrag;
         NSMutableArray *Fluege = [currentAuftrag valueForKey:@"Fluege"];
         NSMutableDictionary* vals =[Fluege objectAtIndex:indexPath.row];
         [GlobalState Instance].flugData = vals;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //hier weiter mit seque zum eintragen der daten
+        
+        
+        
+        
     }
     }
 //Table View Code
