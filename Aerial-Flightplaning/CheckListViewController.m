@@ -77,6 +77,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(OMBescheideButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(OMBescheideButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            OMBescheideButton = 0;
         }
     }else if ([sender tag] == 18 ) {
         FlugticketsButton  = FlugticketsButton +1;
@@ -84,6 +87,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(FlugticketsButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(FlugticketsButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            FlugticketsButton = 0;
         }
     }else if ([sender tag] == 20 ) {
         NotausruestungButton = NotausruestungButton +1;
@@ -91,6 +97,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(NotausruestungButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(NotausruestungButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            NotausruestungButton = 0;
         }
     }else if([sender tag] == 19) {
         EnduranceButton = EnduranceButton +1;
@@ -98,6 +107,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(EnduranceButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(EnduranceButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            EnduranceButton = 0;
         }
     }else if([sender tag] == 15 ) {
         ATCFlugplanButton = ATCFlugplanButton +1;
@@ -105,6 +117,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(ATCFlugplanButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(ATCFlugplanButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            ATCFlugplanButton = 0;
         }
     }else if ([sender tag] == 16 ) {
         Wetterberatungbutton = Wetterberatungbutton +1;
@@ -112,6 +127,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(Wetterberatungbutton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(Wetterberatungbutton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            Wetterberatungbutton = 0;
         }
     }else if ([sender tag] == 17 ) {
         NotamButton = NotamButton +1;
@@ -119,6 +137,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(NotamButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(NotamButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            NotamButton = 0;
         }
     }else if([sender tag] == 12 ) {
         KartenmaterialButton = KartenmaterialButton +1;
@@ -126,6 +147,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(KartenmaterialButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(KartenmaterialButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            KartenmaterialButton = 0;
         }
     }else if ([sender tag] == 13 ) {
         SchwerpunktberechnungButton = SchwerpunktberechnungButton +1;
@@ -133,6 +157,9 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(SchwerpunktberechnungButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
+        }else if(SchwerpunktberechnungButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            SchwerpunktberechnungButton = 0;
         }
     }else if ([sender tag] == 14 ) {
         BordbuchButton =  BordbuchButton +1;
@@ -140,8 +167,10 @@
             [sender setBackgroundColor:[UIColor greenColor]];
         }else if(BordbuchButton==2){
             [sender setBackgroundColor:[UIColor redColor]];
-        }
-    }
+        }else if(BordbuchButton == 3){
+            [sender setBackgroundColor:[UIColor whiteColor]];
+            BordbuchButton = 0;
+        }    }
 
 }
 
