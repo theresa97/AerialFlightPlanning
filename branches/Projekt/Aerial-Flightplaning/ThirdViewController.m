@@ -757,8 +757,6 @@
         
        Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
     }
-    
-    
     if(ZweiteZahl == nil) {
         Minuten =[NSString stringWithFormat:@"%@%@", @"0", ErsteZahl];
     }else{
@@ -779,9 +777,13 @@
             minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
         }else if (stunden < 10){
             NSString *stunden2 = [@(stunden) stringValue];
-            minutenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
+            stundenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
         
+        }else{
+            minutenST =[@(minuten) stringValue];
+            stundenST = [@(stunden) stringValue];
         }
+        
         [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
        
         
