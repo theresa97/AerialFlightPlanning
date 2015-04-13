@@ -713,9 +713,8 @@
     [self.Anzeige setText:@""];
     plus = true;
     NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
-    NSLog(ZweiteZahl);
-    if([ZweiteZahl isEqual:[NSNull null]]) {
-        Minuten = ErsteZahl;
+    if(ZweiteZahl == nil) {
+        Minuten = [NSString stringWithFormat:@"%@%@", @"0", ErsteZahl];
     }else{
         Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
     }
@@ -739,8 +738,8 @@
 - (IBAction)ActionIstGleich:(id)sender {
     NSString *Minuten;
     NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
-    if([ZweiteZahl isEqualToString:@"0"]) {
-        Minuten = ErsteZahl;
+    if(ZweiteZahl == nil) {
+        Minuten =[NSString stringWithFormat:@"%@%@", @"0", ErsteZahl];
     }else{
         Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
     }
