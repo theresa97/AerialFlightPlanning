@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Flugplan-->
@@ -697,7 +697,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="GAe-Tj-Knh"/>
+                        <segue destination="Tuu-NO-axc" kind="relationship" relationship="rootViewController" id="hJ2-tz-9Af"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgU-FG-WgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -713,7 +713,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KdJ-Wc-5fO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tMy-3q-9SE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -724,7 +724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjP-5d-WgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="-1185"/>
+            <point key="canvasLocation" x="-567" y="-1137"/>
         </scene>
         <!--Item-->
         <scene sceneID="dto-2n-mnf">
@@ -735,7 +735,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VBN-sb-ciu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dcY-ia-dCq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flightpreperation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nG-ok-lPC">
@@ -964,7 +964,4 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hWX-hp-xRo"/>
-    </inferredMetricsTieBreakers>
 </document>
