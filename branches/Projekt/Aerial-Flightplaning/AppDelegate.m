@@ -33,6 +33,7 @@
     [GlobalState Instance].logedInUser.username = @"test";
     [GlobalState Instance].fluege = [[NSMutableArray alloc]init];
     [GlobalState Instance].flugData = [[NSMutableDictionary alloc]init];
+   
     return YES;
 }
 
