@@ -681,9 +681,15 @@
 
 - (IBAction)ActionMinus:(id)sender {
     NSString *Minuten;
+    NSString *Stunden;
     [self.Anzeige setText:@""];
     minus = true;
-    NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    if(VierteZahl == nil){
+        Stunden = [NSString stringWithFormat:@"%@%@", @"0", DritteZahl];
+    }else{
+        
+        Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    }
     if([ZweiteZahl isEqualToString:@"0"]) {
     Minuten = ErsteZahl;
     }else{
@@ -710,9 +716,16 @@
 
 - (IBAction)ActionPlus:(id)sender {
     NSString *Minuten;
+    NSString *Stunden;
     [self.Anzeige setText:@""];
     plus = true;
-    NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    if(VierteZahl == nil){
+        Stunden = [NSString stringWithFormat:@"%@%@", @"0", DritteZahl];
+    }else{
+        
+        Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    }
+   
     if(ZweiteZahl == nil) {
         Minuten = [NSString stringWithFormat:@"%@%@", @"0", ErsteZahl];
     }else{
@@ -737,7 +750,15 @@
 
 - (IBAction)ActionIstGleich:(id)sender {
     NSString *Minuten;
-    NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    NSString *Stunden;
+    if(VierteZahl == nil){
+        Stunden = [NSString stringWithFormat:@"%@%@", @"0", DritteZahl];
+    }else{
+        
+       Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
+    }
+    
+    
     if(ZweiteZahl == nil) {
         Minuten =[NSString stringWithFormat:@"%@%@", @"0", ErsteZahl];
     }else{
