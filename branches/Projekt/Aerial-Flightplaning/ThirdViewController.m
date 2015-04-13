@@ -680,10 +680,15 @@
 }
 
 - (IBAction)ActionMinus:(id)sender {
+    NSString *Minuten;
     [self.Anzeige setText:@""];
     minus = true;
     NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
-    NSString *Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    if([ZweiteZahl isEqualToString:@"0"]) {
+    Minuten = ErsteZahl;
+    }else{
+     Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    }
     NSInteger StundenINT = [Stunden integerValue];
     NSInteger MinutenINT = [Minuten integerValue];
     NSInteger StundenInMin = StundenINT * 60;
@@ -704,10 +709,16 @@
 }
 
 - (IBAction)ActionPlus:(id)sender {
+    NSString *Minuten;
     [self.Anzeige setText:@""];
     plus = true;
     NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
-    NSString *Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    NSLog(ZweiteZahl);
+    if([ZweiteZahl isEqual:[NSNull null]]) {
+        Minuten = ErsteZahl;
+    }else{
+        Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    }
     NSInteger StundenINT = [Stunden integerValue];
     NSInteger MinutenINT = [Minuten integerValue];
     NSInteger StundenInMin = StundenINT * 60;
@@ -726,8 +737,13 @@
 }
 
 - (IBAction)ActionIstGleich:(id)sender {
+    NSString *Minuten;
     NSString *Stunden = [NSString stringWithFormat:@"%@%@", VierteZahl, DritteZahl];
-    NSString *Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    if([ZweiteZahl isEqualToString:@"0"]) {
+        Minuten = ErsteZahl;
+    }else{
+        Minuten = [NSString stringWithFormat:@"%@%@", ZweiteZahl, ErsteZahl];
+    }
     NSInteger StundenINT = [Stunden integerValue];
     NSInteger MinutenINT = [Minuten integerValue];
     NSInteger StundenInMin = StundenINT * 60;
