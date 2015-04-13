@@ -751,8 +751,16 @@
         NSInteger minutenEnde =  minutenGesamt - minutenGesamt2;
         NSInteger stunden = minutenEnde / 60;
         NSInteger minuten = minutenEnde % 60;
-        NSString *stundenST =[@(stunden) stringValue];
-        NSString *minutenST = [@(minuten) stringValue];
+        NSString *minutenST;
+        NSString *stundenST;
+        if(minuten < 10) {
+            NSString *minuten2 = [@(minuten) stringValue];
+            minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
+        }else if (stunden < 10){
+            NSString *stunden2 = [@(stunden) stringValue];
+            minutenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
+        
+        }
         [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
        
         
@@ -760,8 +768,17 @@
         NSInteger minutenEnde =  minutenGesamt + minutenGesamt2;
         NSInteger stunden = minutenEnde / 60;
         NSInteger minuten = minutenEnde % 60;
-        NSString *stundenST =[@(stunden) stringValue];
-        NSString *minutenST = [@(minuten) stringValue];
+        NSString *minutenST;
+        NSString *stundenST;
+        if(minuten < 10) {
+            stundenST =[@(stunden) stringValue];
+            NSString *minuten2 = [@(minuten) stringValue];
+            minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
+                }else{
+        stundenST =[@(stunden) stringValue];
+        minutenST = [@(minuten) stringValue];
+        }
+       
         [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
     }
     ErsteZ = false;
