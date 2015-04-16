@@ -22,8 +22,8 @@ PFObject* currentAuftrag;
 
 -(void)viewWillAppear:(BOOL)animated{
     [self getObjects];
-    [self getFluege];
-    
+    [self getFluege];   
+    self.tabBarController.navigationItem.hidesBackButton = YES;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJC-oX-fhd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Flugplan-->
@@ -387,7 +387,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="W&amp;B" id="94n-8G-tnm"/>
+                    <tabBarItem key="tabBarItem" title="W&amp;B" image="Waage(50x50).png" id="94n-8G-tnm"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
@@ -651,7 +651,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Umrechner" id="5ju-rg-vnO"/>
+                    <tabBarItem key="tabBarItem" title="Umrechner" image="Rechner(50x50)..png" id="5ju-rg-vnO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
@@ -683,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6q-jp-2hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="1332"/>
+            <point key="canvasLocation" x="68" y="1508"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8tw-Ty-gQl">
@@ -702,7 +702,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgU-FG-WgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1499" y="-20"/>
+            <point key="canvasLocation" x="-2291" y="8"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="7ve-Vp-K48">
@@ -724,9 +724,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjP-5d-WgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="-1137"/>
+            <point key="canvasLocation" x="-1203" y="43"/>
         </scene>
-        <!--Item-->
+        <!--Checklist-->
         <scene sceneID="dto-2n-mnf">
             <objects>
                 <viewController id="qxX-h2-dd4" customClass="CheckListViewController" sceneMemberID="viewController">
@@ -751,7 +751,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n74-Yy-MkA">
-                                <rect key="frame" x="50" y="85" width="205" height="30"/>
+                                <rect key="frame" x="51" y="120" width="205" height="30"/>
                                 <state key="normal" title="aktuelle LFZ-Papiere an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -760,7 +760,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzU-Lo-NqM">
-                                <rect key="frame" x="50" y="124" width="227" height="30"/>
+                                <rect key="frame" x="51" y="159" width="227" height="30"/>
                                 <state key="normal" title="aktuelle OM &amp;Bescheide an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -769,7 +769,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73j-uR-gjA">
-                                <rect key="frame" x="50" y="390" width="80" height="30"/>
+                                <rect key="frame" x="51" y="425" width="80" height="30"/>
                                 <state key="normal" title="Flugtickets ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -778,7 +778,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-AR-Ztp">
-                                <rect key="frame" x="50" y="276" width="93" height="30"/>
+                                <rect key="frame" x="51" y="311" width="93" height="30"/>
                                 <state key="normal" title="ATC-Flugplan">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -787,7 +787,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PJ-Gv-8eA">
-                                <rect key="frame" x="50" y="314" width="106" height="30"/>
+                                <rect key="frame" x="51" y="349" width="106" height="30"/>
                                 <state key="normal" title="Wetterberatung">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -796,7 +796,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14g-Jx-FXM">
-                                <rect key="frame" x="50" y="352" width="46" height="30"/>
+                                <rect key="frame" x="51" y="387" width="46" height="30"/>
                                 <state key="normal" title="Notam">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -805,7 +805,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkW-wo-NEC">
-                                <rect key="frame" x="50" y="162" width="159" height="30"/>
+                                <rect key="frame" x="51" y="197" width="159" height="30"/>
                                 <state key="normal" title="Kartenmaterial an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -814,7 +814,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-eR-zRd">
-                                <rect key="frame" x="50" y="200" width="291" height="30"/>
+                                <rect key="frame" x="51" y="235" width="291" height="30"/>
                                 <state key="normal" title="Mass &amp; Balance durchgeführt und an Bord">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -823,7 +823,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyz-Ot-keB">
-                                <rect key="frame" x="50" y="238" width="262" height="30"/>
+                                <rect key="frame" x="51" y="273" width="262" height="30"/>
                                 <state key="normal" title="Bordbuch an Bord / Wartung / Mängel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -832,68 +832,68 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao3-17-Lbf">
-                                <rect key="frame" x="437" y="86" width="97" height="30"/>
+                                <rect key="frame" x="438" y="121" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6f-Wh-9WM">
-                                <rect key="frame" x="437" y="124" width="97" height="30"/>
+                                <rect key="frame" x="438" y="159" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFG-yQ-I6l">
-                                <rect key="frame" x="437" y="162" width="97" height="30"/>
+                                <rect key="frame" x="438" y="197" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fk-xU-P8k">
-                                <rect key="frame" x="437" y="200" width="97" height="30"/>
+                                <rect key="frame" x="438" y="235" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLo-qD-0fo">
-                                <rect key="frame" x="437" y="238" width="97" height="30"/>
+                                <rect key="frame" x="438" y="273" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oT3-fZ-8Ig">
-                                <rect key="frame" x="437" y="276" width="97" height="30"/>
+                                <rect key="frame" x="438" y="311" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jby-3O-Cpx">
-                                <rect key="frame" x="437" y="314" width="97" height="30"/>
+                                <rect key="frame" x="438" y="349" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-3C-5ua">
-                                <rect key="frame" x="437" y="352" width="97" height="30"/>
+                                <rect key="frame" x="438" y="387" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-IE-JEr">
-                                <rect key="frame" x="437" y="390" width="97" height="30"/>
+                                <rect key="frame" x="438" y="425" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-Uo-CkU">
-                                <rect key="frame" x="437" y="428" width="97" height="30"/>
+                                <rect key="frame" x="438" y="463" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-t2-PKn">
-                                <rect key="frame" x="437" y="466" width="97" height="30"/>
+                                <rect key="frame" x="438" y="501" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remarks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7n-Ya-WsT">
-                                <rect key="frame" x="437" y="57" width="68" height="21"/>
+                                <rect key="frame" x="438" y="92" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-ds-VWL">
-                                <rect key="frame" x="50" y="428" width="74" height="30"/>
+                                <rect key="frame" x="51" y="463" width="74" height="30"/>
                                 <state key="normal" title="Endurance">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -902,7 +902,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-YR-63M">
-                                <rect key="frame" x="50" y="466" width="101" height="30"/>
+                                <rect key="frame" x="51" y="501" width="101" height="30"/>
                                 <state key="normal" title="Notausrüstung">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -911,7 +911,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flightpreparation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugv-Hz-DCn">
-                                <rect key="frame" x="50" y="57" width="130" height="21"/>
+                                <rect key="frame" x="51" y="92" width="130" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -919,7 +919,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dVb-hq-vVW"/>
+                    <tabBarItem key="tabBarItem" title="Checklist" id="dVb-hq-vVW"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="ATCFlugplan_Button" destination="j8m-AR-Ztp" id="0AL-VI-JsA"/>
                         <outlet property="Bordbuch_Button" destination="uyz-Ot-keB" id="ND4-by-YUM"/>
@@ -936,14 +937,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocR-nT-fCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828" y="913"/>
+            <point key="canvasLocation" x="-1160" y="1653"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mXO-DS-b8Z"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="1024"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -962,6 +966,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rechner(50x50)..png" width="25" height="25"/>
+        <image name="Waage(50x50).png" width="25" height="15"/>
         <image name="first" width="30" height="30"/>
     </resources>
 </document>

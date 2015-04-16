@@ -20,12 +20,20 @@
 		6C26E4F219EB058F002F627D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E4F119EB058F002F627D /* SecondViewController.m */; };
 		6C26E4F519EB058F002F627D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C26E4F319EB058F002F627D /* Main.storyboard */; };
 		6C26E4F719EB058F002F627D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C26E4F619EB058F002F627D /* Images.xcassets */; };
-		6C26E4FA19EB058F002F627D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C26E4F819EB058F002F627D /* LaunchScreen.xib */; };
 		6C26E50619EB058F002F627D /* Aerial_FlightplaningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C26E50519EB058F002F627D /* Aerial_FlightplaningTests.m */; };
 		6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C3320741A2C9C9A00E1C0FB /* Lunch.png */; };
 		6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6450B219F5178C002D67EE /* ThirdViewController.m */; };
 		6C7206521A1A240600EF8FE5 /* HU300.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7206511A1A240600EF8FE5 /* HU300.m */; };
 		6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */; };
+		6C82DAAF1ADFD64300CDC83B /* Logo(53x53).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAA71ADFD64300CDC83B /* Logo(53x53).@2x.png */; };
+		6C82DAB01ADFD64300CDC83B /* Logo(80x80).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAA81ADFD64300CDC83B /* Logo(80x80).@2x.png */; };
+		6C82DAB11ADFD64300CDC83B /* LOGO(152x152).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAA91ADFD64300CDC83B /* LOGO(152x152).@2x.png */; };
+		6C82DAB21ADFD64300CDC83B /* Logo(1024x1024).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAA1ADFD64300CDC83B /* Logo(1024x1024).@2x.png */; };
+		6C82DAB31ADFD64300CDC83B /* Logo(1536x2048).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAB1ADFD64300CDC83B /* Logo(1536x2048).@2x.png */; };
+		6C82DAB41ADFD64300CDC83B /* Logo(1920x1080)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAC1ADFD64300CDC83B /* Logo(1920x1080)@2x.png */; };
+		6C82DAB51ADFD64300CDC83B /* Rechner(50x50).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */; };
+		6C82DAB61ADFD64300CDC83B /* Waage(50x50)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */; };
+		6C82DAB81ADFDAFE00CDC83B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */; };
 		6C867ABE19FE734400315F83 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABB19FE734400315F83 /* Bolts.framework */; };
 		6C867ABF19FE734400315F83 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABC19FE734400315F83 /* Parse.framework */; };
 		6C867AC019FE734400315F83 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABD19FE734400315F83 /* ParseFacebookUtils.framework */; };
@@ -75,7 +83,6 @@
 		6C26E4F119EB058F002F627D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		6C26E4F419EB058F002F627D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C26E4F619EB058F002F627D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6C26E4F919EB058F002F627D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6C26E4FF19EB058F002F627D /* Aerial-FlightplaningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerial-FlightplaningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C26E50419EB058F002F627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C26E50519EB058F002F627D /* Aerial_FlightplaningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aerial_FlightplaningTests.m; sourceTree = "<group>"; };
@@ -85,6 +92,15 @@
 		6C7206501A1A240600EF8FE5 /* HU300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HU300.h; sourceTree = "<group>"; };
 		6C7206511A1A240600EF8FE5 /* HU300.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HU300.m; sourceTree = "<group>"; };
 		6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiagramHU300.png; sourceTree = "<group>"; };
+		6C82DAA71ADFD64300CDC83B /* Logo(53x53).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(53x53).@2x.png"; sourceTree = "<group>"; };
+		6C82DAA81ADFD64300CDC83B /* Logo(80x80).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(80x80).@2x.png"; sourceTree = "<group>"; };
+		6C82DAA91ADFD64300CDC83B /* LOGO(152x152).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOGO(152x152).@2x.png"; sourceTree = "<group>"; };
+		6C82DAAA1ADFD64300CDC83B /* Logo(1024x1024).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(1024x1024).@2x.png"; sourceTree = "<group>"; };
+		6C82DAAB1ADFD64300CDC83B /* Logo(1536x2048).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(1536x2048).@2x.png"; sourceTree = "<group>"; };
+		6C82DAAC1ADFD64300CDC83B /* Logo(1920x1080)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(1920x1080)@2x.png"; sourceTree = "<group>"; };
+		6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rechner(50x50).@2x.png"; sourceTree = "<group>"; };
+		6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Waage(50x50)@2x.png"; sourceTree = "<group>"; };
+		6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		6C867ABB19FE734400315F83 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6C867ABC19FE734400315F83 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6C867ABD19FE734400315F83 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -142,6 +158,7 @@
 		6C26E4DA19EB058F002F627D = {
 			isa = PBXGroup;
 			children = (
+				6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */,
 				66D0E5CD1A1AD77D008ECE59 /* libsqlite3.0.dylib */,
 				6C3320731A2C9C8B00E1C0FB /* Images */,
 				6C26E4E519EB058F002F627D /* Aerial-Flightplaning */,
@@ -174,7 +191,6 @@
 				6C26E4F619EB058F002F627D /* Images.xcassets */,
 				6689AE4C1A9A9E2000F79580 /* FlugViewController.h */,
 				6689AE4D1A9A9E2000F79580 /* FlugViewController.m */,
-				6C26E4F819EB058F002F627D /* LaunchScreen.xib */,
 				6C6450B119F5178C002D67EE /* ThirdViewController.h */,
 				6C6450B219F5178C002D67EE /* ThirdViewController.m */,
 				6C867AD919FE809400315F83 /* GlobalState.h */,
@@ -223,6 +239,14 @@
 		6C3320731A2C9C8B00E1C0FB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6C82DAA71ADFD64300CDC83B /* Logo(53x53).@2x.png */,
+				6C82DAA81ADFD64300CDC83B /* Logo(80x80).@2x.png */,
+				6C82DAA91ADFD64300CDC83B /* LOGO(152x152).@2x.png */,
+				6C82DAAA1ADFD64300CDC83B /* Logo(1024x1024).@2x.png */,
+				6C82DAAB1ADFD64300CDC83B /* Logo(1536x2048).@2x.png */,
+				6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */,
+				6C82DAAC1ADFD64300CDC83B /* Logo(1920x1080)@2x.png */,
+				6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */,
 				6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */,
 				6C3320741A2C9C9A00E1C0FB /* Lunch.png */,
 			);
@@ -340,10 +364,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C26E4F519EB058F002F627D /* Main.storyboard in Resources */,
+				6C82DAB61ADFD64300CDC83B /* Waage(50x50)@2x.png in Resources */,
+				6C82DAB41ADFD64300CDC83B /* Logo(1920x1080)@2x.png in Resources */,
+				6C82DAB31ADFD64300CDC83B /* Logo(1536x2048).@2x.png in Resources */,
 				6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */,
-				6C26E4FA19EB058F002F627D /* LaunchScreen.xib in Resources */,
+				6C82DAB11ADFD64300CDC83B /* LOGO(152x152).@2x.png in Resources */,
 				6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */,
+				6C82DAAF1ADFD64300CDC83B /* Logo(53x53).@2x.png in Resources */,
+				6C82DAB01ADFD64300CDC83B /* Logo(80x80).@2x.png in Resources */,
+				6C82DAB81ADFDAFE00CDC83B /* Launch Screen.xib in Resources */,
 				6C26E4F719EB058F002F627D /* Images.xcassets in Resources */,
+				6C82DAB21ADFD64300CDC83B /* Logo(1024x1024).@2x.png in Resources */,
+				6C82DAB51ADFD64300CDC83B /* Rechner(50x50).@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,14 +432,6 @@
 				6C26E4F419EB058F002F627D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6C26E4F819EB058F002F627D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C26E4F919EB058F002F627D /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -495,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Aerial-Flightplaning/parse-library-1",
@@ -509,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Aerial-Flightplaning/parse-library-1",
