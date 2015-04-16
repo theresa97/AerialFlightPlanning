@@ -775,15 +775,19 @@
         if(minuten < 10) {
             NSString *minuten2 = [@(minuten) stringValue];
             minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
-        }else if (stunden < 10){
+        }else{
+            minutenST =[@(minuten) stringValue];
+        }
+        
+        if (stunden < 10){
             NSString *stunden2 = [@(stunden) stringValue];
             stundenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
         
         }else{
-            minutenST =[@(minuten) stringValue];
-            stundenST = [@(stunden) stringValue];
+                stundenST = [@(stunden) stringValue];
         }
         
+                    
         [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
        
         
