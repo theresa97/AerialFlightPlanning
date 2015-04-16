@@ -54,7 +54,7 @@ PFObject* currentAuftrag;
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"dd.MM yyyy HH:mm"];
     NSString *dateString = [formatter  stringFromDate:date];
-    NSMutableArray *fluege = [[NSMutableArray alloc]init];
+    //NSMutableArray *fluege = [[NSMutableArray alloc]init];
     
     data[@"User"] = [GlobalState Instance].logedInUser.username;
     data[@"Pilotenname"] = self.textFieldPilot.text;
