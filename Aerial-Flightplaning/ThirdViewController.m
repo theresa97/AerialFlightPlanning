@@ -41,7 +41,7 @@
     NSString *DritteZahl;
     NSString *VierteZahl;
     NSInteger minutenGesamt;
-    
+    NSInteger minuten3;
 }
 
 
@@ -677,6 +677,9 @@
     
     plus = false;
     minus = false;
+    
+    minuten3 = 0;
+    minutenGesamt = 0;
 }
 
 - (IBAction)ActionMinus:(id)sender {
@@ -767,47 +770,105 @@
     NSInteger StundenInMin = StundenINT * 60;
     NSInteger minutenGesamt2 = StundenInMin +MinutenINT;
     if(minus == true){
-        NSInteger minutenEnde =  minutenGesamt - minutenGesamt2;
-        NSInteger stunden = minutenEnde / 60;
-        NSInteger minuten = minutenEnde % 60;
+        NSInteger stunden;
+        NSInteger minuten;
+        NSInteger minutenEnde;
         NSString *minutenST;
         NSString *stundenST;
-        if(minuten < 10) {
-            NSString *minuten2 = [@(minuten) stringValue];
-            minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
-        }else{
-            minutenST =[@(minuten) stringValue];
-        }
-        
-        if (stunden < 10){
-            NSString *stunden2 = [@(stunden) stringValue];
-            stundenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
-        
-        }else{
+        if(minuten3 ==0){
+            minutenEnde =  minutenGesamt - minutenGesamt2;
+            stunden = minutenEnde / 60;
+            minuten = minutenEnde % 60;
+            
+            if(minuten < 10) {
+                NSString *minuten2 = [@(minuten) stringValue];
+                minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
+            }else{
+                minutenST =[@(minuten) stringValue];
+            }
+            
+            if (stunden < 10){
+                NSString *stunden2 = [@(stunden) stringValue];
+                stundenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
+                
+            }else{
                 stundenST = [@(stunden) stringValue];
-        }
-        
-                    
+            }
+            
         [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+        }else{
+            minutenEnde = minuten3- minutenGesamt2;
+            stunden = minutenEnde / 60;
+            minuten = minutenEnde % 60;
+            
+            if(minuten < 10) {
+                NSString *minuten2 = [@(minuten) stringValue];
+                minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
+            }else{
+                minutenST =[@(minuten) stringValue];
+            }
+            
+            if (stunden < 10){
+                NSString *stunden2 = [@(stunden) stringValue];
+                stundenST = [NSString stringWithFormat:@"%@%@", @"0",stunden2];
+                
+            }else{
+                stundenST = [@(stunden) stringValue];
+            }
+            [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+        }
+        minuten3 = minutenEnde;
        
         
     }else if(plus == true){
-        NSInteger minutenEnde =  minutenGesamt + minutenGesamt2;
-        NSInteger stunden = minutenEnde / 60;
-        NSInteger minuten = minutenEnde % 60;
+        
+        NSInteger stunden;
+        NSInteger minuten;
+        NSInteger minutenEnde;
         NSString *minutenST;
         NSString *stundenST;
-        if(minuten < 10) {
-            stundenST =[@(stunden) stringValue];
-            NSString *minuten2 = [@(minuten) stringValue];
-            minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
-                }else{
-        stundenST =[@(stunden) stringValue];
-        minutenST = [@(minuten) stringValue];
+        if(minuten3 ==0){
+         minutenEnde =  minutenGesamt + minutenGesamt2;
+        stunden = minutenEnde / 60;
+            minuten = minutenEnde % 60;
+        
+            if(minuten < 10) {
+                stundenST =[@(stunden) stringValue];
+                NSString *minuten2 = [@(minuten) stringValue];
+                minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
+            }else{
+                stundenST =[@(stunden) stringValue];
+                minutenST = [@(minuten) stringValue];
+            }
+            
+            [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+        }else{
+            
+            minutenEnde =   minutenGesamt2+ minuten3;
+            stunden = minutenEnde / 60;
+            minuten = minutenEnde % 60;
+            
+            if(minuten < 10) {
+                stundenST =[@(stunden) stringValue];
+                NSString *minuten2 = [@(minuten) stringValue];
+                minutenST = [NSString stringWithFormat:@"%@%@", @"0",minuten2];
+            }else{
+                stundenST =[@(stunden) stringValue];
+                minutenST = [@(minuten) stringValue];
+            }
+            
+            [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+ 
+            
         }
-       
-        [self.Anzeige setText:[NSString stringWithFormat:@"%@:%@", stundenST , minutenST]];
+        minuten3 = minutenEnde;
+        
+        
+        
+        
     }
+    
+    
     ErsteZ = false;
     ZweiteZ = false;
     DritteZ = false;
