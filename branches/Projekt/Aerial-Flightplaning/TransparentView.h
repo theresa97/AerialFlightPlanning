@@ -10,8 +10,8 @@
 
 @interface TransparentView : UIView
 
-@property (weak, nonatomic) NSNumber* cgdif;
-@property (weak, nonatomic) NSNumber* cgdifLat;
+@property (strong, nonatomic) NSNumber* cgdif;
+@property (strong, nonatomic) NSNumber* cgdifLat;
 @property BOOL noDrwaing;
 
 -(void)setCGlong:(NSNumber *)cglong setCGlat:(NSNumber *)cglat setDrawingDisabled:(BOOL)drawing;

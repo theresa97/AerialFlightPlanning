@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "HU300.h"
 #import <QuartzCore/QuartzCore.h>
+#import "GlobalState.h"
 #import "TransparentView.h"
 @interface SecondViewController ()
 
@@ -123,9 +124,9 @@
     [neueBerechnung initVariables:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPilot.text]and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtCoPilot.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldGewichtPassagier.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritStart.text] and:[NSDecimalNumber decimalNumberWithString:self.textFieldSpritEnde.text]];
     
     NSNumber * momentOld = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeightArmLong doubleValue]*[neueBerechnung.self.BasicEmptyWeight doubleValue]];
-    //NSNumber *testnum =[NSNumber numberWithDouble:[neueBerechnung.self.PilotWeight doubleValue]];
+    NSNumber *testnum =[NSNumber numberWithDouble:[neueBerechnung.self.PilotWeight doubleValue]];
     
-    //NSNumber *test1 =[NSNumber numberWithDouble:[neueBerechnung.self.COpilotweight doubleValue]*[neueBerechnung.self.COpilotLongArm doubleValue] ];
+    NSNumber *test1 =[NSNumber numberWithDouble:[neueBerechnung.self.COpilotweight doubleValue]*[neueBerechnung.self.COpilotLongArm doubleValue] ];
     
     
     NSNumber *loadMoment = [NSNumber numberWithFloat:[neueBerechnung.self.PilotWeight floatValue]*[neueBerechnung.self.PilotLongArm floatValue]+[neueBerechnung.self.COpilotweight floatValue]*[neueBerechnung.self.COpilotLongArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*[neueBerechnung.self.MidPassangerLongArm floatValue]+0.79*[neueBerechnung.self.FuelStart floatValue]*[neueBerechnung.self.MainFuelTankLongArm floatValue]+[neueBerechnung.self.GloveBoxWeight floatValue]*[neueBerechnung.self.GloveBoxLongArm floatValue]];
@@ -157,11 +158,11 @@
     
     NSNumber * momentOldLat = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeightArmLat doubleValue]*[neueBerechnung.self.BasicEmptyWeight doubleValue]];
     
-   // NSNumber *loadMomentLat = [NSNumber numberWithFloat:[neueBerechnung.self.PilotWeight floatValue]*[neueBerechnung.self.PilotLatArm floatValue]+[neueBerechnung.self.COpilotweight floatValue]*[neueBerechnung.self.COpilotLatArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*0.75 +0.79*[neueBerechnung.self.FuelStart floatValue]*[neueBerechnung.self.MainFuelTankLatArm floatValue]+[neueBerechnung.self.GloveBoxWeight floatValue]*[neueBerechnung.self.GloveBoxLatArm floatValue]];
-   // NSNumber * momentNewLat =[NSNumber numberWithDouble:[momentOldLat doubleValue] + [loadMomentLat doubleValue]];
-   // NSNumber * WeightNewLat = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeight doubleValue]+ [neueBerechnung.self.PilotWeight doubleValue]+[neueBerechnung.self.COpilotweight doubleValue]+ [neueBerechnung.self.MidPassangerWeight doubleValue]+[neueBerechnung.self.GloveBoxWeight doubleValue]+[neueBerechnung.self.FuelStart doubleValue]*0.79];
-    //NSNumber *CGnewLat = [NSNumber numberWithDouble:[momentNewLat doubleValue] / [WeightNewLat doubleValue]];
-    //[self.labelNeuerCG setText:[NSString stringWithFormat:@"%@",CGnew]];
+    NSNumber *loadMomentLat = [NSNumber numberWithFloat:[neueBerechnung.self.PilotWeight floatValue]*[neueBerechnung.self.PilotLatArm floatValue]+[neueBerechnung.self.COpilotweight floatValue]*[neueBerechnung.self.COpilotLatArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*0.75 +0.79*[neueBerechnung.self.FuelStart floatValue]*[neueBerechnung.self.MainFuelTankLatArm floatValue]+[neueBerechnung.self.GloveBoxWeight floatValue]*[neueBerechnung.self.GloveBoxLatArm floatValue]];
+    NSNumber * momentNewLat =[NSNumber numberWithDouble:[momentOldLat doubleValue] + [loadMomentLat doubleValue]];
+    NSNumber * WeightNewLat = [NSNumber numberWithDouble:[neueBerechnung.self.BasicEmptyWeight doubleValue]+ [neueBerechnung.self.PilotWeight doubleValue]+[neueBerechnung.self.COpilotweight doubleValue]+ [neueBerechnung.self.MidPassangerWeight doubleValue]+[neueBerechnung.self.GloveBoxWeight doubleValue]+[neueBerechnung.self.FuelStart doubleValue]*0.79];
+    NSNumber *CGnewLat = [NSNumber numberWithDouble:[momentNewLat doubleValue] / [WeightNewLat doubleValue]];
+    [self.labelNeuerCG setText:[NSString stringWithFormat:@"%@",CGnew]];
     
     //Berechung CG mit verbleibenden Sprit
     NSNumber *MomentWithoutFuelLat =[NSNumber numberWithFloat:[neueBerechnung.self.PilotWeight floatValue]*[neueBerechnung.self.PilotLatArm floatValue]+[neueBerechnung.self.COpilotweight floatValue]*[neueBerechnung.self.COpilotLatArm doubleValue]+[neueBerechnung.self.MidPassangerWeight doubleValue]*[neueBerechnung.self.MidPassangerLongArm floatValue]+0.79*[neueBerechnung.self.FuelEnd floatValue]*[neueBerechnung.self.MainFuelTankLatArm floatValue]+[neueBerechnung.self.GloveBoxWeight floatValue]*[neueBerechnung.self.GloveBoxLatArm floatValue]];
