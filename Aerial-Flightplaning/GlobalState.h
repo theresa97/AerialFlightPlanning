@@ -13,7 +13,6 @@
 @property NSMutableArray *helicopters; // array for PickerView with all stored Helicopters
 @property NSMutableArray *allCheckLists;
 
-
 +(GlobalState *)Instance;
 - (NSString *)dataFilePath:(NSString *)pDataFile;
 -(NSMutableArray*)load;
