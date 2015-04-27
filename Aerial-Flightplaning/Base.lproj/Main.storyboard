@@ -79,7 +79,8 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-i4-YbL">
                                 <rect key="frame" x="630" y="913" width="122" height="54"/>
-                                <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92342478128708061" green="0.92364465801801832" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.06387495144656441" green="0.43296714999663555" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Speichern">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,9 +152,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.023235985437276507" green="0.019377046327408123" blue="0.03862847222222221" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Flugplan" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Flugplan" image="airplane-symbol-7.png" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="buttonSendeZuCloud" destination="ose-i4-YbL" id="yL6-PB-VAx"/>
@@ -651,7 +651,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Umrechner" image="Rechner(50x50)..png" id="5ju-rg-vnO"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Umrechner" image="calculator.png" id="5ju-rg-vnO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
@@ -919,7 +919,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Checklist" id="dVb-hq-vVW"/>
+                    <tabBarItem key="tabBarItem" title="Checklist" image="thumb-up-7.png" id="dVb-hq-vVW"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="ATCFlugplan_Button" destination="j8m-AR-Ztp" id="0AL-VI-JsA"/>
@@ -966,8 +966,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Rechner(50x50)..png" width="25" height="25"/>
         <image name="Waage(50x50).png" width="25" height="15"/>
-        <image name="first" width="30" height="30"/>
+        <image name="airplane-symbol-7.png" width="30" height="30"/>
+        <image name="calculator.png" width="30" height="30"/>
+        <image name="thumb-up-7.png" width="30" height="30"/>
     </resources>
 </document>

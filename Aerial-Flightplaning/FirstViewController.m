@@ -206,6 +206,8 @@ editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.textFieldFlughelfer setText:@""];
     [self.textViewCrew setText:@""];
     [self.textFieldKennzeichen setText:@""];
+    NSDate *today = [NSDate date];
+    [self.pickerDateDatum setDate:today];
     currentAuftrag = nil;
     [self.smalltable reloadData];    
 }

@@ -24,8 +24,6 @@
 		6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C3320741A2C9C9A00E1C0FB /* Lunch.png */; };
 		6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6450B219F5178C002D67EE /* ThirdViewController.m */; };
 		6C7206521A1A240600EF8FE5 /* HU300.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7206511A1A240600EF8FE5 /* HU300.m */; };
-		6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */; };
-		6C82DAB51ADFD64300CDC83B /* Rechner(50x50).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */; };
 		6C82DAB61ADFD64300CDC83B /* Waage(50x50)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */; };
 		6C82DAB81ADFDAFE00CDC83B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */; };
 		6C867ABE19FE734400315F83 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867ABB19FE734400315F83 /* Bolts.framework */; };
@@ -43,6 +41,10 @@
 		6C867AD419FE742A00315F83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C867AD319FE742A00315F83 /* SystemConfiguration.framework */; };
 		6C867ADB19FE809400315F83 /* GlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C867ADA19FE809400315F83 /* GlobalState.m */; };
 		6C94B5271A7BF87000DD7306 /* TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C94B5261A7BF87000DD7306 /* TransparentView.m */; };
+		6CC7A8821AEE6D5600840FD7 /* thumb-up-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7A8811AEE6D5600840FD7 /* thumb-up-7.png */; };
+		6CC7A8841AEE6DA000840FD7 /* airplane-symbol-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7A8831AEE6DA000840FD7 /* airplane-symbol-7.png */; };
+		6CC7A8861AEE6E6700840FD7 /* Rechner(50x50)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7A8851AEE6E6700840FD7 /* Rechner(50x50)@2x.png */; };
+		6CC7A8881AEE6F6800840FD7 /* calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7A8871AEE6F6800840FD7 /* calculator.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +87,6 @@
 		6C6450B219F5178C002D67EE /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		6C7206501A1A240600EF8FE5 /* HU300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HU300.h; sourceTree = "<group>"; };
 		6C7206511A1A240600EF8FE5 /* HU300.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HU300.m; sourceTree = "<group>"; };
-		6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiagramHU300.png; sourceTree = "<group>"; };
-		6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rechner(50x50).@2x.png"; sourceTree = "<group>"; };
 		6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Waage(50x50)@2x.png"; sourceTree = "<group>"; };
 		6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		6C867ABB19FE734400315F83 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -106,6 +106,10 @@
 		6C867ADA19FE809400315F83 /* GlobalState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalState.m; sourceTree = "<group>"; };
 		6C94B5251A7BF87000DD7306 /* TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentView.h; sourceTree = "<group>"; };
 		6C94B5261A7BF87000DD7306 /* TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentView.m; sourceTree = "<group>"; };
+		6CC7A8811AEE6D5600840FD7 /* thumb-up-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-up-7.png"; sourceTree = "<group>"; };
+		6CC7A8831AEE6DA000840FD7 /* airplane-symbol-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplane-symbol-7.png"; sourceTree = "<group>"; };
+		6CC7A8851AEE6E6700840FD7 /* Rechner(50x50)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rechner(50x50)@2x.png"; sourceTree = "<group>"; };
+		6CC7A8871AEE6F6800840FD7 /* calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculator.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,10 +231,12 @@
 		6C3320731A2C9C8B00E1C0FB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */,
+				6CC7A8871AEE6F6800840FD7 /* calculator.png */,
+				6CC7A8851AEE6E6700840FD7 /* Rechner(50x50)@2x.png */,
 				6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */,
-				6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */,
 				6C3320741A2C9C9A00E1C0FB /* Lunch.png */,
+				6CC7A8831AEE6DA000840FD7 /* airplane-symbol-7.png */,
+				6CC7A8811AEE6D5600840FD7 /* thumb-up-7.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -348,11 +354,13 @@
 			files = (
 				6C26E4F519EB058F002F627D /* Main.storyboard in Resources */,
 				6C82DAB61ADFD64300CDC83B /* Waage(50x50)@2x.png in Resources */,
-				6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */,
+				6CC7A8881AEE6F6800840FD7 /* calculator.png in Resources */,
 				6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */,
+				6CC7A8861AEE6E6700840FD7 /* Rechner(50x50)@2x.png in Resources */,
+				6CC7A8841AEE6DA000840FD7 /* airplane-symbol-7.png in Resources */,
+				6CC7A8821AEE6D5600840FD7 /* thumb-up-7.png in Resources */,
 				6C82DAB81ADFDAFE00CDC83B /* Launch Screen.xib in Resources */,
 				6C26E4F719EB058F002F627D /* Images.xcassets in Resources */,
-				6C82DAB51ADFD64300CDC83B /* Rechner(50x50).@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
