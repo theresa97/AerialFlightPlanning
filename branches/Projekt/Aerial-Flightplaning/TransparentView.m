@@ -33,7 +33,7 @@
     }
 -(void)setCGlong:(NSNumber *)cglong setCGlat:(NSNumber *)cglat setDrawingDisabled:(BOOL)drawing{
     cgdif=cglong;
-    cgdifLat=cglat ;
+    cgdifLat=cglat;
     noDrwaing=drawing;
 }
 

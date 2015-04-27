@@ -25,12 +25,6 @@
 		6C6450B319F5178C002D67EE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6450B219F5178C002D67EE /* ThirdViewController.m */; };
 		6C7206521A1A240600EF8FE5 /* HU300.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7206511A1A240600EF8FE5 /* HU300.m */; };
 		6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */; };
-		6C82DAAF1ADFD64300CDC83B /* Logo(53x53).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAA71ADFD64300CDC83B /* Logo(53x53).@2x.png */; };
-		6C82DAB01ADFD64300CDC83B /* Logo(80x80).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAA81ADFD64300CDC83B /* Logo(80x80).@2x.png */; };
-		6C82DAB11ADFD64300CDC83B /* LOGO(152x152).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAA91ADFD64300CDC83B /* LOGO(152x152).@2x.png */; };
-		6C82DAB21ADFD64300CDC83B /* Logo(1024x1024).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAA1ADFD64300CDC83B /* Logo(1024x1024).@2x.png */; };
-		6C82DAB31ADFD64300CDC83B /* Logo(1536x2048).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAB1ADFD64300CDC83B /* Logo(1536x2048).@2x.png */; };
-		6C82DAB41ADFD64300CDC83B /* Logo(1920x1080)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAC1ADFD64300CDC83B /* Logo(1920x1080)@2x.png */; };
 		6C82DAB51ADFD64300CDC83B /* Rechner(50x50).@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */; };
 		6C82DAB61ADFD64300CDC83B /* Waage(50x50)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */; };
 		6C82DAB81ADFDAFE00CDC83B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */; };
@@ -92,12 +86,6 @@
 		6C7206501A1A240600EF8FE5 /* HU300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HU300.h; sourceTree = "<group>"; };
 		6C7206511A1A240600EF8FE5 /* HU300.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HU300.m; sourceTree = "<group>"; };
 		6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiagramHU300.png; sourceTree = "<group>"; };
-		6C82DAA71ADFD64300CDC83B /* Logo(53x53).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(53x53).@2x.png"; sourceTree = "<group>"; };
-		6C82DAA81ADFD64300CDC83B /* Logo(80x80).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(80x80).@2x.png"; sourceTree = "<group>"; };
-		6C82DAA91ADFD64300CDC83B /* LOGO(152x152).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOGO(152x152).@2x.png"; sourceTree = "<group>"; };
-		6C82DAAA1ADFD64300CDC83B /* Logo(1024x1024).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(1024x1024).@2x.png"; sourceTree = "<group>"; };
-		6C82DAAB1ADFD64300CDC83B /* Logo(1536x2048).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(1536x2048).@2x.png"; sourceTree = "<group>"; };
-		6C82DAAC1ADFD64300CDC83B /* Logo(1920x1080)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo(1920x1080)@2x.png"; sourceTree = "<group>"; };
 		6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rechner(50x50).@2x.png"; sourceTree = "<group>"; };
 		6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Waage(50x50)@2x.png"; sourceTree = "<group>"; };
 		6C82DAB71ADFDAFE00CDC83B /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
@@ -239,13 +227,7 @@
 		6C3320731A2C9C8B00E1C0FB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6C82DAA71ADFD64300CDC83B /* Logo(53x53).@2x.png */,
-				6C82DAA81ADFD64300CDC83B /* Logo(80x80).@2x.png */,
-				6C82DAA91ADFD64300CDC83B /* LOGO(152x152).@2x.png */,
-				6C82DAAA1ADFD64300CDC83B /* Logo(1024x1024).@2x.png */,
-				6C82DAAB1ADFD64300CDC83B /* Logo(1536x2048).@2x.png */,
 				6C82DAAD1ADFD64300CDC83B /* Rechner(50x50).@2x.png */,
-				6C82DAAC1ADFD64300CDC83B /* Logo(1920x1080)@2x.png */,
 				6C82DAAE1ADFD64300CDC83B /* Waage(50x50)@2x.png */,
 				6C7F079C1A2CA9D300217AD5 /* DiagramHU300.png */,
 				6C3320741A2C9C9A00E1C0FB /* Lunch.png */,
@@ -332,6 +314,7 @@
 				TargetAttributes = {
 					6C26E4E219EB058F002F627D = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = KZB357YW5L;
 					};
 					6C26E4FE19EB058F002F627D = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -365,16 +348,10 @@
 			files = (
 				6C26E4F519EB058F002F627D /* Main.storyboard in Resources */,
 				6C82DAB61ADFD64300CDC83B /* Waage(50x50)@2x.png in Resources */,
-				6C82DAB41ADFD64300CDC83B /* Logo(1920x1080)@2x.png in Resources */,
-				6C82DAB31ADFD64300CDC83B /* Logo(1536x2048).@2x.png in Resources */,
 				6C7F079D1A2CA9D300217AD5 /* DiagramHU300.png in Resources */,
-				6C82DAB11ADFD64300CDC83B /* LOGO(152x152).@2x.png in Resources */,
 				6C3320751A2C9C9A00E1C0FB /* Lunch.png in Resources */,
-				6C82DAAF1ADFD64300CDC83B /* Logo(53x53).@2x.png in Resources */,
-				6C82DAB01ADFD64300CDC83B /* Logo(80x80).@2x.png in Resources */,
 				6C82DAB81ADFDAFE00CDC83B /* Launch Screen.xib in Resources */,
 				6C26E4F719EB058F002F627D /* Images.xcassets in Resources */,
-				6C82DAB21ADFD64300CDC83B /* Logo(1024x1024).@2x.png in Resources */,
 				6C82DAB51ADFD64300CDC83B /* Rechner(50x50).@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Aerial-Flightplaning/parse-library-1",
@@ -535,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Aerial-Flightplaning/parse-library-1",
